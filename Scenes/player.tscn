@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cre6fiyfcf35x"]
+
+[ext_resource type="Script" uid="uid://doceqgnqsgu5" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://biqh22lkslyvy" path="res://Sprites/gordao_astronauta.png" id="2_cvnsp"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ryrav"]
+friction = 0.02
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e2o6t"]
+radius = 34.234486
+
+[node name="Player" type="RigidBody2D" unique_id=1431038016]
+mass = 2.0
+physics_material_override = SubResource("PhysicsMaterial_ryrav")
+script = ExtResource("1_cvnsp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1233079308]
+position = Vector2(1.9999999, -5.999999)
+scale = Vector2(0.86, 0.86)
+texture = ExtResource("2_cvnsp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1001642145]
+visible = false
+shape = SubResource("CircleShape2D_e2o6t")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=743832337 groups=["Player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1615327810]
+visible = false
+shape = SubResource("CircleShape2D_e2o6t")

@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dvtcdj7at2mbq"]
+
+[ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/collectables_controller.gd" id="1_n1xa8"]
+[ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/cama.tscn" id="2_rot6e"]
+[ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/collectable.tscn" id="3_wchaa"]
+[ext_resource type="Script" uid="uid://dfktrjfq4daxy" path="res://Scripts/line_controller.gd" id="4_iwybi"]
+[ext_resource type="Script" uid="uid://bjkdkcl3blwmn" path="res://Scripts/line_rendering.gd" id="5_xi6ke"]
+[ext_resource type="Script" uid="uid://cryc6w5ro18dn" path="res://Scripts/line_collider.gd" id="6_i8l5y"]
+[ext_resource type="Texture2D" uid="uid://biqh22lkslyvy" path="res://Sprites/gordao_astronauta.png" id="7_i8l5y"]
+[ext_resource type="Script" uid="uid://cbc24q2fpet5x" path="res://Scripts/floating.gd" id="8_fhsmn"]
+
+[node name="LevelEditor" type="Node2D" unique_id=1951955586]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=218518758]
+z_index = -4096
+offset_left = -4.0
+offset_top = -6.0
+offset_right = 1156.0
+offset_bottom = 652.0
+color = Color(0.27058825, 0, 0, 1)
+
+[node name="collectables_controller" type="Node2D" parent="." unique_id=1093850872]
+unique_name_in_owner = true
+script = ExtResource("1_n1xa8")
+
+[node name="cama" parent="collectables_controller" unique_id=1009130463 instance=ExtResource("2_rot6e")]
+position = Vector2(942, 444)
+
+[node name="collectable" parent="collectables_controller" unique_id=186391876 instance=ExtResource("3_wchaa")]
+position = Vector2(440.00003, 129.00002)
+
+[node name="collectable2" parent="collectables_controller" unique_id=363670006 instance=ExtResource("3_wchaa")]
+position = Vector2(855, 201.00003)
+
+[node name="collectable3" parent="collectables_controller" unique_id=1904548980 instance=ExtResource("3_wchaa")]
+position = Vector2(166, 461.00003)
+
+[node name="collectable4" parent="collectables_controller" unique_id=1881939281 instance=ExtResource("3_wchaa")]
+position = Vector2(642, 338.00003)
+
+[node name="line_controller" type="Node2D" parent="." unique_id=1231839291]
+unique_name_in_owner = true
+script = ExtResource("4_iwybi")
+
+[node name="line_rendering" type="Node2D" parent="." unique_id=188203355]
+script = ExtResource("5_xi6ke")
+
+[node name="line_collider" type="Node2D" parent="." unique_id=1938069666]
+script = ExtResource("6_i8l5y")
+
+[node name="player_pos" type="Marker2D" parent="." unique_id=1770960032]
+unique_name_in_owner = true
+position = Vector2(178, 104)
+
+[node name="Sprite2D" type="Sprite2D" parent="player_pos" unique_id=1981605666]
+scale = Vector2(0.86, 0.86)
+texture = ExtResource("7_i8l5y")
+
+[node name="floating" type="Node2D" parent="player_pos" unique_id=1384107538 node_paths=PackedStringArray("floating_object")]
+script = ExtResource("8_fhsmn")
+floating_object = NodePath("../Sprite2D")
+float_height = 7.0
+float_duration = 1.5

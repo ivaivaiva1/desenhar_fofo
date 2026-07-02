@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://binf33aajd47b"]
+
+[ext_resource type="Script" uid="uid://b2qlfq6dvkuqg" path="res://Scripts/level_manager.gd" id="1_ci404"]
+[ext_resource type="Texture2D" uid="uid://biqh22lkslyvy" path="res://Sprites/gordao_astronauta.png" id="2_3h21g"]
+[ext_resource type="Script" uid="uid://cbc24q2fpet5x" path="res://Scripts/floating.gd" id="3_tt2a7"]
+[ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/collectables_controller.gd" id="4_aprpu"]
+[ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/cama.tscn" id="5_ds0h8"]
+[ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/collectable.tscn" id="6_vo0n3"]
+[ext_resource type="Script" uid="uid://dfktrjfq4daxy" path="res://Scripts/line_controller.gd" id="7_obx2n"]
+[ext_resource type="Script" uid="uid://bjkdkcl3blwmn" path="res://Scripts/line_rendering.gd" id="8_hcxy8"]
+[ext_resource type="Script" uid="uid://cryc6w5ro18dn" path="res://Scripts/line_collider.gd" id="9_ejytl"]
+
+[node name="level_manager" type="Node2D" unique_id=1942550901]
+script = ExtResource("1_ci404")
+is_testing = true
+
+[node name="player_pos" type="Marker2D" parent="." unique_id=1605794197]
+unique_name_in_owner = true
+position = Vector2(178, 104)
+
+[node name="Sprite2D" type="Sprite2D" parent="player_pos" unique_id=996276655]
+scale = Vector2(0.86, 0.86)
+texture = ExtResource("2_3h21g")
+
+[node name="floating" type="Node2D" parent="player_pos" unique_id=267157271 node_paths=PackedStringArray("floating_object")]
+script = ExtResource("3_tt2a7")
+floating_object = NodePath("../Sprite2D")
+float_height = 7.0
+float_duration = 1.5
+
+[node name="collectables_controller" type="Node2D" parent="." unique_id=569908720]
+unique_name_in_owner = true
+script = ExtResource("4_aprpu")
+
+[node name="cama" parent="collectables_controller" unique_id=1009130463 instance=ExtResource("5_ds0h8")]
+position = Vector2(942, 444)
+
+[node name="collectable" parent="collectables_controller" unique_id=186391876 instance=ExtResource("6_vo0n3")]
+position = Vector2(440.00003, 129.00002)
+
+[node name="collectable2" parent="collectables_controller" unique_id=282371562 instance=ExtResource("6_vo0n3")]
+position = Vector2(855, 201.00003)
+
+[node name="collectable3" parent="collectables_controller" unique_id=2015754005 instance=ExtResource("6_vo0n3")]
+position = Vector2(166, 461.00003)
+
+[node name="collectable4" parent="collectables_controller" unique_id=1358002574 instance=ExtResource("6_vo0n3")]
+position = Vector2(642, 338.00003)
+
+[node name="line_controller" type="Node2D" parent="." unique_id=1640535268]
+unique_name_in_owner = true
+script = ExtResource("7_obx2n")
+
+[node name="line_rendering" type="Node2D" parent="." unique_id=1721059272]
+script = ExtResource("8_hcxy8")
+
+[node name="line_collider" type="Node2D" parent="." unique_id=1743104282]
+script = ExtResource("9_ejytl")
+
+[node name="state_label" type="RichTextLabel" parent="." unique_id=1308438878]
+offset_top = 607.0
+offset_right = 1152.0
+offset_bottom = 647.0
+theme_override_font_sizes/normal_font_size = 25
+text = "PRESS START TO PLAY"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2017613795]
+z_index = -4096
+offset_left = -4.0
+offset_top = -6.0
+offset_right = 1156.0
+offset_bottom = 652.0
+color = Color(0.27058825, 0, 0, 1)

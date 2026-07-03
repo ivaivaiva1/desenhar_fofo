@@ -5,8 +5,10 @@ class_name LevelManager
 var next_level = preload("res://Scenes/collectable.tscn")
 
 @onready var line_controller: LineController = %line_controller
-var collectables_controller: CollectablesController
+@onready var load_level: LoadLevel = %load_level
 @onready var state_label: RichTextLabel = $state_label
+var collectables_controller: CollectablesController
+
 
 var player_scene: PackedScene = preload("uid://cre6fiyfcf35x")
 var player_pos: Marker2D 
@@ -33,9 +35,11 @@ func _process(_delta: float) -> void:
 func start_drawning():
 	current_state = GAME_STATE.DRAWNING
 	rolling_bob.auto_destroy()
+	state_label.text = ("PRESS START TO PLAY")
+	if load_level.level_instance == null: return
 	collectables_controller.restore_collectables()
 	player_pos.visible = true
-	state_label.text = ("PRESS START TO PLAY")
+
 
 
 func start_rolling():
@@ -64,4 +68,7 @@ func pass_level():
 	if is_testing:
 		start_drawning()
 		return
-	get_tree().change_scene_to_packed(next_level)
+	load_level.free_level()
+	start_drawning()
+	CurrentLevel.current_level += 1
+	load_level.do_load_level()

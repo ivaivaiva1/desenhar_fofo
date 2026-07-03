@@ -1,11 +1,11 @@
 extends Node2D
+class_name LoadLevel
 
 @onready var level_manager: LevelManager = get_parent()
 @export var current_world: CurrentLevel.WORLDS 
 @export var level: int
 
 var level_instance = Level 
-var enviorement_instance = Node2D
 
 
 func _ready() -> void:
@@ -14,6 +14,7 @@ func _ready() -> void:
 
 
 func do_load_level():
+	level = CurrentLevel.current_level
 	spawn_level()
 	spawn_enviorement()
 
@@ -52,6 +53,11 @@ func spawn_enviorement():
 	match current_world:
 		CurrentLevel.WORLDS.SPACE:
 			target_enviorement = space_enviorement
-	enviorement_instance = target_enviorement.instantiate()
-	get_tree().current_scene.add_child.call_deferred(enviorement_instance)
+	var enviorement_instance = target_enviorement.instantiate()
+	level_instance.add_child.call_deferred(enviorement_instance)
 	enviorement_instance.global_position = Vector2.ZERO
+
+
+func free_level():
+	level_instance.queue_free()
+	level_instance = null

@@ -1,7 +1,7 @@
 extends Node2D
 class_name CollectablesController
 
-@onready var level_manager: LevelManager = get_parent() as LevelManager
+@onready var level_manager: LevelManager = get_tree().current_scene as LevelManager
 var level_collectables: Array[Collectable] = []
 
 

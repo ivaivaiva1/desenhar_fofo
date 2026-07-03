@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c7mrc7tpslwvn"]
+
+[ext_resource type="Script" uid="uid://bwk6yq56faubf" path="res://Scripts/LevelLoop/level.gd" id="1_ffhb2"]
+[ext_resource type="PackedScene" uid="uid://hv0uyenq7lw7" path="res://Scenes/player_spawner.tscn" id="1_vl2sw"]
+[ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/collectables_controller.gd" id="2_ffhb2"]
+[ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/cama.tscn" id="3_vcpgf"]
+[ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/collectable.tscn" id="4_7h5f8"]
+
+[node name="level01_space" type="Node2D" unique_id=1864007018]
+script = ExtResource("1_ffhb2")
+
+[node name="player_spawner" parent="." unique_id=1071021330 instance=ExtResource("1_vl2sw")]
+unique_name_in_owner = true
+position = Vector2(178, 104)
+
+[node name="collectables_controller" type="Node2D" parent="." unique_id=710388454]
+unique_name_in_owner = true
+script = ExtResource("2_ffhb2")
+
+[node name="cama" parent="collectables_controller" unique_id=1009130463 instance=ExtResource("3_vcpgf")]
+position = Vector2(942, 444)
+
+[node name="collectable" parent="collectables_controller" unique_id=186391876 instance=ExtResource("4_7h5f8")]
+position = Vector2(440.00003, 129.00002)
+
+[node name="collectable2" parent="collectables_controller" unique_id=922472791 instance=ExtResource("4_7h5f8")]
+position = Vector2(855, 201.00003)
+
+[node name="collectable3" parent="collectables_controller" unique_id=464806080 instance=ExtResource("4_7h5f8")]
+position = Vector2(166, 461.00003)
+
+[node name="collectable4" parent="collectables_controller" unique_id=1924941152 instance=ExtResource("4_7h5f8")]
+position = Vector2(642, 338.00003)

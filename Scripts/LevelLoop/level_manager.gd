@@ -2,22 +2,17 @@ extends Node2D
 class_name LevelManager
 
 @export var is_testing: bool = false
-@export var current_world: GameWorlds.WORLDS 
 var next_level = preload("res://Scenes/collectable.tscn")
 
 @onready var line_controller: LineController = %line_controller
-@onready var collectables_controller: CollectablesController = %collectables_controller
+var collectables_controller: CollectablesController
 @onready var state_label: RichTextLabel = $state_label
 
 var player_scene: PackedScene = preload("uid://cre6fiyfcf35x")
-@onready var player_pos: Marker2D = %player_spawner
+var player_pos: Marker2D 
 
 var current_state: GAME_STATE = GAME_STATE.DRAWNING
 var rolling_bob: Player
-
-
-func _ready() -> void:
-	spawn_enviorement()
 
 
 func _process(_delta: float) -> void:
@@ -70,14 +65,3 @@ func pass_level():
 		start_drawning()
 		return
 	get_tree().change_scene_to_packed(next_level)
-
-
-var space_enviorement: PackedScene = preload("uid://cpgoaknm65vp5")
-func spawn_enviorement():
-	var target_enviorement: PackedScene
-	match current_world:
-		GameWorlds.WORLDS.SPACE:
-			target_enviorement = space_enviorement
-	var enviorement_instance:= target_enviorement.instantiate()
-	get_tree().current_scene.add_child(enviorement_instance)
-	enviorement_instance.global_position = Vector2.ZERO

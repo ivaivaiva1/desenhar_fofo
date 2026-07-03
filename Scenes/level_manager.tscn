@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://binf33aajd47b"]
 
 [ext_resource type="Script" uid="uid://b2qlfq6dvkuqg" path="res://Scripts/level_manager.gd" id="1_ci404"]
-[ext_resource type="Texture2D" uid="uid://biqh22lkslyvy" path="res://Sprites/gordao_astronauta.png" id="2_3h21g"]
-[ext_resource type="Script" uid="uid://cbc24q2fpet5x" path="res://Scripts/floating.gd" id="3_tt2a7"]
+[ext_resource type="PackedScene" uid="uid://hv0uyenq7lw7" path="res://Scenes/player_spawner.tscn" id="2_ci404"]
 [ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/collectables_controller.gd" id="4_aprpu"]
 [ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/cama.tscn" id="5_ds0h8"]
 [ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/collectable.tscn" id="6_vo0n3"]
@@ -14,19 +13,9 @@
 script = ExtResource("1_ci404")
 is_testing = true
 
-[node name="player_pos" type="Marker2D" parent="." unique_id=1605794197]
+[node name="player_spawner" parent="." unique_id=1071021330 instance=ExtResource("2_ci404")]
 unique_name_in_owner = true
 position = Vector2(178, 104)
-
-[node name="Sprite2D" type="Sprite2D" parent="player_pos" unique_id=996276655]
-scale = Vector2(0.86, 0.86)
-texture = ExtResource("2_3h21g")
-
-[node name="floating" type="Node2D" parent="player_pos" unique_id=267157271 node_paths=PackedStringArray("floating_object")]
-script = ExtResource("3_tt2a7")
-floating_object = NodePath("../Sprite2D")
-float_height = 7.0
-float_duration = 1.5
 
 [node name="collectables_controller" type="Node2D" parent="." unique_id=569908720]
 unique_name_in_owner = true
@@ -66,11 +55,3 @@ text = "PRESS START TO PLAY"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=2017613795]
-z_index = -4096
-offset_left = -4.0
-offset_top = -6.0
-offset_right = 1156.0
-offset_bottom = 652.0
-color = Color(0.27058825, 0, 0, 1)

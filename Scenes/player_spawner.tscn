@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://hv0uyenq7lw7"]
+
+[ext_resource type="Texture2D" uid="uid://biqh22lkslyvy" path="res://Sprites/gordao_astronauta.png" id="1_iwcbr"]
+[ext_resource type="Script" uid="uid://cbc24q2fpet5x" path="res://Scripts/floating.gd" id="2_o4mbg"]
+
+[node name="player_spawner" type="Marker2D" unique_id=1071021330 groups=["PlayerSpawner"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=301654723]
+scale = Vector2(0.86, 0.86)
+texture = ExtResource("1_iwcbr")
+
+[node name="floating" type="Node2D" parent="." unique_id=1376148530 node_paths=PackedStringArray("floating_object")]
+script = ExtResource("2_o4mbg")
+floating_object = NodePath("../Sprite2D")
+float_height = 7.0
+float_duration = 1.5

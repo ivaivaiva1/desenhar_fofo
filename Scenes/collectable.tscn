@@ -7,7 +7,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_1tq3v"]
 radius = 33.49754
 
-[node name="collectable" type="Node2D" unique_id=186391876]
+[node name="collectable" type="Node2D" unique_id=186391876 groups=["Collectable"]]
 scale = Vector2(1.015, 1.015)
 script = ExtResource("1_licok")
 

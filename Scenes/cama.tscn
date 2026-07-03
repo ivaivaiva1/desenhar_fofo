@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bcynbwdwllm32" path="res://Sprites/cama.png" id="1_hiwqy"]
 [ext_resource type="Script" uid="uid://cbc24q2fpet5x" path="res://Scripts/floating.gd" id="2_yx27d"]
 
-[node name="cama" type="Node2D" unique_id=1009130463]
+[node name="cama" type="Node2D" unique_id=1009130463 groups=["Cama"]]
 script = ExtResource("1_5o4a5")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1182990813]

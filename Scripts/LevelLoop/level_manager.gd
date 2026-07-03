@@ -5,10 +5,11 @@ class_name LevelManager
 var next_level = preload("res://Scenes/collectable.tscn")
 
 @onready var line_controller: LineController = %line_controller
+@onready var line_rendering = get_node("line_rendering")
+@onready var line_collider = get_node("line_collider")
 @onready var load_level: LoadLevel = %load_level
 @onready var state_label: RichTextLabel = $state_label
 var collectables_controller: CollectablesController
-
 
 var player_scene: PackedScene = preload("uid://cre6fiyfcf35x")
 var player_pos: Marker2D 
@@ -16,17 +17,24 @@ var player_pos: Marker2D
 var current_state: GAME_STATE = GAME_STATE.DRAWNING
 var rolling_bob: Player
 
+signal clear_lines()
+
+
+func _ready() -> void:
+	clear_lines.connect(line_rendering.clear)
+	clear_lines.connect(line_collider.clear)
+
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("ui_select"):
-		get_tree().reload_current_scene()
-	
 	if current_state == GAME_STATE.ROLLING:
 		if Input.is_action_just_pressed("ui_accept"):
 			start_drawning()
 			return
 	
 	if current_state == GAME_STATE.DRAWNING:
+		if Input.is_action_just_pressed("ui_select"):
+			clear_lines.emit()
+		
 		if Input.is_action_just_pressed("ui_accept"):
 				start_rolling()
 				return
@@ -70,5 +78,6 @@ func pass_level():
 		return
 	load_level.free_level()
 	start_drawning()
+	clear_lines.emit()
 	CurrentLevel.current_level += 1
 	load_level.do_load_level()

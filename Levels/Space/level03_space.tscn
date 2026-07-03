@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://ddosmyp801epy"]
+
+[ext_resource type="Script" uid="uid://bwk6yq56faubf" path="res://Scripts/LevelLoop/level.gd" id="1_jw280"]
+[ext_resource type="PackedScene" uid="uid://hv0uyenq7lw7" path="res://Scenes/player_spawner.tscn" id="2_rr08l"]
+[ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/collectables_controller.gd" id="3_3tox5"]
+[ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/cama.tscn" id="4_y3wju"]
+[ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/collectable.tscn" id="5_21uar"]
+
+[node name="level03_space" type="Node2D" unique_id=1864007018]
+script = ExtResource("1_jw280")
+
+[node name="player_spawner" parent="." unique_id=1071021330 instance=ExtResource("2_rr08l")]
+unique_name_in_owner = true
+position = Vector2(1073, 70)
+
+[node name="collectables_controller" type="Node2D" parent="." unique_id=710388454]
+unique_name_in_owner = true
+script = ExtResource("3_3tox5")
+
+[node name="cama" parent="collectables_controller" unique_id=1009130463 instance=ExtResource("4_y3wju")]
+position = Vector2(602, 574)
+
+[node name="collectable" parent="collectables_controller" unique_id=186391876 instance=ExtResource("5_21uar")]
+position = Vector2(376, 80)
+
+[node name="collectable2" parent="collectables_controller" unique_id=922472791 instance=ExtResource("5_21uar")]
+position = Vector2(827, 79.999985)
+
+[node name="collectable3" parent="collectables_controller" unique_id=464806080 instance=ExtResource("5_21uar")]
+position = Vector2(544.00006, 79)
+
+[node name="collectable4" parent="collectables_controller" unique_id=1924941152 instance=ExtResource("5_21uar")]
+position = Vector2(689.00006, 79.99997)
+
+[node name="collectable5" parent="collectables_controller" unique_id=1228734772 instance=ExtResource("5_21uar")]
+position = Vector2(375, 200.99997)
+
+[node name="collectable6" parent="collectables_controller" unique_id=875388077 instance=ExtResource("5_21uar")]
+position = Vector2(826, 200.99995)
+
+[node name="collectable7" parent="collectables_controller" unique_id=691032486 instance=ExtResource("5_21uar")]
+position = Vector2(543.00006, 199.99997)
+
+[node name="collectable8" parent="collectables_controller" unique_id=100631321 instance=ExtResource("5_21uar")]
+position = Vector2(688.00006, 200.99994)
+
+[node name="collectable9" parent="collectables_controller" unique_id=2004039964 instance=ExtResource("5_21uar")]
+position = Vector2(375, 320.99997)
+
+[node name="collectable10" parent="collectables_controller" unique_id=1295920080 instance=ExtResource("5_21uar")]
+position = Vector2(826, 320.99997)
+
+[node name="collectable11" parent="collectables_controller" unique_id=1591727009 instance=ExtResource("5_21uar")]
+position = Vector2(543.00006, 319.99997)
+
+[node name="collectable12" parent="collectables_controller" unique_id=1666455154 instance=ExtResource("5_21uar")]
+position = Vector2(688.00006, 320.99994)
+
+[node name="collectable13" parent="collectables_controller" unique_id=1075868382 instance=ExtResource("5_21uar")]
+position = Vector2(375, 433.99997)
+
+[node name="collectable14" parent="collectables_controller" unique_id=892782354 instance=ExtResource("5_21uar")]
+position = Vector2(826, 433.99997)
+
+[node name="collectable15" parent="collectables_controller" unique_id=1527744314 instance=ExtResource("5_21uar")]
+position = Vector2(543.00006, 432.99997)
+
+[node name="collectable16" parent="collectables_controller" unique_id=1101272630 instance=ExtResource("5_21uar")]
+position = Vector2(688.00006, 433.99994)

@@ -12,6 +12,7 @@ is_testing = true
 
 [node name="load_level" type="Node2D" parent="." unique_id=306488323]
 script = ExtResource("2_ghtn7")
+level = 1
 
 [node name="line_controller" type="Node2D" parent="." unique_id=1640535268]
 unique_name_in_owner = true

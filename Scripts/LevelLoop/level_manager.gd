@@ -43,7 +43,7 @@ func _process(_delta: float) -> void:
 func start_drawning():
 	current_state = GAME_STATE.DRAWNING
 	rolling_bob.auto_destroy()
-	state_label.text = ("PRESS START TO PLAY")
+	state_label.text = (" PRESS START TO PLAY")
 	if load_level.level_instance == null: return
 	collectables_controller.restore_collectables()
 	player_pos.visible = true
@@ -55,7 +55,7 @@ func start_rolling():
 	current_state = GAME_STATE.ROLLING
 	spawn_bob()
 	player_pos.visible = false
-	state_label.text = ("PRESS START TO STOP")
+	state_label.text = (" PRESS START TO STOP")
 
 
 func spawn_bob():

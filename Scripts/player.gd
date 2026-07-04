@@ -23,14 +23,23 @@ func _process(_delta: float) -> void:
 
 func _integrate_forces(state: PhysicsDirectBodyState2D):
 	var gravity: float = gravity_air
-	
 	if state.get_contact_count() > 0:
 		if linear_velocity.y < 0:
 			gravity = gravity_ground_up
 		else:
 			gravity = gravity_ground_down
-	
+		
+	for i in state.get_contact_count():
+		var collider := state.get_contact_collider_object(i)
+		
+		if collider.is_in_group("Pudim"):
+			var normal := state.get_contact_local_normal(i)
+			var pudim: Pudim = collider as Pudim
+			
+			linear_velocity += normal * pudim.pudim_force
+			pudim.pump_pudim()
 	apply_central_force(Vector2.DOWN * gravity * mass)
+
 
 
 var original_scale: Vector2
@@ -52,28 +61,28 @@ func pump_yuumy():
 		sprite,
 		"scale",
 		original_scale * randf_range(0.75, 0.85),
-		0.09
+		0.095
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
 	pump_tween.tween_property(
 		sprite,
 		"scale",
 		original_scale * randf_range(1.10, 1.20),
-		0.08
+		0.088
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
 	pump_tween.tween_property(
 		sprite,
 		"scale",
 		original_scale * randf_range(0.85, 0.95),
-		0.07
+		0.077
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
 	pump_tween.tween_property(
 		sprite,
 		"scale",
 		original_scale,
-		0.06
+		0.064
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
 

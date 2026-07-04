@@ -11,12 +11,12 @@ var level_instance = Level
 func _ready() -> void:
 	CurrentLevel.current_level = level
 	do_load_level()
+	spawn_enviorement()
 
 
 func do_load_level():
 	level = CurrentLevel.current_level
 	spawn_level()
-	spawn_enviorement()
 
 
 var candy_path: String = "res://Levels/Candy/"
@@ -54,7 +54,7 @@ func spawn_enviorement():
 		CurrentLevel.WORLDS.SPACE:
 			target_enviorement = space_enviorement
 	var enviorement_instance = target_enviorement.instantiate()
-	level_instance.add_child.call_deferred(enviorement_instance)
+	get_tree().current_scene.add_child.call_deferred(enviorement_instance)
 	enviorement_instance.global_position = Vector2.ZERO
 
 

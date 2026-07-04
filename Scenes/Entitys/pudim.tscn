@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://c8rqtnxypgm2q"]
+
+[ext_resource type="Texture2D" uid="uid://doaryc8bvmlbd" path="res://Sprites/prato.png" id="1_0506k"]
+[ext_resource type="Script" uid="uid://c53s34m5o7vy1" path="res://Scripts/Entitys/pudim.gd" id="1_i4r8i"]
+[ext_resource type="Texture2D" uid="uid://qyc7n8op0nbm" path="res://Sprites/gelatina_amarela.png" id="2_i4r8i"]
+[ext_resource type="Script" uid="uid://cbc24q2fpet5x" path="res://Scripts/floating.gd" id="4_h3n23"]
+
+[node name="Pudim" type="StaticBody2D" unique_id=540096184 groups=["Pudim"]]
+script = ExtResource("1_i4r8i")
+
+[node name="Prato" type="StaticBody2D" parent="." unique_id=1917443444]
+scale = Vector2(2.595, 2.595)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Prato" unique_id=1855763162]
+visible = false
+polygon = PackedVector2Array(-34.24179, -6.681122, -45.41713, 1.4113617, -45.031784, 6.4210052, -38.095367, 12.5867, -31.544296, 16.825623, -11.120407, 21.83525, 8.532776, 22.220612, 26.644516, 17.596344, 45.141647, 8.347778, 46.297714, 1.7967224, 35.12236, -5.9104004)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=869696583]
+visible = false
+scale = Vector2(2.595, 2.595)
+polygon = PackedVector2Array(-14.588623, -29.41716, 10.459549, -29.41716, 25.87381, -24.792877, 30.112732, -20.168594, 32.810226, -14.002899, 34.737015, -6.295761, -34.24179, -7.0664825, -32.315018, -18.241821, -28.076096, -22.866089)
+
+[node name="sprites_container" type="Node2D" parent="." unique_id=604784532]
+
+[node name="prato_sprite" type="Sprite2D" parent="sprites_container" unique_id=630171695]
+scale = Vector2(2.595, 2.595)
+texture = ExtResource("1_0506k")
+
+[node name="pudim_sprite" type="Sprite2D" parent="sprites_container" unique_id=1241014564]
+unique_name_in_owner = true
+scale = Vector2(2.595, 2.595)
+texture = ExtResource("2_i4r8i")
+
+[node name="floating" type="Node2D" parent="." unique_id=987034080 node_paths=PackedStringArray("floating_object")]
+script = ExtResource("4_h3n23")
+floating_object = NodePath("../sprites_container")
+float_height = 7.0
+float_duration = 1.5

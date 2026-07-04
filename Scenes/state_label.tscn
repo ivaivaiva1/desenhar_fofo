@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://coxucj5dl8fh1"]
+
+[ext_resource type="FontFile" uid="uid://cvngtcdy0lodq" path="res://Fonts/Super Mario Bros. NES.ttf" id="1_u3o5r"]
+[ext_resource type="Script" uid="uid://bihsmxg4rpvy5" path="res://Scripts/LevelLoop/state_label.gd" id="2_j1ppn"]
+
+[sub_resource type="FontVariation" id="FontVariation_708gi"]
+base_font = ExtResource("1_u3o5r")
+
+[node name="state_label" type="RichTextLabel" unique_id=23194447]
+z_index = 4096
+offset_right = 1152.0
+offset_bottom = 40.0
+theme_override_colors/font_outline_color = Color(0.69, 0.66309, 0.15180002, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = SubResource("FontVariation_708gi")
+theme_override_font_sizes/normal_font_size = 14
+text = " PRESS START TO PLAY"
+vertical_alignment = 1
+script = ExtResource("2_j1ppn")
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="." unique_id=402845388]
+unique_name_in_owner = true
+wait_time = 0.8

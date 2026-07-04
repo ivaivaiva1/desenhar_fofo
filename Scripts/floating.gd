@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var floating_object: Node2D 
-@onready var start_y: float = floating_object.position.y
+@onready var start_y: float = floating_object.global_position.y
 
 @export var float_height: float = 5
 @export var float_duration: float = 1
@@ -21,14 +21,14 @@ func do_floating(unique_duration: float):
 	
 	tween.tween_property(
 		floating_object,
-		"position:y",
+		"global_position:y",
 		start_y - float_height,
 		unique_duration
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
 	tween.tween_property(
 		floating_object,
-		"position:y",
+		"global_position:y",
 		start_y,
 		unique_duration
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)

@@ -2,22 +2,18 @@
 
 [ext_resource type="Script" uid="uid://b2qlfq6dvkuqg" path="res://Scripts/LevelLoop/level_manager.gd" id="1_ci404"]
 [ext_resource type="Script" uid="uid://bop5puq6wnjdq" path="res://Scripts/LevelLoop/load_level.gd" id="2_ghtn7"]
-[ext_resource type="FontFile" uid="uid://cvngtcdy0lodq" path="res://Fonts/Super Mario Bros. NES.ttf" id="6_pakjl"]
+[ext_resource type="PackedScene" uid="uid://coxucj5dl8fh1" path="res://Scenes/state_label.tscn" id="6_pakjl"]
 [ext_resource type="Script" uid="uid://dfktrjfq4daxy" path="res://Scripts/LevelLoop/line_controller.gd" id="7_obx2n"]
 [ext_resource type="Script" uid="uid://bjkdkcl3blwmn" path="res://Scripts/LevelLoop/line_rendering.gd" id="8_hcxy8"]
 [ext_resource type="Script" uid="uid://cryc6w5ro18dn" path="res://Scripts/LevelLoop/line_collider.gd" id="9_ejytl"]
 
-[sub_resource type="FontVariation" id="FontVariation_708gi"]
-base_font = ExtResource("6_pakjl")
-
 [node name="level_manager" type="Node2D" unique_id=1942550901]
 script = ExtResource("1_ci404")
-is_testing = true
 
 [node name="load_level" type="Node2D" parent="." unique_id=306488323]
 unique_name_in_owner = true
 script = ExtResource("2_ghtn7")
-level = 4
+level = 1
 
 [node name="line_controller" type="Node2D" parent="." unique_id=1640535268]
 unique_name_in_owner = true
@@ -29,11 +25,7 @@ script = ExtResource("8_hcxy8")
 [node name="line_collider" type="Node2D" parent="." unique_id=1743104282]
 script = ExtResource("9_ejytl")
 
-[node name="state_label" type="RichTextLabel" parent="." unique_id=1308438878]
-offset_right = 1152.0
-offset_bottom = 40.0
-theme_override_fonts/normal_font = SubResource("FontVariation_708gi")
-theme_override_font_sizes/normal_font_size = 14
-text = " PRESS START TO PLAY"
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
+[node name="state_label" parent="." unique_id=23194447 instance=ExtResource("6_pakjl")]
+theme_override_colors/default_color = Color(0.8627451, 0.047058824, 0.047058824, 1)
+theme_override_colors/font_outline_color = Color(0.9843137, 0.9490196, 0.21176471, 1)
+text = " SPACE TO PLAY"

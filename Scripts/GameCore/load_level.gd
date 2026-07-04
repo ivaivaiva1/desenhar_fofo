@@ -53,6 +53,7 @@ func spawn_enviorement():
 	match current_world:
 		CurrentLevel.WORLDS.SPACE:
 			target_enviorement = space_enviorement
+	if target_enviorement == null: return
 	var enviorement_instance = target_enviorement.instantiate()
 	get_tree().current_scene.add_child.call_deferred(enviorement_instance)
 	enviorement_instance.global_position = Vector2.ZERO

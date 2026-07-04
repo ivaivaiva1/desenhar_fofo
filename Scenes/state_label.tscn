@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://coxucj5dl8fh1"]
 
 [ext_resource type="FontFile" uid="uid://cvngtcdy0lodq" path="res://Fonts/Super Mario Bros. NES.ttf" id="1_u3o5r"]
-[ext_resource type="Script" uid="uid://bihsmxg4rpvy5" path="res://Scripts/LevelLoop/state_label.gd" id="2_j1ppn"]
+[ext_resource type="Script" uid="uid://bihsmxg4rpvy5" path="res://Scripts/GameCore/Objects/state_label.gd" id="2_j1ppn"]
 
 [sub_resource type="FontVariation" id="FontVariation_708gi"]
 base_font = ExtResource("1_u3o5r")

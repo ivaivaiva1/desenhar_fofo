@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dhlapd5iw2bi"]
+
+[ext_resource type="Script" uid="uid://fjshigaxwr0q" path="res://Scripts/GameCore/Objects/collectable.gd" id="1_4dvax"]
+[ext_resource type="Texture2D" uid="uid://d1uw4aeujvhb8" path="res://Sprites/pelicanooo.png" id="2_gmkae"]
+[ext_resource type="Script" uid="uid://cvaejuimtiv26" path="res://Scripts/Behaviours/floating_patrol.gd" id="3_37k74"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1tq3v"]
+radius = 33.49754
+
+[node name="papagaio" type="Node2D" unique_id=186391876 groups=["Collectable"]]
+scale = Vector2(1.015, 1.015)
+script = ExtResource("1_4dvax")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1524499499]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=322469688]
+position = Vector2(-0.98522174, -1.9704435)
+shape = SubResource("CircleShape2D_1tq3v")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1871186142]
+unique_name_in_owner = true
+scale = Vector2(0.212, 0.212)
+texture = ExtResource("2_gmkae")
+flip_h = true
+
+[node name="floating_patrol" type="Node2D" parent="." unique_id=1663466198 node_paths=PackedStringArray("target_object")]
+script = ExtResource("3_37k74")
+target_object = NodePath("../patrol_target")
+transition = 4
+
+[node name="patrol_target" type="Marker2D" parent="." unique_id=1758924140]
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

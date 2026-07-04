@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://binf33aajd47b"]
 
-[ext_resource type="Script" uid="uid://b2qlfq6dvkuqg" path="res://Scripts/LevelLoop/level_manager.gd" id="1_ci404"]
-[ext_resource type="Script" uid="uid://bop5puq6wnjdq" path="res://Scripts/LevelLoop/load_level.gd" id="2_ghtn7"]
+[ext_resource type="Script" uid="uid://b2qlfq6dvkuqg" path="res://Scripts/GameCore/level_manager.gd" id="1_ci404"]
+[ext_resource type="Script" uid="uid://bop5puq6wnjdq" path="res://Scripts/GameCore/load_level.gd" id="2_ghtn7"]
 [ext_resource type="PackedScene" uid="uid://coxucj5dl8fh1" path="res://Scenes/state_label.tscn" id="6_pakjl"]
-[ext_resource type="Script" uid="uid://dfktrjfq4daxy" path="res://Scripts/LevelLoop/line_controller.gd" id="7_obx2n"]
-[ext_resource type="Script" uid="uid://bjkdkcl3blwmn" path="res://Scripts/LevelLoop/line_rendering.gd" id="8_hcxy8"]
-[ext_resource type="Script" uid="uid://cryc6w5ro18dn" path="res://Scripts/LevelLoop/line_collider.gd" id="9_ejytl"]
+[ext_resource type="Script" uid="uid://dfktrjfq4daxy" path="res://Scripts/GameCore/line_controller.gd" id="7_obx2n"]
+[ext_resource type="Script" uid="uid://bjkdkcl3blwmn" path="res://Scripts/GameCore/line_rendering.gd" id="8_hcxy8"]
+[ext_resource type="Script" uid="uid://cryc6w5ro18dn" path="res://Scripts/GameCore/line_collider.gd" id="9_ejytl"]
 
 [node name="level_manager" type="Node2D" unique_id=1942550901]
 script = ExtResource("1_ci404")
@@ -13,6 +13,7 @@ script = ExtResource("1_ci404")
 [node name="load_level" type="Node2D" parent="." unique_id=306488323]
 unique_name_in_owner = true
 script = ExtResource("2_ghtn7")
+current_world = 1
 level = 1
 
 [node name="line_controller" type="Node2D" parent="." unique_id=1640535268]

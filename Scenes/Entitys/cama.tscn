@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://m64lbytajtml"]
 
-[ext_resource type="Script" uid="uid://bxntjccfapdub" path="res://Scripts/cama.gd" id="1_5o4a5"]
+[ext_resource type="Script" uid="uid://bxntjccfapdub" path="res://Scripts/GameCore/Objects/cama.gd" id="1_5o4a5"]
 [ext_resource type="Texture2D" uid="uid://bcynbwdwllm32" path="res://Sprites/cama.png" id="1_hiwqy"]
-[ext_resource type="Script" uid="uid://cbc24q2fpet5x" path="res://Scripts/floating.gd" id="2_yx27d"]
+[ext_resource type="Script" uid="uid://cbc24q2fpet5x" path="res://Scripts/Behaviours/floating.gd" id="2_yx27d"]
 
 [node name="cama" type="Node2D" unique_id=1009130463 groups=["Cama"]]
 script = ExtResource("1_5o4a5")
@@ -20,7 +20,6 @@ polygon = PackedVector2Array(-55, 8, 6, -12, 10, -19, 19, -21, 54, -1, 57, 4, 57
 [node name="floating" type="Node2D" parent="." unique_id=1240163059 node_paths=PackedStringArray("floating_object")]
 script = ExtResource("2_yx27d")
 floating_object = NodePath("../Sprite")
-float_height = 7.0
 float_duration = 1.5
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

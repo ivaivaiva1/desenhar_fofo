@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dh7l6aoyv2g5t"]
+
+[ext_resource type="Script" uid="uid://bwk6yq56faubf" path="res://Scripts/GameCore/level.gd" id="1_kpbm5"]
+[ext_resource type="PackedScene" uid="uid://hv0uyenq7lw7" path="res://Scenes/player_spawner.tscn" id="2_ctkhu"]
+[ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/GameCore/collectables_controller.gd" id="3_npukg"]
+[ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/Entitys/cama.tscn" id="4_m7gne"]
+[ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/food.tscn" id="5_m73si"]
+
+[node name="level" type="Node2D" unique_id=1864007018]
+script = ExtResource("1_kpbm5")
+
+[node name="player_spawner" parent="." unique_id=1071021330 instance=ExtResource("2_ctkhu")]
+unique_name_in_owner = true
+position = Vector2(592, 93)
+
+[node name="collectables_controller" type="Node2D" parent="." unique_id=710388454]
+unique_name_in_owner = true
+script = ExtResource("3_npukg")
+
+[node name="cama" parent="collectables_controller" unique_id=1009130463 instance=ExtResource("4_m7gne")]
+position = Vector2(592, 558)
+
+[node name="collectable4" parent="collectables_controller" unique_id=311860417 instance=ExtResource("5_m73si")]
+position = Vector2(96, 279.00003)
+
+[node name="collectable2" parent="collectables_controller" unique_id=922472791 instance=ExtResource("5_m73si")]
+position = Vector2(256, 279.00003)
+
+[node name="collectable3" parent="collectables_controller" unique_id=1289604986 instance=ExtResource("5_m73si")]
+position = Vector2(416.00003, 279)
+
+[node name="collectable5" parent="collectables_controller" unique_id=186391876 instance=ExtResource("5_m73si")]
+position = Vector2(736, 279.00003)
+
+[node name="collectable6" parent="collectables_controller" unique_id=1542912169 instance=ExtResource("5_m73si")]
+position = Vector2(896, 279.00003)
+
+[node name="collectable7" parent="collectables_controller" unique_id=651045096 instance=ExtResource("5_m73si")]
+position = Vector2(1056.0001, 279.00003)

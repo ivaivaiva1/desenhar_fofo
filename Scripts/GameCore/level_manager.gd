@@ -2,7 +2,6 @@ extends Node2D
 class_name LevelManager
 
 @export var is_testing: bool = false
-var next_level = preload("res://Scenes/collectable.tscn")
 
 @onready var line_controller: LineController = %line_controller
 @onready var line_rendering = get_node("line_rendering")

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cre6fiyfcf35x"]
 
-[ext_resource type="Script" uid="uid://doceqgnqsgu5" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Script" uid="uid://doceqgnqsgu5" path="res://Scripts/GameCore/Objects/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://biqh22lkslyvy" path="res://Sprites/gordao_astronauta.png" id="2_cvnsp"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ryrav"]

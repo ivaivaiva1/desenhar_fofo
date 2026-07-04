@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://doaryc8bvmlbd" path="res://Sprites/prato.png" id="1_0506k"]
 [ext_resource type="Script" uid="uid://c53s34m5o7vy1" path="res://Scripts/Entitys/pudim.gd" id="1_i4r8i"]
 [ext_resource type="Texture2D" uid="uid://qyc7n8op0nbm" path="res://Sprites/gelatina_amarela.png" id="2_i4r8i"]
-[ext_resource type="Script" uid="uid://cbc24q2fpet5x" path="res://Scripts/floating.gd" id="4_h3n23"]
+[ext_resource type="Script" uid="uid://cbc24q2fpet5x" path="res://Scripts/Behaviours/floating.gd" id="4_h3n23"]
 
 [node name="Pudim" type="StaticBody2D" unique_id=540096184 groups=["Pudim"]]
 script = ExtResource("1_i4r8i")
@@ -34,5 +34,5 @@ texture = ExtResource("2_i4r8i")
 [node name="floating" type="Node2D" parent="." unique_id=987034080 node_paths=PackedStringArray("floating_object")]
 script = ExtResource("4_h3n23")
 floating_object = NodePath("../sprites_container")
-float_height = 7.0
+float_height = 2.5
 float_duration = 1.5

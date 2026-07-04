@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://c5x8myjxj4tyx"]
+
+[ext_resource type="Script" uid="uid://bwk6yq56faubf" path="res://Scripts/GameCore/level.gd" id="1_j0y70"]
+[ext_resource type="PackedScene" uid="uid://hv0uyenq7lw7" path="res://Scenes/player_spawner.tscn" id="2_8au82"]
+[ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/GameCore/collectables_controller.gd" id="3_3pb2w"]
+[ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/Entitys/cama.tscn" id="4_nutnc"]
+[ext_resource type="PackedScene" uid="uid://dhlapd5iw2bi" path="res://Scenes/Entitys/papagaio.tscn" id="5_qepil"]
+[ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/food.tscn" id="5_w6dua"]
+
+[node name="level" type="Node2D" unique_id=1864007018]
+script = ExtResource("1_j0y70")
+
+[node name="player_spawner" parent="." unique_id=1071021330 instance=ExtResource("2_8au82")]
+unique_name_in_owner = true
+position = Vector2(96, 96)
+
+[node name="collectables_controller" type="Node2D" parent="." unique_id=710388454]
+unique_name_in_owner = true
+script = ExtResource("3_3pb2w")
+
+[node name="cama" parent="collectables_controller" unique_id=1009130463 instance=ExtResource("4_nutnc")]
+position = Vector2(1056, 544)
+
+[node name="papagaio" parent="collectables_controller" unique_id=186391876 instance=ExtResource("5_qepil")]
+position = Vector2(288, 96)
+
+[node name="floating_patrol" parent="collectables_controller/papagaio" index="2" unique_id=1663466198]
+position = Vector2(-6.0133163e-05, -3.0066582e-05)
+travel_time = 8.0
+
+[node name="patrol_target" parent="collectables_controller/papagaio" index="3" unique_id=1758924140]
+position = Vector2(0, 441.3793)
+
+[node name="collectable" parent="collectables_controller" unique_id=1693343819 instance=ExtResource("5_w6dua")]
+position = Vector2(480.00003, 320)
+
+[node name="collectable2" parent="collectables_controller" unique_id=213420676 instance=ExtResource("5_w6dua")]
+position = Vector2(608, 320.00003)
+
+[node name="collectable3" parent="collectables_controller" unique_id=293433622 instance=ExtResource("5_w6dua")]
+position = Vector2(736.00006, 320.00003)
+
+[node name="collectable4" parent="collectables_controller" unique_id=2042838463 instance=ExtResource("5_w6dua")]
+position = Vector2(832.00006, 320.00003)
+
+[editable path="collectables_controller/papagaio"]

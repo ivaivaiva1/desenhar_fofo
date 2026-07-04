@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://j7lymsebhxtp"]
 
-[ext_resource type="Script" uid="uid://bwk6yq56faubf" path="res://Scripts/LevelLoop/level.gd" id="1_f5ysl"]
+[ext_resource type="Script" uid="uid://bwk6yq56faubf" path="res://Scripts/GameCore/level.gd" id="1_f5ysl"]
 [ext_resource type="PackedScene" uid="uid://hv0uyenq7lw7" path="res://Scenes/player_spawner.tscn" id="2_7kydc"]
-[ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/collectables_controller.gd" id="3_30bx0"]
-[ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/cama.tscn" id="4_b5lhv"]
-[ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/collectable.tscn" id="5_a4ni2"]
+[ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/GameCore/collectables_controller.gd" id="3_30bx0"]
+[ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/Entitys/cama.tscn" id="4_b5lhv"]
+[ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/food.tscn" id="5_a4ni2"]
 [ext_resource type="PackedScene" uid="uid://c8rqtnxypgm2q" path="res://Scenes/Entitys/pudim.tscn" id="6_h53u1"]
 
-[node name="level06_space" type="Node2D" unique_id=1864007018]
+[node name="level" type="Node2D" unique_id=1864007018]
 script = ExtResource("1_f5ysl")
 
 [node name="player_spawner" parent="." unique_id=1071021330 instance=ExtResource("2_7kydc")]

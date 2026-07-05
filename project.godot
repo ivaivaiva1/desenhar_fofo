@@ -32,6 +32,7 @@ Collectable=""
 Cama=""
 PlayerSpawner=""
 Pudim=""
+draw_blocker=""
 
 [input]
 

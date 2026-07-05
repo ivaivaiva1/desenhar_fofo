@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dy2epci38kera"]
+
+[ext_resource type="Script" uid="uid://dfktrjfq4daxy" path="res://Scripts/GameCore/line_controller.gd" id="1_3sjni"]
+
+[node name="line_controller" type="Node2D" unique_id=679656892]
+script = ExtResource("1_3sjni")
+
+[node name="draw_area" type="TextureRect" parent="." unique_id=693275038]
+unique_name_in_owner = true
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 0
+
+[connection signal="gui_input" from="draw_area" to="." method="_on_draw_area_gui_input"]

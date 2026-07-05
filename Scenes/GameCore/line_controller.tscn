@@ -2,13 +2,17 @@
 
 [ext_resource type="Script" uid="uid://dfktrjfq4daxy" path="res://Scripts/GameCore/line_controller.gd" id="1_3sjni"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f40gr"]
+size = Vector2(1152, 648)
+
 [node name="line_controller" type="Node2D" unique_id=679656892]
 script = ExtResource("1_3sjni")
 
-[node name="draw_area" type="TextureRect" parent="." unique_id=693275038]
+[node name="draw_area" type="Area2D" parent="." unique_id=86845867 groups=["DrawArea"]]
 unique_name_in_owner = true
-offset_right = 1152.0
-offset_bottom = 648.0
-mouse_filter = 0
+position = Vector2(576, 324)
 
-[connection signal="gui_input" from="draw_area" to="." method="_on_draw_area_gui_input"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="draw_area" unique_id=613761997]
+shape = SubResource("RectangleShape2D_f40gr")
+
+[connection signal="input_event" from="draw_area" to="." method="_on_draw_area_input_event"]

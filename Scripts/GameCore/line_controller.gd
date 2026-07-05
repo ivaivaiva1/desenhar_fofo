@@ -1,10 +1,10 @@
-extends Node
+extends Node2D
 class_name LineController
 
 @onready var level_manager: LevelManager = get_parent() as LevelManager
 @onready var line_rendering = get_parent().get_node("line_rendering")
 @onready var line_collider = get_parent().get_node("line_collider")
-@onready var draw_area: TextureRect = %draw_area
+@onready var draw_area: Area2D = %draw_area
 
 var current_line: Line
 var is_drawing: bool = false
@@ -23,7 +23,7 @@ func _ready():
 	line_finished.connect(line_collider.add_line)
 
 
-func _on_draw_area_gui_input(event: InputEvent) -> void:
+func _on_draw_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if level_manager.current_state == level_manager.GAME_STATE.ROLLING:
 		return
 	
@@ -47,17 +47,23 @@ func handle_mouse_button(event: InputEventMouseButton):
 func handle_mouse_motion(event: InputEventMouseMotion):
 	if !is_drawing:
 		return
+	var mouse_pos:= get_global_mouse_position()
 	
 	var last_point: Vector2 = current_line.source_points[-1]
-	
-	var result: Dictionary = get_last_valid_point(last_point, event.position)
+	var result: Dictionary = get_last_valid_point(last_point, mouse_pos)
 	
 	if result["blocked"]:
-		add_point(result["point"])
-		finish_line()
+		var last_valid_point = result["point"]
+		
+		add_point(last_valid_point)
+		
+		# NÃO termina imediatamente de forma “seca”
+		# só encerra o estado
+		is_drawing = false
+		current_line = null
 		return
 	
-	add_point(event.position)
+	add_point(mouse_pos)
 
 
 func get_last_valid_point(from: Vector2, to: Vector2) -> Dictionary:
@@ -85,18 +91,34 @@ func get_last_valid_point(from: Vector2, to: Vector2) -> Dictionary:
 
 
 func can_draw_at(point: Vector2) -> bool:
-	if !draw_area.get_global_rect().has_point(point):
+	var query := PhysicsPointQueryParameters2D.new()
+	query.position = point
+	query.collide_with_areas = true
+	query.collide_with_bodies = false
+	query.collision_mask = 1
+
+	var space_state := get_viewport().world_2d.direct_space_state
+	var hits := space_state.intersect_point(query)
+	print(hits)
+	if hits.is_empty():
 		return false
-	
-	for control in get_tree().get_nodes_in_group("draw_blocker"):
-		if control is Control and control.get_global_rect().has_point(point):
+
+	var inside_draw_area := false
+
+	for hit in hits:
+		var collider = hit.collider
+
+		if collider.is_in_group("DrawBlocker"):
 			return false
-	
-	return true
+
+		if collider.is_in_group("DrawArea"):
+			inside_draw_area = true
+
+	return inside_draw_area
 
 
 func start_line():
-	var mouse_pos := get_viewport().get_mouse_position()
+	var mouse_pos := get_global_mouse_position()
 	
 	if !can_draw_at(mouse_pos):
 		return

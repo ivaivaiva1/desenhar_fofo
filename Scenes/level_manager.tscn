@@ -7,6 +7,9 @@
 [ext_resource type="Script" uid="uid://bjkdkcl3blwmn" path="res://Scripts/GameCore/line_rendering.gd" id="8_hcxy8"]
 [ext_resource type="Script" uid="uid://cryc6w5ro18dn" path="res://Scripts/GameCore/line_collider.gd" id="9_ejytl"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1tq3v"]
+size = Vector2(233, 68)
+
 [node name="level_manager" type="Node2D" unique_id=1942550901]
 script = ExtResource("1_ci404")
 
@@ -29,9 +32,15 @@ theme_override_colors/default_color = Color(0.84313726, 0.48235294, 0.7294118, 1
 theme_override_colors/font_outline_color = Color(0.6039216, 0.84705883, 0.93333334, 1)
 text = " SPACE TO PLAY"
 
-[node name="Button" type="Button" parent="." unique_id=511872069 groups=["draw_blocker"]]
+[node name="Button" type="Button" parent="." unique_id=511872069]
 offset_left = 404.0
 offset_top = 188.0
 offset_right = 637.0
 offset_bottom = 256.0
 text = "SPACE TO PLAY"
+
+[node name="Area2D" type="Area2D" parent="Button" unique_id=1728336147 groups=["DrawBlocker"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button/Area2D" unique_id=383961179]
+position = Vector2(116.5, 34)
+shape = SubResource("RectangleShape2D_1tq3v")

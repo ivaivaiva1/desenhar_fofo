@@ -14,7 +14,8 @@ signal line_finished(line: Line)
 
 
 func _ready():
-	line_rendering.line_color = SkinPicker.line_color()
+	update_line_color()
+	WorldIsChangingEmmiter.world_is_changing.connect(update_line_color)
 	line_started.connect(line_rendering._on_line_started)
 	point_added.connect(line_rendering._on_point_added)
 	line_finished.connect(line_rendering._on_line_finished)
@@ -61,3 +62,8 @@ func finish_line():
 func add_point(point: Vector2):
 	current_line.source_points.append(point)
 	point_added.emit(current_line, point)
+
+
+@onready var WorldIsChangingEmmiter: LoadLevel = get_tree().get_first_node_in_group("WorldIsChangingEmmiter") as LoadLevel
+func update_line_color():
+	line_rendering.line_color = SkinPicker.line_color()

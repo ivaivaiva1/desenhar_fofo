@@ -3,9 +3,10 @@ extends RichTextLabel
 @onready var timer: Timer = %Timer
 var font_color: Color = Color.BLACK
 var outline_color: Color = Color.WHITE
-
+@onready var WorldIsChangingEmmiter: LoadLevel = get_tree().get_first_node_in_group("WorldIsChangingEmmiter") as LoadLevel
 
 func _ready() -> void:
+	WorldIsChangingEmmiter.world_is_changing.connect(set_label_color)
 	set_label_color()
 	blink_text()
 

@@ -42,18 +42,33 @@ texture = ExtResource("3_jchrq")
 [node name="MarshmallowTree" type="Sprite2D" parent="." unique_id=682389699]
 modulate = Color(1, 1, 1, 0.7647059)
 z_index = -1000
-position = Vector2(776, 546)
+position = Vector2(1101, 533)
 scale = Vector2(1.4642857, 1.4642857)
+texture = ExtResource("5_d2xpe")
+
+[node name="MarshmallowTree4" type="Sprite2D" parent="." unique_id=967952815]
+modulate = Color(1, 1, 1, 0.7647059)
+z_index = -1000
+position = Vector2(710.5, 548.8125)
+scale = Vector2(1.2589283, 1.2589283)
 texture = ExtResource("5_d2xpe")
 
 [node name="MarshmallowTree2" type="Sprite2D" parent="." unique_id=1227331052]
 modulate = Color(1, 1, 1, 0.7647059)
 z_index = -1000
-position = Vector2(435, 546)
+position = Vector2(428.00003, 534)
 scale = Vector2(1.4642857, 1.4642857)
 texture = ExtResource("5_d2xpe")
 
+[node name="MarshmallowTree5" type="Sprite2D" parent="." unique_id=66123274]
+modulate = Color(1, 1, 1, 0.7647059)
+z_index = -1000
+position = Vector2(136, 553)
+scale = Vector2(1.2232144, 1.2232145)
+texture = ExtResource("5_d2xpe")
+
 [node name="SweetMountain" type="Sprite2D" parent="." unique_id=1483374933]
+visible = false
 modulate = Color(1, 1, 1, 0.8627451)
 z_index = -1000
 position = Vector2(295, 572.00006)
@@ -61,6 +76,7 @@ scale = Vector2(2.0259995, 2.0259995)
 texture = ExtResource("6_3gkgr")
 
 [node name="SweetMountain2" type="Sprite2D" parent="." unique_id=670801758]
+visible = false
 modulate = Color(1, 1, 1, 0.8627451)
 z_index = -1000
 position = Vector2(556, 630)
@@ -69,6 +85,7 @@ texture = ExtResource("6_3gkgr")
 flip_h = true
 
 [node name="SweetMountain3" type="Sprite2D" parent="." unique_id=1637645059]
+visible = false
 modulate = Color(1, 1, 1, 0.8627451)
 z_index = -1000
 position = Vector2(1128, 563.00006)
@@ -77,6 +94,7 @@ texture = ExtResource("6_3gkgr")
 flip_h = true
 
 [node name="SweetMountain4" type="Sprite2D" parent="." unique_id=1017383078]
+visible = false
 modulate = Color(1, 1, 1, 0.8627451)
 z_index = -1000
 position = Vector2(-50, 586.00006)
@@ -85,42 +103,42 @@ texture = ExtResource("6_3gkgr")
 flip_h = true
 
 [node name="Cloud1" type="Sprite2D" parent="." unique_id=1103447442]
-modulate = Color(0.84, 0.47879997, 0.72562003, 0.49803922)
+modulate = Color(1, 1, 1, 0.6862745)
 z_index = -1000
 position = Vector2(200.99998, 105)
 scale = Vector2(2.58, 2.58)
 texture = ExtResource("7_rswk1")
 
 [node name="Cloud2" type="Sprite2D" parent="." unique_id=808086901]
-modulate = Color(0.84, 0.47879997, 0.72562003, 0.49803922)
+modulate = Color(1, 1, 1, 0.6862745)
 z_index = -1000
 position = Vector2(862.225, 240.375)
 scale = Vector2(1.9700001, 1.9700001)
 texture = ExtResource("7_rswk1")
 
 [node name="Cloud3" type="Sprite2D" parent="." unique_id=2122272762]
-modulate = Color(0.84, 0.47879997, 0.72562003, 0.49803922)
+modulate = Color(1, 1, 1, 0.6862745)
 z_index = -1000
 position = Vector2(976, 90)
 scale = Vector2(5.214286, 5.214286)
 texture = ExtResource("8_kb8rp")
 
 [node name="Cloud6" type="Sprite2D" parent="." unique_id=1507023488]
-modulate = Color(0.84, 0.47879997, 0.72562003, 0.49803922)
+modulate = Color(1, 1, 1, 0.6862745)
 z_index = -1000
 position = Vector2(593.0178, 281.25003)
 scale = Vector2(4.249998, 4.249998)
 texture = ExtResource("8_kb8rp")
 
 [node name="Cloud4" type="Sprite2D" parent="." unique_id=1542668001]
-modulate = Color(0.84, 0.47879997, 0.72562003, 0.49803922)
+modulate = Color(1, 1, 1, 0.6862745)
 z_index = -1000
 position = Vector2(186.58334, 263.25)
 scale = Vector2(2.8333335, 2.8333333)
 texture = ExtResource("9_0ow7h")
 
 [node name="Cloud5" type="Sprite2D" parent="." unique_id=483153927]
-modulate = Color(0.84, 0.47879997, 0.72562003, 0.49803922)
+modulate = Color(1, 1, 1, 0.6862745)
 z_index = -1000
 position = Vector2(471.67264, 99.125)
 scale = Vector2(1.9880964, 1.9880961)

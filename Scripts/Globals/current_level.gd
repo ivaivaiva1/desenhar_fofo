@@ -1,9 +1,10 @@
 extends Node
 
 var current_level: int
+var current_world: WORLDS
 
 enum WORLDS {
-	SPACE,
 	CANDY,
+	SPACE,
 	SNOW
 }

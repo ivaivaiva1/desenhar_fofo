@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cumvxyqe4xg4r"]
 
-[ext_resource type="Texture2D" uid="uid://vaub5rxhlur4" path="res://Sprites/pizza.png" id="1_3rsma"]
+[ext_resource type="Texture2D" uid="uid://vaub5rxhlur4" path="res://Sprites/Space/pizza.png" id="1_3rsma"]
 [ext_resource type="Script" uid="uid://fjshigaxwr0q" path="res://Scripts/GameCore/Objects/collectable.gd" id="1_licok"]
 [ext_resource type="Script" uid="uid://cbc24q2fpet5x" path="res://Scripts/Behaviours/floating.gd" id="3_me652"]
 
@@ -10,6 +10,7 @@ radius = 33.49754
 [node name="food" type="Node2D" unique_id=186391876 groups=["Collectable"]]
 scale = Vector2(1.015, 1.015)
 script = ExtResource("1_licok")
+entity_type = 1
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1524499499]
 

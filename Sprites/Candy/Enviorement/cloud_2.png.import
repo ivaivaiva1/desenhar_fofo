@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcynbwdwllm32"
-path="res://.godot/imported/cama.png-61096be0a911a620bc90134883d8a893.ctex"
+uid="uid://mcy8ebs17j57"
+path="res://.godot/imported/cloud_2.png-c55bac50d44efce87743ffa813c17994.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/cama.png"
-dest_files=["res://.godot/imported/cama.png-61096be0a911a620bc90134883d8a893.ctex"]
+source_file="res://Sprites/Candy/Enviorement/cloud_2.png"
+dest_files=["res://.godot/imported/cloud_2.png-c55bac50d44efce87743ffa813c17994.ctex"]
 
 [params]
 

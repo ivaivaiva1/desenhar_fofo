@@ -13,7 +13,6 @@ script = ExtResource("1_ci404")
 [node name="load_level" type="Node2D" parent="." unique_id=306488323]
 unique_name_in_owner = true
 script = ExtResource("2_ghtn7")
-current_world = 1
 level = 1
 
 [node name="line_controller" type="Node2D" parent="." unique_id=1640535268]
@@ -27,6 +26,6 @@ script = ExtResource("8_hcxy8")
 script = ExtResource("9_ejytl")
 
 [node name="state_label" parent="." unique_id=23194447 instance=ExtResource("6_pakjl")]
-theme_override_colors/default_color = Color(0.8627451, 0.047058824, 0.047058824, 1)
-theme_override_colors/font_outline_color = Color(0.9843137, 0.9490196, 0.21176471, 1)
+theme_override_colors/default_color = Color(0.84313726, 0.48235294, 0.7294118, 1)
+theme_override_colors/font_outline_color = Color(0.6039216, 0.84705883, 0.93333334, 1)
 text = " SPACE TO PLAY"

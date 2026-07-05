@@ -1,13 +1,15 @@
 [gd_scene format=3 uid="uid://m64lbytajtml"]
 
 [ext_resource type="Script" uid="uid://bxntjccfapdub" path="res://Scripts/GameCore/Objects/cama.gd" id="1_5o4a5"]
-[ext_resource type="Texture2D" uid="uid://bcynbwdwllm32" path="res://Sprites/cama.png" id="1_hiwqy"]
+[ext_resource type="Texture2D" uid="uid://bcynbwdwllm32" path="res://Sprites/Candy/cama_candy.png" id="1_hiwqy"]
 [ext_resource type="Script" uid="uid://cbc24q2fpet5x" path="res://Scripts/Behaviours/floating.gd" id="2_yx27d"]
 
 [node name="cama" type="Node2D" unique_id=1009130463 groups=["Cama"]]
 script = ExtResource("1_5o4a5")
+entity_type = 2
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1182990813]
+unique_name_in_owner = true
 scale = Vector2(1.15, 1.15)
 texture = ExtResource("1_hiwqy")
 

@@ -2,6 +2,7 @@ extends Node2D
 class_name LineRendering
 
 var lines: Array[Line] = []
+var line_color: Color
 
 
 func add_line(line: Line):
@@ -28,7 +29,7 @@ func _draw():
 		if line.source_points.size() < 2: continue
 		draw_polyline(
 			line.source_points,
-			line.color,
+			line_color,
 			line.width
 		)
 

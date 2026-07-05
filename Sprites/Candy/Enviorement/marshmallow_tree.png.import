@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qyc7n8op0nbm"
-path="res://.godot/imported/gelatina_amarela.png-6a32dbfa2e4be9c5f7c646b1b671450a.ctex"
+uid="uid://b5mv7brituycr"
+path="res://.godot/imported/marshmallow_tree.png-c43e31bfac5af4360349b40445325b3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/gelatina_amarela.png"
-dest_files=["res://.godot/imported/gelatina_amarela.png-6a32dbfa2e4be9c5f7c646b1b671450a.ctex"]
+source_file="res://Sprites/Candy/Enviorement/marshmallow_tree.png"
+dest_files=["res://.godot/imported/marshmallow_tree.png-c43e31bfac5af4360349b40445325b3c.ctex"]
 
 [params]
 

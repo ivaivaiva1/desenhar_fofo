@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://bjiygpavx67dp"]
+
+[ext_resource type="Texture2D" uid="uid://dynn24s0cgww8" path="res://Sprites/Candy/Enviorement/sky1.png" id="1_yj73v"]
+[ext_resource type="Texture2D" uid="uid://br3hu3gt17jcy" path="res://Sprites/Candy/Enviorement/sky2.png" id="2_6s8k7"]
+[ext_resource type="Texture2D" uid="uid://58fhp3m762ya" path="res://Sprites/Candy/Enviorement/sky4.png" id="3_jchrq"]
+[ext_resource type="Texture2D" uid="uid://oexbrmxo2uuf" path="res://Sprites/Candy/Enviorement/sky3.png" id="4_8sfmg"]
+[ext_resource type="Texture2D" uid="uid://b5mv7brituycr" path="res://Sprites/Candy/Enviorement/marshmallow_tree.png" id="5_d2xpe"]
+[ext_resource type="Texture2D" uid="uid://ia5nmvp0gtap" path="res://Sprites/Candy/Enviorement/sweet_mountain.png" id="6_3gkgr"]
+[ext_resource type="Texture2D" uid="uid://c75wgj1nan33w" path="res://Sprites/Candy/Enviorement/cloud_1.png" id="7_rswk1"]
+[ext_resource type="Texture2D" uid="uid://mcy8ebs17j57" path="res://Sprites/Candy/Enviorement/cloud_2.png" id="8_kb8rp"]
+[ext_resource type="Texture2D" uid="uid://xals5i2qw46p" path="res://Sprites/Candy/Enviorement/cloud_3.png" id="9_0ow7h"]
+
+[node name="CandyEnviorement" type="Node2D" unique_id=1520312425]
+
+[node name="Sky1" type="Sprite2D" parent="." unique_id=493116398]
+visible = false
+z_index = -4096
+position = Vector2(574.6667, 326.5)
+scale = Vector2(0.6027778, 0.6027778)
+texture = ExtResource("1_yj73v")
+
+[node name="Sky2" type="Sprite2D" parent="." unique_id=2033112129]
+visible = false
+z_index = -4096
+position = Vector2(572.1854, 328.75)
+scale = Vector2(2.4438205, 2.4438202)
+texture = ExtResource("2_6s8k7")
+
+[node name="Sky3" type="Sprite2D" parent="." unique_id=731868240]
+visible = false
+z_index = -4096
+position = Vector2(660, 328.5)
+scale = Vector2(4.4066668, 4.4066668)
+texture = ExtResource("4_8sfmg")
+
+[node name="Sky4" type="Sprite2D" parent="." unique_id=920171103]
+z_index = -4096
+position = Vector2(574.37494, 324)
+scale = Vector2(3.8708332, 3.255)
+texture = ExtResource("3_jchrq")
+
+[node name="MarshmallowTree" type="Sprite2D" parent="." unique_id=682389699]
+modulate = Color(1, 1, 1, 0.7647059)
+z_index = -1000
+position = Vector2(776, 546)
+scale = Vector2(1.4642857, 1.4642857)
+texture = ExtResource("5_d2xpe")
+
+[node name="MarshmallowTree2" type="Sprite2D" parent="." unique_id=1227331052]
+modulate = Color(1, 1, 1, 0.7647059)
+z_index = -1000
+position = Vector2(435, 546)
+scale = Vector2(1.4642857, 1.4642857)
+texture = ExtResource("5_d2xpe")
+
+[node name="SweetMountain" type="Sprite2D" parent="." unique_id=1483374933]
+modulate = Color(1, 1, 1, 0.8627451)
+z_index = -1000
+position = Vector2(295, 572.00006)
+scale = Vector2(2.0259995, 2.0259995)
+texture = ExtResource("6_3gkgr")
+
+[node name="SweetMountain2" type="Sprite2D" parent="." unique_id=670801758]
+modulate = Color(1, 1, 1, 0.8627451)
+z_index = -1000
+position = Vector2(556, 630)
+scale = Vector2(2.0259995, 2.0259995)
+texture = ExtResource("6_3gkgr")
+flip_h = true
+
+[node name="SweetMountain3" type="Sprite2D" parent="." unique_id=1637645059]
+modulate = Color(1, 1, 1, 0.8627451)
+z_index = -1000
+position = Vector2(1128, 563.00006)
+scale = Vector2(2.0259995, 2.0259995)
+texture = ExtResource("6_3gkgr")
+flip_h = true
+
+[node name="SweetMountain4" type="Sprite2D" parent="." unique_id=1017383078]
+modulate = Color(1, 1, 1, 0.8627451)
+z_index = -1000
+position = Vector2(-50, 586.00006)
+scale = Vector2(2.0259995, 2.0259995)
+texture = ExtResource("6_3gkgr")
+flip_h = true
+
+[node name="Cloud1" type="Sprite2D" parent="." unique_id=1103447442]
+modulate = Color(0.84, 0.47879997, 0.72562003, 0.49803922)
+z_index = -1000
+position = Vector2(200.99998, 105)
+scale = Vector2(2.58, 2.58)
+texture = ExtResource("7_rswk1")
+
+[node name="Cloud2" type="Sprite2D" parent="." unique_id=808086901]
+modulate = Color(0.84, 0.47879997, 0.72562003, 0.49803922)
+z_index = -1000
+position = Vector2(862.225, 240.375)
+scale = Vector2(1.9700001, 1.9700001)
+texture = ExtResource("7_rswk1")
+
+[node name="Cloud3" type="Sprite2D" parent="." unique_id=2122272762]
+modulate = Color(0.84, 0.47879997, 0.72562003, 0.49803922)
+z_index = -1000
+position = Vector2(976, 90)
+scale = Vector2(5.214286, 5.214286)
+texture = ExtResource("8_kb8rp")
+
+[node name="Cloud6" type="Sprite2D" parent="." unique_id=1507023488]
+modulate = Color(0.84, 0.47879997, 0.72562003, 0.49803922)
+z_index = -1000
+position = Vector2(593.0178, 281.25003)
+scale = Vector2(4.249998, 4.249998)
+texture = ExtResource("8_kb8rp")
+
+[node name="Cloud4" type="Sprite2D" parent="." unique_id=1542668001]
+modulate = Color(0.84, 0.47879997, 0.72562003, 0.49803922)
+z_index = -1000
+position = Vector2(186.58334, 263.25)
+scale = Vector2(2.8333335, 2.8333333)
+texture = ExtResource("9_0ow7h")
+
+[node name="Cloud5" type="Sprite2D" parent="." unique_id=483153927]
+modulate = Color(0.84, 0.47879997, 0.72562003, 0.49803922)
+z_index = -1000
+position = Vector2(471.67264, 99.125)
+scale = Vector2(1.9880964, 1.9880961)
+texture = ExtResource("9_0ow7h")

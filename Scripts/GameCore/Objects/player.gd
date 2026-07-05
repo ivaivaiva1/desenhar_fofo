@@ -2,13 +2,17 @@ extends RigidBody2D
 class_name Player
 
 var level_manager: LevelManager
+
+@export var entity_type: SkinPicker.ENTITY_TYPE
+@onready var sprite: Sprite2D = %Sprite
+
 @export var gravity_air: float = 100.0
 @export var gravity_ground_down: float = 6000.0
 @export var gravity_ground_up: float = 10
-@onready var sprite: Sprite2D = %Sprite
 
 
 func _ready() -> void:
+	SkinPicker.change_skin(entity_type, sprite)
 	original_scale = sprite.scale
 	
 	contact_monitor = true

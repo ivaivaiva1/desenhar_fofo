@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cpgoaknm65vp5"]
 
-[ext_resource type="Texture2D" uid="uid://hcaex61xyblt" path="res://Sprites/pixelart_starfields/pixelart_starfield.png" id="1_7vfud"]
-[ext_resource type="Texture2D" uid="uid://bomsuprhx1klp" path="res://Sprites/pixelart_starfields/pixelart_starfield_corona.png" id="2_qsvle"]
+[ext_resource type="Texture2D" uid="uid://hcaex61xyblt" path="res://Sprites/Space/pixelart_starfields/pixelart_starfield.png" id="1_7vfud"]
+[ext_resource type="Texture2D" uid="uid://bomsuprhx1klp" path="res://Sprites/Space/pixelart_starfields/pixelart_starfield_corona.png" id="2_qsvle"]
 
 [node name="SpaceEnviorement" type="Node2D" unique_id=1520312425]
 

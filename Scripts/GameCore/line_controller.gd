@@ -14,6 +14,7 @@ signal line_finished(line: Line)
 
 
 func _ready():
+	line_rendering.line_color = SkinPicker.line_color()
 	line_started.connect(line_rendering._on_line_started)
 	point_added.connect(line_rendering._on_point_added)
 	line_finished.connect(line_rendering._on_line_finished)

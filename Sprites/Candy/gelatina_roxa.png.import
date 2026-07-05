@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wa5ujbse68o0"
-path="res://.godot/imported/pixelart_starfield_diagonal_diffraction_spikes.png-ee17af5e2d91451bca772bcc1626acbf.ctex"
+uid="uid://cvmq64launl8n"
+path="res://.godot/imported/gelatina_roxa.png-605a1f94104d097a61e148e2b423fef9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/pixelart_starfields/pixelart_starfield_diagonal_diffraction_spikes.png"
-dest_files=["res://.godot/imported/pixelart_starfield_diagonal_diffraction_spikes.png-ee17af5e2d91451bca772bcc1626acbf.ctex"]
+source_file="res://Sprites/Candy/gelatina_roxa.png"
+dest_files=["res://.godot/imported/gelatina_roxa.png-605a1f94104d097a61e148e2b423fef9.ctex"]
 
 [params]
 

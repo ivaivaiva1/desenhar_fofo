@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://biqh22lkslyvy"
-path="res://.godot/imported/gordao_astronauta.png-0f156bc1dbdd92280952674f9788da25.ctex"
+uid="uid://bomsuprhx1klp"
+path="res://.godot/imported/pixelart_starfield_corona.png-24a4dcc6f4c4cf84db3d66f59f1ffc8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/gordao_astronauta.png"
-dest_files=["res://.godot/imported/gordao_astronauta.png-0f156bc1dbdd92280952674f9788da25.ctex"]
+source_file="res://Sprites/Space/pixelart_starfields/pixelart_starfield_corona.png"
+dest_files=["res://.godot/imported/pixelart_starfield_corona.png-24a4dcc6f4c4cf84db3d66f59f1ffc8d.ctex"]
 
 [params]
 

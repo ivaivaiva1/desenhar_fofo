@@ -10,12 +10,14 @@ var level_instance = Level
 
 func _ready() -> void:
 	CurrentLevel.current_level = level
+	CurrentLevel.current_world = current_world
 	do_load_level()
 	spawn_enviorement()
 
 
 func do_load_level():
 	level = CurrentLevel.current_level
+	CurrentLevel.current_world = current_world
 	spawn_level()
 
 
@@ -46,11 +48,13 @@ func spawn_level():
 	level_instance.start(level_manager)
 
 
-
+var candy_enviorement: PackedScene = preload("uid://bjiygpavx67dp")
 var space_enviorement: PackedScene = preload("uid://cpgoaknm65vp5")
 func spawn_enviorement():
 	var target_enviorement: PackedScene
 	match current_world:
+		CurrentLevel.WORLDS.CANDY:
+			target_enviorement = candy_enviorement
 		CurrentLevel.WORLDS.SPACE:
 			target_enviorement = space_enviorement
 	if target_enviorement == null: return

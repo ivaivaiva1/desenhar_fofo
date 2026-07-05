@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vaub5rxhlur4"
-path="res://.godot/imported/pizza.png-18b23b938a502c5ae315eaadf4e056cc.ctex"
+uid="uid://br3hu3gt17jcy"
+path="res://.godot/imported/sky2.png-7ca4b04a25f1b86f43b7f392d6a7cc8f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/pizza.png"
-dest_files=["res://.godot/imported/pizza.png-18b23b938a502c5ae315eaadf4e056cc.ctex"]
+source_file="res://Sprites/Candy/Enviorement/sky2.png"
+dest_files=["res://.godot/imported/sky2.png-7ca4b04a25f1b86f43b7f392d6a7cc8f.ctex"]
 
 [params]
 

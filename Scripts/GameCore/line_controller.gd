@@ -48,9 +48,8 @@ func handle_mouse_motion(event: InputEventMouseMotion):
 	if !is_drawing:
 		return
 	
-	var mouse_pos := get_global_mouse_position()
 	var last_point: Vector2 = current_line.source_points[-1]
-	var result: Dictionary = get_last_valid_point(last_point, mouse_pos)
+	var result: Dictionary = get_last_valid_point(last_point, get_global_mouse_position())
 	
 	if result["blocked"]:
 		var last_valid_point = result["point"]
@@ -58,7 +57,7 @@ func handle_mouse_motion(event: InputEventMouseMotion):
 		finish_line() 
 		return
 	
-	add_point(mouse_pos)
+	add_point(get_global_mouse_position())
 
 
 func get_last_valid_point(from: Vector2, to: Vector2) -> Dictionary:

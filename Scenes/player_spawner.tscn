@@ -16,4 +16,4 @@ texture = ExtResource("1_iwcbr")
 script = ExtResource("2_o4mbg")
 floating_object = NodePath("../Sprite")
 float_height = 4.0
-float_duration = 1.5
+float_duration = 0.5

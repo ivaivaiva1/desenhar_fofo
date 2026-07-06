@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/Entitys/cama.tscn" id="4_bcrut"]
 [ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/food.tscn" id="5_m6blr"]
 [ext_resource type="PackedScene" uid="uid://c8rqtnxypgm2q" path="res://Scenes/Entitys/pudim.tscn" id="6_4ieov"]
-[ext_resource type="PackedScene" uid="uid://bjcrlaayj6gw" path="res://Scenes/GameCore/ui.tscn" id="7_okf0e"]
 
 [node name="level" type="Node2D" unique_id=1864007018]
 script = ExtResource("1_wsjyj")
@@ -46,5 +45,3 @@ pudim_force = 600.0
 [node name="Pudim" parent="collectables_controller" unique_id=1431602877 instance=ExtResource("6_4ieov")]
 position = Vector2(576, 434)
 pudim_force = 400.0
-
-[node name="UI" parent="." unique_id=653901674 instance=ExtResource("7_okf0e")]

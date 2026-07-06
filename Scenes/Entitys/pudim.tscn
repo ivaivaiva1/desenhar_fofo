@@ -35,4 +35,4 @@ texture = ExtResource("3_h3n23")
 script = ExtResource("4_h3n23")
 floating_object = NodePath("../sprites_container")
 float_height = 2.5
-float_duration = 1.5
+float_duration = 0.5

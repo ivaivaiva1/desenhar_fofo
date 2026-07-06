@@ -28,6 +28,6 @@ texture = ExtResource("1_3rsma")
 script = ExtResource("3_me652")
 floating_object = NodePath("../Sprite")
 float_height = 7.0
-float_duration = 1.5
+float_duration = 0.5
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

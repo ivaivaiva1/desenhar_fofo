@@ -19,6 +19,8 @@ config/icon="res://icon.svg"
 
 CurrentLevel="*uid://2xgiptyacinv"
 SkinPicker="*uid://cs5cgf165xdqs"
+MusicManager="*uid://defeqkiga7uap"
+SoundsList="*uid://c1m5kvl600jvu"
 
 [display]
 

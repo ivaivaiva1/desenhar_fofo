@@ -21,6 +21,7 @@ signal clear_lines()
 
 
 func _ready() -> void:
+	MusicManager.play_instant(SoundsList.CANDY_WORLD)
 	level_ui.level_manager = self
 	level_ui.line_controller = line_controller
 	clear_lines.connect(line_rendering.clear)

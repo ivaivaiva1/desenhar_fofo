@@ -86,7 +86,6 @@ func can_draw_at(point: Vector2) -> bool:
 	
 	var space_state := get_viewport().world_2d.direct_space_state
 	var hits := space_state.intersect_point(query)
-	print(hits)
 	if hits.is_empty():
 		return false
 	

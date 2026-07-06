@@ -10,11 +10,12 @@
 
 [node name="level_manager" type="Node2D" unique_id=1942550901]
 script = ExtResource("1_ci404")
+is_testing = true
 
 [node name="load_level" type="Node2D" parent="." unique_id=306488323]
 unique_name_in_owner = true
 script = ExtResource("2_ghtn7")
-level = 1
+level = 17
 
 [node name="line_controller" parent="." unique_id=679656892 instance=ExtResource("3_pakjl")]
 unique_name_in_owner = true

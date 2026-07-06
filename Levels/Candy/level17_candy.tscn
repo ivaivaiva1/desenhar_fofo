@@ -6,9 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/Entitys/cama.tscn" id="4_5qns1"]
 [ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/food.tscn" id="5_vcy8p"]
 [ext_resource type="PackedScene" uid="uid://c8rqtnxypgm2q" path="res://Scenes/Entitys/pudim.tscn" id="6_5ar4j"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1tq3v"]
-size = Vector2(544, 651)
+[ext_resource type="PackedScene" uid="uid://dre73vp3h1l47" path="res://Scenes/Entitys/draw_blocker.tscn" id="7_yimnh"]
 
 [node name="level" type="Node2D" unique_id=1864007018]
 script = ExtResource("1_0wbnu")
@@ -22,7 +20,7 @@ unique_name_in_owner = true
 script = ExtResource("3_w3wxf")
 
 [node name="cama" parent="collectables_controller" unique_id=1009130463 instance=ExtResource("4_5qns1")]
-position = Vector2(1056, 248)
+position = Vector2(1056, 62)
 
 [node name="collectable" parent="collectables_controller" unique_id=186391876 instance=ExtResource("5_vcy8p")]
 position = Vector2(192, 403.00003)
@@ -40,19 +38,10 @@ position = Vector2(480.00003, 403.00003)
 position = Vector2(544, 341.00003)
 
 [node name="Pudim" parent="collectables_controller" unique_id=540096184 instance=ExtResource("6_5ar4j")]
-position = Vector2(832, 558)
-pudim_force = 500.0
+position = Vector2(800, 558)
+pudim_force = 600.0
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=2094297567]
-modulate = Color(0, 0, 0, 0.32941177)
-z_index = -500
-offset_left = 608.0
-offset_right = 1152.0
+[node name="Draw_Blocker" parent="." unique_id=1494958407 instance=ExtResource("7_yimnh")]
+offset_left = 640.0
+offset_right = 960.0
 offset_bottom = 651.0
-mouse_filter = 2
-
-[node name="Area2D" type="Area2D" parent="ColorRect" unique_id=690024057 groups=["DrawBlocker"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect/Area2D" unique_id=375568868]
-position = Vector2(272, 325.5)
-shape = SubResource("RectangleShape2D_1tq3v")

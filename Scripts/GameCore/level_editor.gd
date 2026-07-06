@@ -44,7 +44,6 @@ func save_level(scene_world: String, level_name: String) -> void:
 	if file:
 		file.store_string(json)
 		file.close()
-		print("Level salvo em: ", save_path + file_name)
 	else:
 		push_error("Não foi possível salvar o level.")
 

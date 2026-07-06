@@ -8,6 +8,7 @@ extends Node2D
 @export var random_duration_percent: float = 30
 
 func _ready() -> void:
+	if float_height == 0: queue_free()
 	var unique_duration = randf_range(
 		float_duration / (1 - (random_duration_percent / 100)),
 		float_duration * (1 + (random_duration_percent / 100))

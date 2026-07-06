@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://cw6rvogvqpjys"]
+
+[ext_resource type="Script" uid="uid://bwk6yq56faubf" path="res://Scripts/GameCore/level.gd" id="1_kidrj"]
+[ext_resource type="PackedScene" uid="uid://hv0uyenq7lw7" path="res://Scenes/player_spawner.tscn" id="2_bi0d5"]
+[ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/GameCore/collectables_controller.gd" id="3_653ff"]
+[ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/Entitys/cama.tscn" id="4_512bx"]
+[ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/food.tscn" id="5_amagp"]
+[ext_resource type="PackedScene" uid="uid://da6q1rlv8eb0c" path="res://Scenes/Entitys/bubblegum.tscn" id="6_kidrj"]
+[ext_resource type="PackedScene" uid="uid://dre73vp3h1l47" path="res://Scenes/Entitys/draw_blocker.tscn" id="7_bi0d5"]
+
+[node name="level" type="Node2D" unique_id=1864007018]
+script = ExtResource("1_kidrj")
+
+[node name="Draw_Blocker" parent="." unique_id=1494958407 instance=ExtResource("7_bi0d5")]
+offset_left = 256.0
+offset_right = 832.0
+offset_bottom = 651.0
+
+[node name="player_spawner" parent="." unique_id=1071021330 instance=ExtResource("2_bi0d5")]
+unique_name_in_owner = true
+position = Vector2(96, 310)
+
+[node name="collectables_controller" type="Node2D" parent="." unique_id=710388454]
+unique_name_in_owner = true
+script = ExtResource("3_653ff")
+
+[node name="cama" parent="collectables_controller" unique_id=1009130463 instance=ExtResource("4_512bx")]
+position = Vector2(1056, 310)
+
+[node name="BubbleGun" parent="collectables_controller" unique_id=982462662 instance=ExtResource("6_kidrj")]
+position = Vector2(352, 310)
+is_horizontal = true
+is_right = true
+
+[node name="collectable" parent="collectables_controller/BubbleGun" unique_id=186391876 instance=ExtResource("5_amagp")]
+scale = Vector2(1, 1)
+
+[node name="floating" parent="collectables_controller/BubbleGun/collectable" index="2" unique_id=1456923062]
+float_height = 0.0
+
+[node name="BubbleGun2" parent="collectables_controller" unique_id=746800837 instance=ExtResource("6_kidrj")]
+position = Vector2(544, 310)
+is_horizontal = true
+is_right = true
+
+[node name="collectable" parent="collectables_controller/BubbleGun2" unique_id=1950932330 instance=ExtResource("5_amagp")]
+scale = Vector2(1, 1)
+
+[node name="floating" parent="collectables_controller/BubbleGun2/collectable" index="2" unique_id=1456923062]
+float_height = 0.0
+
+[node name="BubbleGun3" parent="collectables_controller" unique_id=1802178565 instance=ExtResource("6_kidrj")]
+position = Vector2(736, 310)
+is_horizontal = true
+is_right = true
+
+[node name="collectable" parent="collectables_controller/BubbleGun3" unique_id=360252984 instance=ExtResource("5_amagp")]
+scale = Vector2(1, 1)
+
+[node name="floating" parent="collectables_controller/BubbleGun3/collectable" index="2" unique_id=1456923062]
+float_height = 0.0
+
+[editable path="collectables_controller/BubbleGun/collectable"]
+[editable path="collectables_controller/BubbleGun2/collectable"]
+[editable path="collectables_controller/BubbleGun3/collectable"]

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dre73vp3h1l47"]
+
+[ext_resource type="Script" uid="uid://dcvkmd4q36ia4" path="res://Scripts/Entitys/draw_blocker.gd" id="1_qiaqw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1tq3v"]
+size = Vector2(0, 0)
+
+[node name="Draw_Blocker" type="ColorRect" unique_id=1494958407]
+modulate = Color(1, 1, 1, 0.39215687)
+z_index = -500
+offset_right = 30.0
+offset_bottom = 30.0
+mouse_filter = 2
+color = Color(0.45, 0.3906, 0.15299998, 1)
+script = ExtResource("1_qiaqw")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1308818528 groups=["DrawBlocker"]]
+
+[node name="Collision" type="CollisionShape2D" parent="Area2D" unique_id=841791677]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_1tq3v")

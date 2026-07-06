@@ -60,7 +60,6 @@ func retexture_cama(current_world: CurrentLevel.WORLDS, sprite):
 		CurrentLevel.WORLDS.CANDY:
 			sprite.texture = CAMA_CANDY.texture
 		CurrentLevel.WORLDS.SPACE:
-			print("space")
 			sprite.texture = CAMA_SPACE.texture
 
 

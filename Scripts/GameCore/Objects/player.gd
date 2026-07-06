@@ -25,6 +25,12 @@ func _process(_delta: float) -> void:
 		level_manager.start_drawning()
 
 
+func player_jump(force_x: float, force_y: float) -> void:
+	linear_velocity = Vector2.ZERO
+	angular_velocity = 0.0
+	apply_impulse(Vector2(force_x, force_y))
+
+
 func _integrate_forces(state: PhysicsDirectBodyState2D):
 	var gravity: float = gravity_air
 	if state.get_contact_count() > 0:

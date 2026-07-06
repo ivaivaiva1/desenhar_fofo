@@ -21,7 +21,6 @@ func _ready() -> void:
 func do_load_level():
 	level = CurrentLevel.current_level
 	CurrentLevel.current_world = current_world
-	print(current_world)
 	spawn_level()
 
 

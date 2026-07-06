@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://cjpjt4antewcp"]
+
+[ext_resource type="Script" uid="uid://bwk6yq56faubf" path="res://Scripts/GameCore/level.gd" id="1_wsjyj"]
+[ext_resource type="PackedScene" uid="uid://hv0uyenq7lw7" path="res://Scenes/player_spawner.tscn" id="2_25vhw"]
+[ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/GameCore/collectables_controller.gd" id="3_xx4wl"]
+[ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/Entitys/cama.tscn" id="4_bcrut"]
+[ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/food.tscn" id="5_m6blr"]
+[ext_resource type="PackedScene" uid="uid://c8rqtnxypgm2q" path="res://Scenes/Entitys/pudim.tscn" id="6_4ieov"]
+[ext_resource type="PackedScene" uid="uid://bjcrlaayj6gw" path="res://Scenes/GameCore/ui.tscn" id="7_okf0e"]
+
+[node name="level" type="Node2D" unique_id=1864007018]
+script = ExtResource("1_wsjyj")
+
+[node name="player_spawner" parent="." unique_id=1071021330 instance=ExtResource("2_25vhw")]
+unique_name_in_owner = true
+position = Vector2(160, 62)
+
+[node name="collectables_controller" type="Node2D" parent="." unique_id=710388454]
+unique_name_in_owner = true
+script = ExtResource("3_xx4wl")
+
+[node name="cama" parent="collectables_controller" unique_id=1009130463 instance=ExtResource("4_bcrut")]
+position = Vector2(160, 558)
+
+[node name="collectable" parent="collectables_controller" unique_id=186391876 instance=ExtResource("5_m6blr")]
+position = Vector2(576.00006, 310)
+
+[node name="collectable2" parent="collectables_controller" unique_id=1310654872 instance=ExtResource("5_m6blr")]
+position = Vector2(576.00006, 155)
+
+[node name="collectable3" parent="collectables_controller" unique_id=178932242 instance=ExtResource("5_m6blr")]
+position = Vector2(352.00003, 93)
+
+[node name="collectable5" parent="collectables_controller" unique_id=1104849812 instance=ExtResource("5_m6blr")]
+position = Vector2(896, 403)
+
+[node name="collectable4" parent="collectables_controller" unique_id=2044736291 instance=ExtResource("5_m6blr")]
+position = Vector2(800.00006, 93.00001)
+
+[node name="pudim2" parent="collectables_controller" unique_id=540096184 instance=ExtResource("6_4ieov")]
+position = Vector2(992, 496)
+rotation = -0.7853982
+scale = Vector2(0.99999994, 0.99999994)
+pudim_force = 600.0
+
+[node name="Pudim" parent="collectables_controller" unique_id=1431602877 instance=ExtResource("6_4ieov")]
+position = Vector2(576, 434)
+pudim_force = 400.0
+
+[node name="UI" parent="." unique_id=653901674 instance=ExtResource("7_okf0e")]

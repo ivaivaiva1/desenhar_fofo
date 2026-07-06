@@ -19,13 +19,34 @@ shader_parameter/noise = ExtResource("3_fdpio")
 [node name="UI" type="Node2D" unique_id=653901674]
 script = ExtResource("1_rtcy3")
 
+[node name="HomeIcon" type="Sprite2D" parent="." unique_id=1915542787]
+modulate = Color(1, 1, 1, 0.39215687)
+z_index = 4096
+material = SubResource("ShaderMaterial_3h21g")
+position = Vector2(44, 39)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_kvhau")
+
+[node name="HomeButton" type="Button" parent="HomeIcon" unique_id=1846559177]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.37
+anchor_top = 0.31500003
+anchor_right = 0.62
+anchor_bottom = 0.74100006
+offset_left = -960.4
+offset_top = -540.19995
+offset_right = -960.4001
+offset_bottom = -540.2802
+focus_mode = 0
+
 [node name="Drawning" type="Node2D" parent="." unique_id=1606344860]
 unique_name_in_owner = true
 
 [node name="PlayIcon" type="Sprite2D" parent="Drawning" unique_id=375497352]
 z_index = 4096
 material = SubResource("ShaderMaterial_3h21g")
-position = Vector2(56, 39)
+position = Vector2(1120, 38.999996)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("4_kf4n1")
 
@@ -45,7 +66,7 @@ focus_mode = 0
 [node name="TrashIcon" type="Sprite2D" parent="Drawning" unique_id=1922876924]
 z_index = 4096
 material = SubResource("ShaderMaterial_3h21g")
-position = Vector2(49, 154)
+position = Vector2(970, 47)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_vjd0l")
 
@@ -66,7 +87,7 @@ focus_mode = 0
 modulate = Color(1, 1, 1, 0.39215687)
 z_index = 4096
 material = SubResource("ShaderMaterial_3h21g")
-position = Vector2(38, 106)
+position = Vector2(1026, 53)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("6_vjshc")
 
@@ -83,27 +104,6 @@ offset_right = -539.64014
 offset_bottom = -960.6402
 focus_mode = 0
 
-[node name="HomeIcon" type="Sprite2D" parent="Drawning" unique_id=1915542787]
-modulate = Color(1, 1, 1, 0.39215687)
-z_index = 4096
-material = SubResource("ShaderMaterial_3h21g")
-position = Vector2(44, 211)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("7_kvhau")
-
-[node name="HomeButton" type="Button" parent="Drawning/HomeIcon" unique_id=1846559177]
-modulate = Color(1, 1, 1, 0)
-anchors_preset = -1
-anchor_left = 0.37
-anchor_top = 0.31500003
-anchor_right = 0.62
-anchor_bottom = 0.74100006
-offset_left = -960.4
-offset_top = -540.19995
-offset_right = -960.4001
-offset_bottom = -540.2802
-focus_mode = 0
-
 [node name="Rolling" type="Node2D" parent="." unique_id=635727593]
 unique_name_in_owner = true
 visible = false
@@ -111,7 +111,7 @@ visible = false
 [node name="PauseIcon" type="Sprite2D" parent="Rolling" unique_id=1845421304]
 z_index = 4096
 material = SubResource("ShaderMaterial_3h21g")
-position = Vector2(68, 41.000008)
+position = Vector2(1133, 42.999996)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("8_m7xrn")
 

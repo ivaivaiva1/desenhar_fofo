@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://bwk6yq56faubf" path="res://Scripts/GameCore/level.gd" id="1_j0y70"]
 [ext_resource type="PackedScene" uid="uid://hv0uyenq7lw7" path="res://Scenes/player_spawner.tscn" id="2_8au82"]
 [ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/GameCore/collectables_controller.gd" id="3_3pb2w"]
-[ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/Entitys/cama.tscn" id="4_nutnc"]
-[ext_resource type="PackedScene" uid="uid://dhlapd5iw2bi" path="res://Scenes/Entitys/papagaio.tscn" id="5_qepil"]
+[ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/Entities/cama.tscn" id="4_nutnc"]
+[ext_resource type="PackedScene" uid="uid://dhlapd5iw2bi" path="res://Scenes/Entities/papagaio.tscn" id="5_qepil"]
 [ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/food.tscn" id="5_w6dua"]
 
 [node name="level" type="Node2D" unique_id=1864007018]

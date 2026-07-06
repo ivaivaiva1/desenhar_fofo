@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://bwk6yq56faubf" path="res://Scripts/GameCore/level.gd" id="1_xudkf"]
 [ext_resource type="PackedScene" uid="uid://hv0uyenq7lw7" path="res://Scenes/player_spawner.tscn" id="2_ben73"]
 [ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/GameCore/collectables_controller.gd" id="3_mkrsi"]
-[ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/Entitys/cama.tscn" id="4_ixa7b"]
+[ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/Entities/cama.tscn" id="4_ixa7b"]
 [ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/food.tscn" id="5_f2052"]
-[ext_resource type="PackedScene" uid="uid://c8rqtnxypgm2q" path="res://Scenes/Entitys/pudim.tscn" id="6_gtt8b"]
+[ext_resource type="PackedScene" uid="uid://c8rqtnxypgm2q" path="res://Scenes/Entities/pudim.tscn" id="6_gtt8b"]
 [ext_resource type="Texture2D" uid="uid://1fuofhgf48mn" path="res://fase.png" id="7_ben73"]
 
 [node name="level" type="Node2D" unique_id=1864007018]

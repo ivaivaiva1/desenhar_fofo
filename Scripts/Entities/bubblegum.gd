@@ -66,7 +66,7 @@ func move_player_to_me() -> void:
 	tween = create_tween()
 	tween.set_trans(Tween.TRANS_CIRC)
 	tween.set_ease(Tween.EASE_IN_OUT)
-	tween.tween_property(player, "position", Vector2.ZERO, 1)
+	tween.tween_property(player, "position", Vector2.ZERO, 0.7)
 	
 	await tween.finished
 	if player == null: return

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://da6q1rlv8eb0c"]
 
-[ext_resource type="Script" uid="uid://b0t65n4tfh5gk" path="res://Scripts/Entitys/bubblegum.gd" id="1_b3pm1"]
+[ext_resource type="Script" uid="uid://b0t65n4tfh5gk" path="res://Scripts/Entities/bubblegum.gd" id="1_b3pm1"]
 [ext_resource type="Texture2D" uid="uid://bxlpt8usk1hg4" path="res://Sprites/Candy/bubble.png" id="1_jk14k"]
 [ext_resource type="Script" uid="uid://cbc24q2fpet5x" path="res://Scripts/Behaviours/floating.gd" id="2_mkth0"]
 [ext_resource type="Texture2D" uid="uid://qo6s787fj86d" path="res://Sprites/Candy/bubble_sheet.png" id="4_ihxas"]

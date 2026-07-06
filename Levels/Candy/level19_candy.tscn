@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bjqbp0ad738fp"]
 
 [ext_resource type="Script" uid="uid://bwk6yq56faubf" path="res://Scripts/GameCore/level.gd" id="1_v58nq"]
-[ext_resource type="PackedScene" uid="uid://dre73vp3h1l47" path="res://Scenes/Entitys/draw_blocker.tscn" id="2_5qp46"]
+[ext_resource type="PackedScene" uid="uid://dre73vp3h1l47" path="res://Scenes/Entities/draw_blocker.tscn" id="2_5qp46"]
 [ext_resource type="PackedScene" uid="uid://hv0uyenq7lw7" path="res://Scenes/player_spawner.tscn" id="3_6m6o1"]
 [ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/GameCore/collectables_controller.gd" id="4_avbsy"]
-[ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/Entitys/cama.tscn" id="5_dimyd"]
-[ext_resource type="PackedScene" uid="uid://da6q1rlv8eb0c" path="res://Scenes/Entitys/bubblegum.tscn" id="6_45sb7"]
+[ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/Entities/cama.tscn" id="5_dimyd"]
+[ext_resource type="PackedScene" uid="uid://da6q1rlv8eb0c" path="res://Scenes/Entities/bubblegum.tscn" id="6_45sb7"]
 [ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/food.tscn" id="7_m6sf3"]
 
 [node name="level" type="Node2D" unique_id=1864007018]
@@ -27,15 +27,6 @@ script = ExtResource("4_avbsy")
 [node name="cama" parent="collectables_controller" unique_id=1009130463 instance=ExtResource("5_dimyd")]
 position = Vector2(128, 93)
 
-[node name="BubbleGun" parent="collectables_controller" unique_id=982462662 instance=ExtResource("6_45sb7")]
-position = Vector2(352, 416)
-
-[node name="collectable" parent="collectables_controller/BubbleGun" unique_id=186391876 instance=ExtResource("7_m6sf3")]
-scale = Vector2(1, 1)
-
-[node name="floating" parent="collectables_controller/BubbleGun/collectable" index="2" unique_id=1456923062]
-float_height = 0.0
-
 [node name="BubbleGun2" parent="collectables_controller" unique_id=746800837 instance=ExtResource("6_45sb7")]
 position = Vector2(352, 256)
 is_up = true
@@ -56,6 +47,26 @@ scale = Vector2(1, 1)
 [node name="floating" parent="collectables_controller/BubbleGun3/collectable" index="2" unique_id=1456923062]
 float_height = 0.0
 
+[node name="BubbleGun13" parent="collectables_controller" unique_id=896060283 instance=ExtResource("6_45sb7")]
+position = Vector2(1056, 576)
+is_up = true
+
+[node name="collectable" parent="collectables_controller/BubbleGun13" unique_id=506017443 instance=ExtResource("7_m6sf3")]
+scale = Vector2(1, 1)
+
+[node name="floating" parent="collectables_controller/BubbleGun13/collectable" index="2" unique_id=1456923062]
+float_height = 0.0
+
+[node name="BubbleGun14" parent="collectables_controller" unique_id=696689665 instance=ExtResource("6_45sb7")]
+position = Vector2(1056, 96)
+is_horizontal = true
+
+[node name="collectable" parent="collectables_controller/BubbleGun14" unique_id=1104296875 instance=ExtResource("7_m6sf3")]
+scale = Vector2(1, 1)
+
+[node name="floating" parent="collectables_controller/BubbleGun14/collectable" index="2" unique_id=1456923062]
+float_height = 0.0
+
 [node name="BubbleGun4" parent="collectables_controller" unique_id=345651590 instance=ExtResource("6_45sb7")]
 position = Vector2(128, 416)
 is_horizontal = true
@@ -66,20 +77,12 @@ position = Vector2(128, 576)
 is_horizontal = true
 is_right = true
 
-[node name="BubbleGun9" parent="collectables_controller" unique_id=466252172 instance=ExtResource("6_45sb7")]
-position = Vector2(1056, 576)
-is_up = true
-
 [node name="BubbleGun10" parent="collectables_controller" unique_id=1563147141 instance=ExtResource("6_45sb7")]
 position = Vector2(1056, 416)
 is_up = true
 
 [node name="BubbleGun11" parent="collectables_controller" unique_id=679625801 instance=ExtResource("6_45sb7")]
 position = Vector2(1056, 256)
-
-[node name="BubbleGun12" parent="collectables_controller" unique_id=2090793078 instance=ExtResource("6_45sb7")]
-position = Vector2(1056, 96)
-is_horizontal = true
 
 [node name="BubbleGun6" parent="collectables_controller" unique_id=353316918 instance=ExtResource("6_45sb7")]
 position = Vector2(352, 576)
@@ -89,11 +92,15 @@ is_right = true
 [node name="BubbleGun5" parent="collectables_controller" unique_id=790826259 instance=ExtResource("6_45sb7")]
 position = Vector2(576, 416)
 
+[node name="BubbleGun9" parent="collectables_controller" unique_id=925393714 instance=ExtResource("6_45sb7")]
+position = Vector2(352, 416)
+
 [node name="BubbleGun7" parent="collectables_controller" unique_id=1593472293 instance=ExtResource("6_45sb7")]
 position = Vector2(576, 256)
 is_horizontal = true
 is_right = true
 
-[editable path="collectables_controller/BubbleGun/collectable"]
 [editable path="collectables_controller/BubbleGun2/collectable"]
 [editable path="collectables_controller/BubbleGun3/collectable"]
+[editable path="collectables_controller/BubbleGun13/collectable"]
+[editable path="collectables_controller/BubbleGun14/collectable"]

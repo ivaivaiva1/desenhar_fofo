@@ -20,6 +20,7 @@ func set_label_color():
 
 
 func blink_text():
+	return
 	timer.start()
 	await timer.timeout
 	while(true):

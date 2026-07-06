@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://bjcrlaayj6gw"]
+
+[ext_resource type="Script" uid="uid://5mytxes767qv" path="res://Scripts/GameCore/ui.gd" id="1_rtcy3"]
+[ext_resource type="Shader" uid="uid://cichbmwcxfbtl" path="res://Shaders/Squiggle/squiggle.gdshader" id="2_m7xrn"]
+[ext_resource type="Texture2D" uid="uid://bhopsuvx1h5du" path="res://Shaders/Squiggle/1k_Dissolve_Noise_Texture.png" id="3_fdpio"]
+[ext_resource type="Texture2D" uid="uid://bgvc8sf4telw5" path="res://Sprites/Icons/play_icon.png" id="4_kf4n1"]
+[ext_resource type="Texture2D" uid="uid://bu2vit46bbka0" path="res://Sprites/Icons/trash_icon.png" id="5_vjd0l"]
+[ext_resource type="Texture2D" uid="uid://ykyba4jy82ld" path="res://Sprites/Icons/undo_icon.png" id="6_vjshc"]
+[ext_resource type="Texture2D" uid="uid://d3okj46qdv2ux" path="res://Sprites/Icons/home_icon.png" id="7_kvhau"]
+[ext_resource type="Texture2D" uid="uid://drn48avob2khm" path="res://Sprites/Icons/pause_icon.png" id="8_m7xrn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3h21g"]
+shader = ExtResource("2_m7xrn")
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 0.3
+shader_parameter/fps = 6.0
+shader_parameter/noise = ExtResource("3_fdpio")
+
+[node name="UI" type="Node2D" unique_id=653901674]
+script = ExtResource("1_rtcy3")
+
+[node name="Drawning" type="Node2D" parent="." unique_id=1606344860]
+unique_name_in_owner = true
+
+[node name="PlayIcon" type="Sprite2D" parent="Drawning" unique_id=375497352]
+z_index = 4096
+material = SubResource("ShaderMaterial_3h21g")
+position = Vector2(56, 39)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_kf4n1")
+
+[node name="PlayButton" type="Button" parent="Drawning/PlayIcon" unique_id=211786137]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.29700002
+anchor_top = 0.30600002
+anchor_right = 0.58900005
+anchor_bottom = 0.75900006
+offset_left = -960.24
+offset_top = -540.48
+offset_right = -960.8801
+offset_bottom = -539.72015
+focus_mode = 0
+
+[node name="TrashIcon" type="Sprite2D" parent="Drawning" unique_id=1922876924]
+z_index = 4096
+material = SubResource("ShaderMaterial_3h21g")
+position = Vector2(49, 154)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_vjd0l")
+
+[node name="TrashButton" type="Button" parent="Drawning/TrashIcon" unique_id=978999666]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.333
+anchor_top = 0.25
+anchor_right = 0.583
+anchor_bottom = 0.694
+offset_left = -959.36
+offset_top = -540.0
+offset_right = -959.36005
+offset_bottom = -539.52
+focus_mode = 0
+
+[node name="UndoIcon" type="Sprite2D" parent="Drawning" unique_id=896113428]
+modulate = Color(1, 1, 1, 0.39215687)
+z_index = 4096
+material = SubResource("ShaderMaterial_3h21g")
+position = Vector2(38, 106)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_vjshc")
+
+[node name="UndoIcon" type="Button" parent="Drawning/UndoIcon" unique_id=111701575]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.26900002
+anchor_top = 0.37500003
+anchor_right = 0.83300006
+anchor_bottom = 0.54200006
+offset_left = -540.52
+offset_top = -960.0
+offset_right = -539.64014
+offset_bottom = -960.6402
+focus_mode = 0
+
+[node name="HomeIcon" type="Sprite2D" parent="Drawning" unique_id=1915542787]
+modulate = Color(1, 1, 1, 0.39215687)
+z_index = 4096
+material = SubResource("ShaderMaterial_3h21g")
+position = Vector2(44, 211)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_kvhau")
+
+[node name="HomeButton" type="Button" parent="Drawning/HomeIcon" unique_id=1846559177]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.37
+anchor_top = 0.31500003
+anchor_right = 0.62
+anchor_bottom = 0.74100006
+offset_left = -960.4
+offset_top = -540.19995
+offset_right = -960.4001
+offset_bottom = -540.2802
+focus_mode = 0
+
+[node name="Rolling" type="Node2D" parent="." unique_id=635727593]
+unique_name_in_owner = true
+visible = false
+
+[node name="PauseIcon" type="Sprite2D" parent="Rolling" unique_id=1845421304]
+z_index = 4096
+material = SubResource("ShaderMaterial_3h21g")
+position = Vector2(68, 41.000008)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_m7xrn")
+
+[node name="PauseButton" type="Button" parent="Rolling/PauseIcon" unique_id=1241369019]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.286
+anchor_top = 0.31500003
+anchor_right = 0.453
+anchor_bottom = 0.74100006
+offset_left = -959.12
+offset_top = -540.20013
+offset_right = -959.76
+offset_bottom = -540.2804
+focus_mode = 0
+
+[connection signal="button_down" from="Drawning/PlayIcon/PlayButton" to="." method="_on_play_button_button_down"]
+[connection signal="button_down" from="Drawning/TrashIcon/TrashButton" to="." method="_on_trash_button_button_down"]
+[connection signal="button_down" from="Rolling/PauseIcon/PauseButton" to="." method="_on_pause_button_button_down"]

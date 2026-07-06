@@ -47,20 +47,15 @@ func handle_mouse_button(event: InputEventMouseButton):
 func handle_mouse_motion(event: InputEventMouseMotion):
 	if !is_drawing:
 		return
-	var mouse_pos:= get_global_mouse_position()
 	
+	var mouse_pos := get_global_mouse_position()
 	var last_point: Vector2 = current_line.source_points[-1]
 	var result: Dictionary = get_last_valid_point(last_point, mouse_pos)
 	
 	if result["blocked"]:
 		var last_valid_point = result["point"]
-		
 		add_point(last_valid_point)
-		
-		# NÃO termina imediatamente de forma “seca”
-		# só encerra o estado
-		is_drawing = false
-		current_line = null
+		finish_line() 
 		return
 	
 	add_point(mouse_pos)
@@ -69,7 +64,6 @@ func handle_mouse_motion(event: InputEventMouseMotion):
 func get_last_valid_point(from: Vector2, to: Vector2) -> Dictionary:
 	var distance := from.distance_to(to)
 	var steps := maxi(1, int(distance))
-	
 	var last_valid := from
 	
 	for i in range(steps + 1):
@@ -77,17 +71,11 @@ func get_last_valid_point(from: Vector2, to: Vector2) -> Dictionary:
 		var p := from.lerp(to, t)
 		
 		if !can_draw_at(p):
-			return {
-				"blocked": true,
-				"point": last_valid
-			}
+			return { "blocked": true, "point": last_valid }
 		
 		last_valid = p
 	
-	return {
-		"blocked": false,
-		"point": to
-	}
+	return { "blocked": false, "point": to }
 
 
 func can_draw_at(point: Vector2) -> bool:
@@ -96,24 +84,24 @@ func can_draw_at(point: Vector2) -> bool:
 	query.collide_with_areas = true
 	query.collide_with_bodies = false
 	query.collision_mask = 1
-
+	
 	var space_state := get_viewport().world_2d.direct_space_state
 	var hits := space_state.intersect_point(query)
 	print(hits)
 	if hits.is_empty():
 		return false
-
+	
 	var inside_draw_area := false
-
+	
 	for hit in hits:
 		var collider = hit.collider
-
+		
 		if collider.is_in_group("DrawBlocker"):
 			return false
-
+		
 		if collider.is_in_group("DrawArea"):
 			inside_draw_area = true
-
+	
 	return inside_draw_area
 
 

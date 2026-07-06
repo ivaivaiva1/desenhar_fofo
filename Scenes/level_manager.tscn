@@ -4,11 +4,9 @@
 [ext_resource type="Script" uid="uid://bop5puq6wnjdq" path="res://Scripts/GameCore/load_level.gd" id="2_ghtn7"]
 [ext_resource type="PackedScene" uid="uid://dy2epci38kera" path="res://Scenes/GameCore/line_controller.tscn" id="3_pakjl"]
 [ext_resource type="PackedScene" uid="uid://coxucj5dl8fh1" path="res://Scenes/state_label.tscn" id="6_pakjl"]
+[ext_resource type="PackedScene" uid="uid://bjcrlaayj6gw" path="res://Scenes/GameCore/ui.tscn" id="7_xvh7w"]
 [ext_resource type="Script" uid="uid://bjkdkcl3blwmn" path="res://Scripts/GameCore/line_rendering.gd" id="8_hcxy8"]
 [ext_resource type="Script" uid="uid://cryc6w5ro18dn" path="res://Scripts/GameCore/line_collider.gd" id="9_ejytl"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1tq3v"]
-size = Vector2(233, 68)
 
 [node name="level_manager" type="Node2D" unique_id=1942550901]
 script = ExtResource("1_ci404")
@@ -28,19 +26,10 @@ script = ExtResource("8_hcxy8")
 script = ExtResource("9_ejytl")
 
 [node name="state_label" parent="." unique_id=23194447 instance=ExtResource("6_pakjl")]
+visible = false
 theme_override_colors/default_color = Color(0.84313726, 0.48235294, 0.7294118, 1)
 theme_override_colors/font_outline_color = Color(0.6039216, 0.84705883, 0.93333334, 1)
 text = " SPACE TO PLAY"
 
-[node name="Button" type="Button" parent="." unique_id=511872069]
-offset_left = 404.0
-offset_top = 188.0
-offset_right = 637.0
-offset_bottom = 256.0
-text = "SPACE TO PLAY"
-
-[node name="Area2D" type="Area2D" parent="Button" unique_id=1728336147 groups=["DrawBlocker"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Button/Area2D" unique_id=383961179]
-position = Vector2(116.5, 34)
-shape = SubResource("RectangleShape2D_1tq3v")
+[node name="UI" parent="." unique_id=653901674 instance=ExtResource("7_xvh7w")]
+unique_name_in_owner = true

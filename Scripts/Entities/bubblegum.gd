@@ -123,6 +123,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 
 func change_direction():
 	#if CurrentLevel.level_manager.current_state == CurrentLevel.level_manager.GAME_STATE.ROLLING: return
+	do_pump()
 	if is_horizontal:
 		if is_right:
 			is_right = false
@@ -152,7 +153,7 @@ func set_degrees():
 
 func _on_area_2d_mouse_entered() -> void:
 	print("mouse entered")
-	do_pump()
+	#do_pump()
 
 
 var pump_tween: Tween
@@ -166,20 +167,20 @@ func do_pump():
 	pump_tween.parallel().tween_property(
 		sprite,
 		"scale:x",
-		sprite_scale.x * 1.3,
-		0.2
+		sprite_scale.x * 1.2,
+		0.15
 	)
 	
 	pump_tween.parallel().tween_property(
 		sprite,
 		"scale:y",
-		sprite_scale.y * 1.3,
-		0.2
+		sprite_scale.y * 1.2,
+		0.15
 	)
 	
 	pump_tween.tween_property(
 		sprite,
 		"scale",
 		sprite_scale,
-		0.12
+		0.3
 	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)

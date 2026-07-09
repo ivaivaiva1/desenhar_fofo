@@ -20,7 +20,6 @@ shader_parameter/noise = ExtResource("3_fdpio")
 script = ExtResource("1_rtcy3")
 
 [node name="HomeIcon" type="Sprite2D" parent="." unique_id=1915542787]
-modulate = Color(1, 1, 1, 0.39215687)
 z_index = 4096
 material = SubResource("ShaderMaterial_3h21g")
 position = Vector2(44, 39)
@@ -128,6 +127,7 @@ offset_right = -959.76
 offset_bottom = -540.2804
 focus_mode = 0
 
+[connection signal="button_down" from="HomeIcon/HomeButton" to="." method="_on_home_button_button_down"]
 [connection signal="button_down" from="Drawning/PlayIcon/PlayButton" to="." method="_on_play_button_button_down"]
 [connection signal="button_down" from="Drawning/TrashIcon/TrashButton" to="." method="_on_trash_button_button_down"]
 [connection signal="button_down" from="Rolling/PauseIcon/PauseButton" to="." method="_on_pause_button_button_down"]

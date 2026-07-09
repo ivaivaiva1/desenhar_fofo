@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bxlpt8usk1hg4" path="res://Sprites/Candy/bubble.png" id="1_jk14k"]
 [ext_resource type="Script" uid="uid://cbc24q2fpet5x" path="res://Scripts/Behaviours/floating.gd" id="2_mkth0"]
 [ext_resource type="Texture2D" uid="uid://qo6s787fj86d" path="res://Sprites/Candy/bubble_sheet.png" id="4_ihxas"]
+[ext_resource type="Texture2D" uid="uid://cknh6gnkm40po" path="res://Sprites/Candy/nadica.png" id="5_o4bwg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1tq3v"]
 radius = 56.008926
@@ -50,6 +51,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xm27j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_o4bwg")
 }],
 "loop": 0,
 "name": &"destroy",
@@ -77,7 +81,10 @@ z_index = 100
 rotation = 0.57595867
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_m5rmg")
+animation = &"destroy"
 autoplay = "default"
+frame = 4
+frame_progress = 1.0
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

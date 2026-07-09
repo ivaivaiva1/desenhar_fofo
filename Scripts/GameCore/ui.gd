@@ -25,3 +25,8 @@ func _on_pause_button_button_down() -> void:
 
 func _on_trash_button_button_down() -> void:
 	level_manager.clear_lines.emit()
+
+
+func _on_home_button_button_down() -> void:
+	level_manager.pass_level(false)
+	level_manager.load_level.do_load_level(1, CurrentLevel.WORLDS.LOBBY)

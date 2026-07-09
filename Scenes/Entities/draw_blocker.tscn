@@ -6,7 +6,6 @@
 size = Vector2(0, 0)
 
 [node name="Draw_Blocker" type="ColorRect" unique_id=1494958407]
-modulate = Color(1, 1, 1, 0.39215687)
 z_index = -500
 offset_right = 30.0
 offset_bottom = 30.0

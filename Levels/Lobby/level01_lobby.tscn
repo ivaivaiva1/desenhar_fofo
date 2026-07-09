@@ -15,3 +15,13 @@ position = Vector2(155, 124)
 position = Vector2(768, 192)
 current_world = 1
 level = 1
+
+[node name="Door_Level2" parent="." unique_id=1629707369 instance=ExtResource("3_tt1jv")]
+position = Vector2(210, 380)
+current_world = 1
+level = 2
+
+[node name="Door_Level3" parent="." unique_id=711182545 instance=ExtResource("3_tt1jv")]
+position = Vector2(670, 537)
+current_world = 1
+level = 3

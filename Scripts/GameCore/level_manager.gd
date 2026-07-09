@@ -52,7 +52,8 @@ func start_drawning():
 	rolling_bob.auto_destroy()
 	state_label.text = (" SPACE TO PLAY")
 	if load_level.level_instance == null: return
-	collectables_controller.restore_collectables()
+	if collectables_controller != null:
+		collectables_controller.restore_collectables()
 	player_pos.visible = true
 	level_ui.hide_rolling_ui()
 
@@ -76,7 +77,7 @@ func spawn_bob():
 	rolling_bob.level_manager = self as LevelManager
 
 
-func pass_level():
+func pass_level(call_next_level: bool = true):
 	level_ui.hide_rolling_ui()
 	if is_testing:
 		start_drawning()
@@ -85,6 +86,7 @@ func pass_level():
 	if current_state == GAME_STATE.ROLLING:
 		start_drawning()
 	clear_lines.emit()
+	if !call_next_level: return
 	CurrentLevel.current_level += 1
 	load_level.do_load_level()
 

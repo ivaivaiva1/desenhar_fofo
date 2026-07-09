@@ -70,6 +70,8 @@ func line_color():
 			return LINE_CANDY.color
 		CurrentLevel.WORLDS.SPACE:
 			return LINE_SPACE.color
+		_:
+			return LINE_SPACE.color
 
 
 func label_color() -> Dictionary:

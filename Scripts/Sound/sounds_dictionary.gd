@@ -5,7 +5,7 @@ func _ready() -> void:
 
 
 # musics 
-const CANDY_WORLD := {"stream": preload("uid://bnqhhuue7uhgg"), "volume": -12.0}
+const CANDY_WORLD := {"stream": preload("uid://bnqhhuue7uhgg"), "volume": -25.0}
 
 
 # effects 

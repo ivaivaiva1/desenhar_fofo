@@ -7,6 +7,7 @@ var has_player: bool = false
 var jump_cd: float = 0.01
 var jump_timer: float 
 @onready var sprite: AnimatedSprite2D = %Sprite
+@onready var sprite_scale: Vector2 = sprite.scale
 
 @export var is_horizontal: bool = false
 @export var is_right: bool = false
@@ -54,6 +55,7 @@ func release_player():
 		player.reparent(get_tree().current_scene)
 	player.freeze = false
 	player.player_jump(jump_x, jump_y)
+	HitFreeze.freeze()
 
 
 
@@ -89,6 +91,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 
 func bubble_reset() -> void:
+	if is_alive: return
 	sprite.play("default")
 	set_degrees()
 	is_alive = true
@@ -99,6 +102,8 @@ func bubble_reset() -> void:
 	if tween:
 		tween.kill()
 		tween = null
+	if pump_tween:
+		pump_tween.kill()
 	
 	if player:
 		if player.get_parent() != get_tree().current_scene:
@@ -143,3 +148,38 @@ func set_degrees():
 			sprite.rotation_degrees = -147.0
 		else:
 			sprite.rotation_degrees = 33
+
+
+func _on_area_2d_mouse_entered() -> void:
+	print("mouse entered")
+	do_pump()
+
+
+var pump_tween: Tween
+func do_pump():
+	if pump_tween:
+		pump_tween.kill()
+		sprite.scale = sprite_scale
+	
+	pump_tween = create_tween()
+	
+	pump_tween.parallel().tween_property(
+		sprite,
+		"scale:x",
+		sprite_scale.x * 1.3,
+		0.2
+	)
+	
+	pump_tween.parallel().tween_property(
+		sprite,
+		"scale:y",
+		sprite_scale.y * 1.3,
+		0.2
+	)
+	
+	pump_tween.tween_property(
+		sprite,
+		"scale",
+		sprite_scale,
+		0.12
+	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)

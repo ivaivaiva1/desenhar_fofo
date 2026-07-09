@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://cbc24q2fpet5x" path="res://Scripts/Behaviours/floating.gd" id="3_me652"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1tq3v"]
-radius = 33.49754
+radius = 27.603796
 
 [node name="food" type="Node2D" unique_id=186391876 groups=["Collectable"]]
 scale = Vector2(1.015, 1.015)
@@ -15,7 +15,6 @@ entity_type = 1
 [node name="Area2D" type="Area2D" parent="." unique_id=1524499499]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=322469688]
-visible = false
 position = Vector2(-0.98522174, -1.9704435)
 shape = SubResource("CircleShape2D_1tq3v")
 

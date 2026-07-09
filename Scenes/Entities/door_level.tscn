@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://h8qxxw36sb71"]
+
+[ext_resource type="Script" uid="uid://d2bd8perrdmc8" path="res://Scripts/Entities/door_level.gd" id="1_ow3fx"]
+[ext_resource type="Texture2D" uid="uid://du02fmiy83y6q" path="res://Sprites/Lobby/door_level.png" id="1_vh4bu"]
+[ext_resource type="Texture2D" uid="uid://bt60ot7px2c8s" path="res://icon.svg" id="2_ow3fx"]
+[ext_resource type="FontFile" uid="uid://cvngtcdy0lodq" path="res://Fonts/Super Mario Bros. NES.ttf" id="4_667u7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1tq3v"]
+size = Vector2(101, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_te0iw"]
+size = Vector2(101, 14)
+
+[sub_resource type="FontVariation" id="FontVariation_667u7"]
+base_font = ExtResource("4_667u7")
+
+[sub_resource type="FontVariation" id="FontVariation_ow3fx"]
+base_font = SubResource("FontVariation_667u7")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_667u7"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_laut5"]
+bg_color = Color(0.0666666, 0, 1, 1)
+
+[node name="Door_Level" type="Node2D" unique_id=859191744]
+z_index = -500
+script = ExtResource("1_ow3fx")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=267799297]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=965925983]
+position = Vector2(-0.5, 0)
+scale = Vector2(0.67, 0.67)
+shape = SubResource("RectangleShape2D_1tq3v")
+
+[node name="DoorLevel" type="Sprite2D" parent="." unique_id=387535961]
+scale = Vector2(0.395, 0.305)
+texture = ExtResource("1_vh4bu")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1929935020]
+position = Vector2(0, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2096401709]
+position = Vector2(-0.5, 4)
+shape = SubResource("RectangleShape2D_te0iw")
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D" unique_id=1882096787]
+modulate = Color(0.9882353, 0.63529414, 0.101960786, 1)
+position = Vector2(1.7881393e-05, 3.9999938)
+scale = Vector2(0.79687506, 0.10937478)
+texture = ExtResource("2_ow3fx")
+
+[node name="LevelLabel" type="RichTextLabel" parent="." unique_id=1861147406]
+unique_name_in_owner = true
+offset_left = -51.0
+offset_top = -84.0
+offset_right = 51.0
+offset_bottom = -61.0
+mouse_filter = 2
+theme_override_fonts/normal_font = SubResource("FontVariation_ow3fx")
+text = "0
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=2076151680]
+unique_name_in_owner = true
+offset_left = -51.0
+offset_top = 61.0
+offset_right = 51.0
+offset_bottom = 75.0
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_667u7")
+theme_override_styles/fill = SubResource("StyleBoxFlat_laut5")
+value = 47.0
+show_percentage = false
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

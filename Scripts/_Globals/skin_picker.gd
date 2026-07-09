@@ -3,7 +3,8 @@ extends Node
 enum ENTITY_TYPE {
 	BOB,
 	FOOD,
-	CAMA
+	CAMA,
+	NULL
 }
 
 # LINE COLOR

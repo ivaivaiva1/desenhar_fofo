@@ -22,6 +22,7 @@ SkinPicker="*uid://cs5cgf165xdqs"
 MusicManager="*uid://defeqkiga7uap"
 SoundsList="*uid://c1m5kvl600jvu"
 HitFreeze="*uid://c7abq4ku2qyk1"
+ScreenShake="*uid://dum8v3iaouo5d"
 
 [display]
 
@@ -64,5 +65,3 @@ ui_cancel={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
-2d/snap/snap_2d_transforms_to_pixel=true
-2d/snap/snap_2d_vertices_to_pixel=true

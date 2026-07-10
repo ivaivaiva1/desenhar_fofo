@@ -14,8 +14,7 @@ script = ExtResource("1_ci404")
 [node name="load_level" type="Node2D" parent="." unique_id=306488323]
 unique_name_in_owner = true
 script = ExtResource("2_ghtn7")
-current_world = 2
-level = 5
+level = 1
 
 [node name="line_controller" parent="." unique_id=679656892 instance=ExtResource("3_pakjl")]
 unique_name_in_owner = true
@@ -34,3 +33,6 @@ text = " SPACE TO PLAY"
 
 [node name="UI" parent="." unique_id=653901674 instance=ExtResource("7_xvh7w")]
 unique_name_in_owner = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1436782732]
+position = Vector2(576, 324)

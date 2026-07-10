@@ -4,6 +4,7 @@ class_name CollectablesController
 @onready var level_manager: LevelManager = get_tree().current_scene as LevelManager
 var level_collectables: Array[Collectable] = []
 var level_bubblegums: Array[Bubblegum] = []
+var level_clowns: Array[Clown] = []
 
 
 func _ready() -> void:
@@ -16,6 +17,8 @@ func find_collectables(node: Node) -> void:
 			level_collectables.append(child)
 		if child is Bubblegum:
 			level_bubblegums.append(child)
+		if child is Clown:
+			level_clowns.append(child)
 		find_collectables(child)
 
 
@@ -25,6 +28,8 @@ func restore_collectables():
 		collectable.make_unpicked()
 	for bubblegum in level_bubblegums:
 		bubblegum.bubble_reset()
+	for clown in level_clowns:
+		clown.reset_clown()
 
 
 func check_if_cleared():

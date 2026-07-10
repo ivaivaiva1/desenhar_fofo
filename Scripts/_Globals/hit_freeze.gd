@@ -2,7 +2,7 @@ extends Node
 
 var freeze_tween: Tween
 
-func freeze(time_scale: float = 0.5, duration: float = 0.1) -> void:
+func freeze(time_scale: float = 0.5, duration: float = 0.2) -> void:
 	if freeze_tween:
 		freeze_tween.kill()
 	

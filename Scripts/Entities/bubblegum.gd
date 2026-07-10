@@ -55,7 +55,8 @@ func release_player():
 		player.reparent(get_tree().current_scene)
 	player.freeze = false
 	player.player_jump(jump_x, jump_y)
-	HitFreeze.freeze()
+	HitFreeze.freeze(0.5, 0.1)
+	ScreenShake.do_screen_shake(2, 0.1)
 
 
 
@@ -122,7 +123,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 
 
 func change_direction():
-	#if CurrentLevel.level_manager.current_state == CurrentLevel.level_manager.GAME_STATE.ROLLING: return
+	if sprite.animation == "destroy": return
 	do_pump()
 	if is_horizontal:
 		if is_right:

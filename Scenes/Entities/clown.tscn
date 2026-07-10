@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://bx43pd7q6hqrt"]
+
+[ext_resource type="Script" uid="uid://fjshigaxwr0q" path="res://Scripts/GameCore/Objects/collectable.gd" id="1_i2r05"]
+[ext_resource type="Texture2D" uid="uid://dlpo62cd031ig" path="res://Sprites/Circus/Clown_Sprite.png" id="3_uxv85"]
+[ext_resource type="Script" uid="uid://cbc24q2fpet5x" path="res://Scripts/Behaviours/floating.gd" id="4_c6eb8"]
+[ext_resource type="Script" uid="uid://iyengagp03ya" path="res://Scripts/Behaviours/clown_behaviour.gd" id="4_uxv85"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6eb8"]
+atlas = ExtResource("3_uxv85")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kx0r"]
+atlas = ExtResource("3_uxv85")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1msn"]
+atlas = ExtResource("3_uxv85")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqqew"]
+atlas = ExtResource("3_uxv85")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3guu"]
+atlas = ExtResource("3_uxv85")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_re26k"]
+atlas = ExtResource("3_uxv85")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1u76j"]
+atlas = ExtResource("3_uxv85")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwwmn"]
+atlas = ExtResource("3_uxv85")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0nb2h"]
+atlas = ExtResource("3_uxv85")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g5c5h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6eb8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3kx0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1msn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqqew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3guu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_re26k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1u76j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwwmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0nb2h")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1tq3v"]
+radius = 33.49754
+
+[node name="clown" type="Node2D" unique_id=186391876 groups=["Collectable"]]
+scale = Vector2(1.015, 1.015)
+script = ExtResource("1_i2r05")
+entity_type = 3
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1245632784]
+unique_name_in_owner = true
+position = Vector2(0, 10.83744)
+scale = Vector2(4.6951976, 4.6951976)
+sprite_frames = SubResource("SpriteFrames_g5c5h")
+autoplay = "default"
+frame_progress = 0.86890787
+flip_h = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1524499499]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=322469688]
+position = Vector2(-0.98522174, -1.9704435)
+shape = SubResource("CircleShape2D_1tq3v")
+
+[node name="clown_behaviour" type="Node2D" parent="." unique_id=1843234375]
+script = ExtResource("4_uxv85")
+
+[node name="floating" type="Node2D" parent="." unique_id=798932583 node_paths=PackedStringArray("floating_object")]
+script = ExtResource("4_c6eb8")
+floating_object = NodePath("../Sprite")
+float_height = 7.0
+float_duration = 0.5
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://deojtxwd7cfaa"]
+
+[ext_resource type="Script" uid="uid://bwk6yq56faubf" path="res://Scripts/GameCore/level.gd" id="1_2c36j"]
+[ext_resource type="PackedScene" uid="uid://hv0uyenq7lw7" path="res://Scenes/player_spawner.tscn" id="2_4j1qf"]
+[ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/GameCore/collectables_controller.gd" id="3_pqpwx"]
+[ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/Entities/cama.tscn" id="4_smss5"]
+[ext_resource type="PackedScene" uid="uid://bx43pd7q6hqrt" path="res://Scenes/Entities/clown.tscn" id="5_2c36j"]
+
+[node name="level" type="Node2D" unique_id=1864007018]
+script = ExtResource("1_2c36j")
+
+[node name="player_spawner" parent="." unique_id=1071021330 instance=ExtResource("2_4j1qf")]
+unique_name_in_owner = true
+position = Vector2(160, 93)
+
+[node name="collectables_controller" type="Node2D" parent="." unique_id=710388454]
+unique_name_in_owner = true
+script = ExtResource("3_pqpwx")
+
+[node name="clown2" parent="collectables_controller" unique_id=482788674 instance=ExtResource("5_2c36j")]
+position = Vector2(800, 93.00001)
+
+[node name="clown6" parent="collectables_controller" unique_id=186391876 instance=ExtResource("5_2c36j")]
+position = Vector2(384, 124.00001)
+
+[node name="clown3" parent="collectables_controller" unique_id=864651549 instance=ExtResource("5_2c36j")]
+position = Vector2(224, 372)
+
+[node name="clown5" parent="collectables_controller" unique_id=1005038772 instance=ExtResource("5_2c36j")]
+position = Vector2(960.00006, 310)
+
+[node name="clown4" parent="collectables_controller" unique_id=505402738 instance=ExtResource("5_2c36j")]
+position = Vector2(672, 434.00003)
+
+[node name="cama" parent="collectables_controller" unique_id=1009130463 instance=ExtResource("4_smss5")]
+position = Vector2(96, 558)

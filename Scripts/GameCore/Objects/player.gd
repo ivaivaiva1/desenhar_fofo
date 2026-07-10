@@ -43,6 +43,8 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 		var collider := state.get_contact_collider_object(i)
 		
 		if collider.is_in_group("Pudim"):
+			print("chamei")
+			ScreenShake.do_screen_shake(1.5, 0.2)
 			var normal := state.get_contact_local_normal(i)
 			var pudim: Pudim = collider as Pudim
 			

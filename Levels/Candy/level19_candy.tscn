@@ -25,9 +25,19 @@ unique_name_in_owner = true
 script = ExtResource("4_avbsy")
 
 [node name="cama" parent="collectables_controller" unique_id=1009130463 instance=ExtResource("5_dimyd")]
-position = Vector2(128, 93)
+position = Vector2(128, 576)
 
-[node name="BubbleGun2" parent="collectables_controller" unique_id=746800837 instance=ExtResource("6_45sb7")]
+[node name="BubbleGun12" parent="collectables_controller" unique_id=746800837 instance=ExtResource("6_45sb7")]
+position = Vector2(128, 93)
+is_up = true
+
+[node name="collectable" parent="collectables_controller/BubbleGun12" unique_id=186391876 instance=ExtResource("7_m6sf3")]
+scale = Vector2(1, 1)
+
+[node name="floating" parent="collectables_controller/BubbleGun12/collectable" index="2" unique_id=1456923062]
+float_height = 0.0
+
+[node name="BubbleGun2" parent="collectables_controller" unique_id=187945347 instance=ExtResource("6_45sb7")]
 position = Vector2(352, 256)
 is_up = true
 
@@ -72,11 +82,6 @@ position = Vector2(128, 416)
 is_horizontal = true
 is_right = true
 
-[node name="BubbleGun8" parent="collectables_controller" unique_id=978717106 instance=ExtResource("6_45sb7")]
-position = Vector2(128, 576)
-is_horizontal = true
-is_right = true
-
 [node name="BubbleGun10" parent="collectables_controller" unique_id=1563147141 instance=ExtResource("6_45sb7")]
 position = Vector2(1056, 416)
 is_up = true
@@ -100,6 +105,7 @@ position = Vector2(576, 256)
 is_horizontal = true
 is_right = true
 
+[editable path="collectables_controller/BubbleGun12/collectable"]
 [editable path="collectables_controller/BubbleGun2/collectable"]
 [editable path="collectables_controller/BubbleGun3/collectable"]
 [editable path="collectables_controller/BubbleGun13/collectable"]

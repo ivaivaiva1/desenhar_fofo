@@ -9,7 +9,7 @@ script = ExtResource("1_o4mbg")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=301654723]
 unique_name_in_owner = true
-scale = Vector2(0.86, 0.86)
+scale = Vector2(1.04, 1.04)
 texture = ExtResource("1_iwcbr")
 
 [node name="floating" type="Node2D" parent="." unique_id=1376148530 node_paths=PackedStringArray("floating_object")]

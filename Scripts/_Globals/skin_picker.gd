@@ -18,16 +18,35 @@ const FONT_COLOR_SPACE := {"color": Color("fbf236")}
 const OUTLINE_COLOR_SPACE := {"color": Color("dc0c0c")}
 
 # BOB
-const BOB_CANDY := {"texture": preload("uid://dm6y5ehesh4wg")}
-const BOB_SPACE := {"texture": preload("uid://biqh22lkslyvy")}
+const BOB_CANDY := {
+	"texture": preload("uid://btuffg8yumu42"),
+	"scale": Vector2(1, 1)
+}
+const BOB_SPACE := {
+	"texture": preload("uid://biqh22lkslyvy"),
+	"scale": Vector2(1, 1)
+}
+
 
 # FOOD
-const FOOD_CANDY := {"texture": preload("uid://dgt64h8fkfp17")}
-const FOOD_SPACE := {"texture": preload("uid://vaub5rxhlur4")}
+const FOOD_CANDY := {
+	"texture": preload("uid://dgt64h8fkfp17"), 
+	"scale": Vector2(1, 1)
+}
+const FOOD_SPACE := {
+	"texture": preload("uid://bqoq4gx4ktdr2"), 
+	"scale": Vector2(3.5, 3.5)
+}
 
 # CAMA
-const CAMA_CANDY := {"texture": preload("uid://bcynbwdwllm32")}
-const CAMA_SPACE := {"texture": preload("uid://cs2m2vlka8yw3")}
+const CAMA_CANDY := {
+	"texture": preload("uid://bcynbwdwllm32"),
+	"scale": Vector2(1, 1)
+}
+const CAMA_SPACE := {
+	"texture": preload("uid://cs2m2vlka8yw3"),
+	"scale": Vector2(1, 1)
+}
 
 
 

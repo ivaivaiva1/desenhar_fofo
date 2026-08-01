@@ -1,8 +1,5 @@
 extends Node
 
-func _ready() -> void:
-	randomize()
-
 
 # musics 
 const CANDY_WORLD := {"stream": preload("uid://bnqhhuue7uhgg"), "volume": -10.0}

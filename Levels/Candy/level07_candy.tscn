@@ -35,4 +35,4 @@ position = Vector2(768.00006, 279)
 
 [node name="Pudim" parent="collectables_controller" unique_id=540096184 instance=ExtResource("6_1xbtl")]
 position = Vector2(384, 558)
-pudim_force = 500.0
+pudim_force = 400.0

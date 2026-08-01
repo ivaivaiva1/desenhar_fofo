@@ -43,12 +43,12 @@ position = Vector2(768, 279)
 [node name="pudim" parent="." unique_id=2051217350 instance=ExtResource("6_gtt8b")]
 position = Vector2(160.00002, 496.00003)
 rotation = 0.7853982
-pudim_force = 500.0
+pudim_force = 400.0
 
 [node name="pudim2" parent="." unique_id=540096184 instance=ExtResource("6_gtt8b")]
 position = Vector2(992.0001, 496.00003)
 rotation = -0.7853982
-pudim_force = 500.0
+pudim_force = 400.0
 
 [node name="Fase" type="Sprite2D" parent="." unique_id=424850054]
 position = Vector2(592, 928)

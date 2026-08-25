@@ -10,6 +10,7 @@ var current_level: Level
 @export var gravity_air: float = 100.0
 @export var gravity_ground_down: float = 6000.0
 @export var gravity_ground_up: float = 10
+var max_speed: float = 1200
 
 
 func _ready() -> void:
@@ -59,6 +60,8 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 			linear_velocity += normal * pudim.pudim_force
 			pudim.pump_pudim()
 	apply_central_force(Vector2.DOWN * gravity * mass)
+	linear_velocity.x = clamp(linear_velocity.x, -max_speed, max_speed)
+	linear_velocity.y = clamp(linear_velocity.y, -max_speed, max_speed)
 
 
 

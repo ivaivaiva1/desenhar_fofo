@@ -4,6 +4,7 @@ enum ENTITY_TYPE {
 	BOB,
 	FOOD,
 	CAMA,
+	BEE,
 	NULL
 }
 

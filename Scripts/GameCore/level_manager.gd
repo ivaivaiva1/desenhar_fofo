@@ -74,6 +74,7 @@ func spawn_bob():
 	get_tree().current_scene.add_child(bob_instance)
 	bob_instance.global_position = player_pos.global_position
 	rolling_bob = bob_instance as Player
+	rolling_bob.current_level = load_level.level_instance
 	rolling_bob.level_manager = self as LevelManager
 
 

@@ -8,6 +8,7 @@
 
 [node name="level" type="Node2D" unique_id=1864007018]
 script = ExtResource("1_ffhb2")
+is_warp = true
 
 [node name="player_spawner" parent="." unique_id=1071021330 instance=ExtResource("1_vl2sw")]
 unique_name_in_owner = true

@@ -2,6 +2,7 @@ extends RigidBody2D
 class_name Player
 
 var level_manager: LevelManager
+var current_level: Level
 
 @export var entity_type: SkinPicker.ENTITY_TYPE
 @onready var sprite: Sprite2D = %Sprite
@@ -21,8 +22,15 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if level_manager == null: return
-	if global_position.y > 750:
-		level_manager.start_drawning()
+	if !current_level.is_warp:
+		if global_position.y > 750:
+			level_manager.start_drawning()
+	else:
+		if global_position.y > 700:
+			global_position.y = -39
+		if global_position.y < -40:
+			global_position.y = 699
+
 
 
 func player_jump(force_x: float, force_y: float) -> void:

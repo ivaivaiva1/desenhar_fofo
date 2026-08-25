@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bmwiuk5lpanhd" path="res://Sprites/Candy/Enviorement/candy world v2.png" id="10_0ow7h"]
 
 [node name="CandyEnviorement" type="Node2D" unique_id=1520312425]
+visible = false
 
 [node name="-" type="Node2D" parent="." unique_id=46547202]
 

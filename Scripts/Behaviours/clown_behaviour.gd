@@ -18,7 +18,6 @@ func _process(delta: float) -> void:
 			if start_hiding: return 
 			hide_clown()
 
-
 var hide_tween: Tween
 func hide_clown():
 	if collectable.is_picked: return

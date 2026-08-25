@@ -12,7 +12,7 @@ absorbent = true
 radius = 34.234486
 
 [node name="Player" type="RigidBody2D" unique_id=1431038016]
-mass = 200.0
+mass = 5000.0
 physics_material_override = SubResource("PhysicsMaterial_ryrav")
 script = ExtResource("1_nqm6o")
 

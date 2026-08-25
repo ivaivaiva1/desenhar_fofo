@@ -34,9 +34,9 @@ anchor_top = 0.31500003
 anchor_right = 0.62
 anchor_bottom = 0.74100006
 offset_left = -960.4
-offset_top = -540.19995
+offset_top = -1980.2
 offset_right = -960.4001
-offset_bottom = -540.2802
+offset_bottom = -1980.2803
 focus_mode = 0
 
 [node name="Drawning" type="Node2D" parent="." unique_id=1606344860]
@@ -57,9 +57,9 @@ anchor_top = 0.30600002
 anchor_right = 0.58900005
 anchor_bottom = 0.75900006
 offset_left = -960.24
-offset_top = -540.48
+offset_top = -1780.4799
 offset_right = -960.8801
-offset_bottom = -539.72015
+offset_bottom = -1779.7201
 focus_mode = 0
 
 [node name="TrashIcon" type="Sprite2D" parent="Drawning" unique_id=1922876924]
@@ -77,9 +77,9 @@ anchor_top = 0.25
 anchor_right = 0.583
 anchor_bottom = 0.694
 offset_left = -959.36
-offset_top = -540.0
+offset_top = -1849.9999
 offset_right = -959.36005
-offset_bottom = -539.52
+offset_bottom = -1849.5199
 focus_mode = 0
 
 [node name="UndoIcon" type="Sprite2D" parent="Drawning" unique_id=896113428]
@@ -98,9 +98,9 @@ anchor_top = 0.37500003
 anchor_right = 0.83300006
 anchor_bottom = 0.54200006
 offset_left = -540.52
-offset_top = -960.0
+offset_top = -2799.9998
 offset_right = -539.64014
-offset_bottom = -960.6402
+offset_bottom = -2800.6401
 focus_mode = 0
 
 [node name="Rolling" type="Node2D" parent="." unique_id=635727593]
@@ -122,9 +122,9 @@ anchor_top = 0.31500003
 anchor_right = 0.453
 anchor_bottom = 0.74100006
 offset_left = -959.12
-offset_top = -540.20013
+offset_top = -1950.2
 offset_right = -959.76
-offset_bottom = -540.2804
+offset_bottom = -1950.2803
 focus_mode = 0
 
 [connection signal="button_down" from="HomeIcon/HomeButton" to="." method="_on_home_button_button_down"]

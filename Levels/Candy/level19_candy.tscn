@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/GameCore/collectables_controller.gd" id="4_avbsy"]
 [ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/Entities/cama.tscn" id="5_dimyd"]
 [ext_resource type="PackedScene" uid="uid://da6q1rlv8eb0c" path="res://Scenes/Entities/bubblegum.tscn" id="6_45sb7"]
-[ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/food.tscn" id="7_m6sf3"]
+[ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/Entities/food.tscn" id="7_m6sf3"]
 
 [node name="level" type="Node2D" unique_id=1864007018]
 script = ExtResource("1_v58nq")

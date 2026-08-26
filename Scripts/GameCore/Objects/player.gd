@@ -7,10 +7,10 @@ var current_level: Level
 @export var entity_type: SkinPicker.ENTITY_TYPE
 @onready var sprite: Sprite2D = %Sprite
 
-@export var gravity_air: float = 100.0
-@export var gravity_ground_down: float = 6000.0
-@export var gravity_ground_up: float = 10
-var max_speed: float = 1200
+@export var gravity_air: float = 1400.0
+@export var gravity_ground_down: float = 9000.0
+@export var gravity_ground_up: float = 0
+var max_speed: float = 2000
 
 
 func _ready() -> void:
@@ -24,13 +24,13 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if level_manager == null: return
 	if !current_level.is_warp:
-		if global_position.y > 750:
+		if global_position.y > 1200:
 			level_manager.start_drawning()
 	else:
-		if global_position.y > 700:
-			global_position.y = -39
-		if global_position.y < -40:
-			global_position.y = 699
+		if global_position.y > 1161:
+			global_position.y = -69
+		if global_position.y < -70:
+			global_position.y = 1160
 
 
 

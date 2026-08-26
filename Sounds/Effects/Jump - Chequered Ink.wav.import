@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ga2g4f8o7fqf"
+path="res://.godot/imported/Jump - Chequered Ink.wav-0a2ead780082d23614f9de19d900d315.sample"
+
+[deps]
+
+source_file="res://Sounds/Effects/Jump - Chequered Ink.wav"
+dest_files=["res://.godot/imported/Jump - Chequered Ink.wav-0a2ead780082d23614f9de19d900d315.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -25,12 +25,19 @@ func _process(_delta: float) -> void:
 	if level_manager == null: return
 	if !current_level.is_warp:
 		if global_position.y > 1200:
-			level_manager.start_drawning()
+			die()
 	else:
 		if global_position.y > 1161:
 			global_position.y = -69
+			SfxManager.play_sfx(SoundsList.JUMP_JDWASABI)
 		if global_position.y < -70:
 			global_position.y = 1160
+			SfxManager.play_sfx(SoundsList.JUMP_JDWASABI)
+
+
+func die():
+	SfxManager.play_sfx(SoundsList.DEATH_SFX)
+	level_manager.start_drawning()
 
 
 

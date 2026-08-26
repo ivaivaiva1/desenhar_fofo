@@ -1,11 +1,15 @@
 extends Node2D
 class_name Pudim
 @export var pudim_force: float 
+@onready var timer: Timer = %Timer
 
 @onready var pudim_sprite: Sprite2D = %pudim_sprite
 @onready var original_scale: Vector2 = pudim_sprite.scale
 var pump_tween: Tween 
 func pump_pudim():
+	if !timer.is_stopped(): return
+	timer.start()
+	SfxManager.play_sfx(SoundsList.Jump_ChequeredInk)
 	if pump_tween: pump_tween.kill()
 	pump_tween = create_tween()
 	

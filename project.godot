@@ -23,6 +23,7 @@ MusicManager="*uid://defeqkiga7uap"
 SoundsList="*uid://c1m5kvl600jvu"
 HitFreeze="*uid://c7abq4ku2qyk1"
 ScreenShake="*uid://dum8v3iaouo5d"
+SfxManager="*uid://cr3ijtos7gmcp"
 
 [display]
 

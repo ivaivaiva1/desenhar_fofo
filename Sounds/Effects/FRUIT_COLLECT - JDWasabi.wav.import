@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://okfudy01l2o1"
+path="res://.godot/imported/FRUIT_COLLECT - JDWasabi.wav-98a43e543b6359ae0f7aae6b3de5187d.sample"
+
+[deps]
+
+source_file="res://Sounds/Effects/FRUIT_COLLECT - JDWasabi.wav"
+dest_files=["res://.godot/imported/FRUIT_COLLECT - JDWasabi.wav-98a43e543b6359ae0f7aae6b3de5187d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

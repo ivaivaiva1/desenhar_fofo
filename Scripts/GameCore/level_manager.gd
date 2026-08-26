@@ -79,6 +79,7 @@ func spawn_bob():
 
 
 func pass_level(call_next_level: bool = true):
+	SfxManager.play_sfx(SoundsList.CLICKKK_Skywave)
 	level_ui.hide_rolling_ui()
 	if is_testing:
 		start_drawning()

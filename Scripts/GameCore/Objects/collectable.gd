@@ -31,6 +31,7 @@ func papagaio_collected():
 
 func make_picked():
 	if !can_be_picked: return
+	SfxManager.play_sfx(SoundsList.FRUIT_COLLECT)
 	is_picked = true
 	sprite.visible = false
 

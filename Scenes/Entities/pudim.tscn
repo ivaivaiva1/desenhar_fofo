@@ -35,3 +35,8 @@ script = ExtResource("4_h3n23")
 floating_object = NodePath("../sprites_container")
 float_height = 2.5
 float_duration = 0.5
+
+[node name="Timer" type="Timer" parent="." unique_id=641131971]
+unique_name_in_owner = true
+wait_time = 0.1
+one_shot = true

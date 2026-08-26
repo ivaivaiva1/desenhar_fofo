@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://rs2jrtd0es55"
+path="res://.godot/imported/noob_release - Skywave_Studio.wav-3627e4e1f81d468ffdcfdb80a59b1ca7.sample"
+
+[deps]
+
+source_file="res://Sounds/Effects/noob_release - Skywave_Studio.wav"
+dest_files=["res://.godot/imported/noob_release - Skywave_Studio.wav-3627e4e1f81d468ffdcfdb80a59b1ca7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

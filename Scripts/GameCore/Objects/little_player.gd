@@ -4,9 +4,9 @@ class_name LittlePlayer
 @export var entity_type: SkinPicker.ENTITY_TYPE
 @onready var sprite: Sprite2D = %Sprite
 
-@export var gravity_air: float = 1400.0 / 1.3
-@export var gravity_ground_down: float = 9000.0 / 1.3
-@export var gravity_ground_up: float = 0
+var gravity_air: float = 1400.0 
+var gravity_ground_down: float = 9000.0 
+var gravity_ground_up: float = 0
 var max_speed: float = 1500
 
 
@@ -25,7 +25,6 @@ func _process(_delta: float) -> void:
 
 func die():
 	return
-	queue_free()
 
 
 func player_jump(force_x: float, force_y: float) -> void:

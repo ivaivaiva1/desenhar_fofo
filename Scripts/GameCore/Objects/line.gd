@@ -6,5 +6,5 @@ var render_points := PackedVector2Array()
 var collision_points := PackedVector2Array()
 
 var color := Color.DEEP_PINK
-var width := 3.0
+var width := 5.0
 var collision := true

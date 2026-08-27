@@ -10,7 +10,6 @@
 
 [node name="level" type="Node2D" unique_id=1864007018]
 script = ExtResource("1_wsjyj")
-little_bobs = true
 
 [node name="TileMapLayer" parent="." unique_id=964555964 instance=ExtResource("2_wsjyj")]
 visible = false

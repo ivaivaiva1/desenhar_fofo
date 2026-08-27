@@ -92,6 +92,9 @@ func spawn_little_bobs():
 
 func pass_level(call_next_level: bool = true):
 	SfxManager.play_sfx(SoundsList.CLICKKK_Skywave)
+	Engine.time_scale = 0.1
+	await get_tree().create_timer(0.1).timeout
+	Engine.time_scale = 1
 	level_ui.hide_rolling_ui()
 	if is_testing:
 		start_drawning()

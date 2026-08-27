@@ -10,19 +10,19 @@ script = ExtResource("1_3ktrk")
 position = Vector2(1, 0)
 
 [node name="little_player2" parent="." unique_id=63378758 instance=ExtResource("1_2a1mg")]
-position = Vector2(1, 0)
+position = Vector2(28, 0)
 
 [node name="little_player3" parent="." unique_id=2059790320 instance=ExtResource("1_2a1mg")]
-position = Vector2(1, 0)
+position = Vector2(-13, -31)
 
 [node name="little_player4" parent="." unique_id=758762837 instance=ExtResource("1_2a1mg")]
-position = Vector2(1, 0)
+position = Vector2(-30, 12)
 
 [node name="little_player5" parent="." unique_id=2106802310 instance=ExtResource("1_2a1mg")]
-position = Vector2(1, 0)
+position = Vector2(9, 24)
 
 [node name="little_player6" parent="." unique_id=1597986522 instance=ExtResource("1_2a1mg")]
-position = Vector2(1, 0)
+position = Vector2(26, -31)
 
 [node name="little_player7" parent="." unique_id=669613421 instance=ExtResource("1_2a1mg")]
-position = Vector2(1, 0)
+position = Vector2(3, -2)

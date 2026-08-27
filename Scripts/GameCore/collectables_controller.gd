@@ -5,6 +5,7 @@ class_name CollectablesController
 var level_collectables: Array[Collectable] = []
 var level_bubblegums: Array[Bubblegum] = []
 var level_clowns: Array[Clown] = []
+var level_is_done: bool = false
 
 
 func _ready() -> void:
@@ -33,8 +34,11 @@ func restore_collectables():
 
 
 func check_if_cleared():
+	if level_is_done: return
 	var finish_level: bool = true
 	for collectable in level_collectables:
 		if !collectable.is_picked:
 			finish_level = false
-	if finish_level: level_manager.pass_level()
+	if finish_level: 
+		level_is_done = true
+		level_manager.pass_level()

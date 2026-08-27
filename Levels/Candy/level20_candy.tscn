@@ -9,7 +9,6 @@
 
 [node name="level" type="Node2D" unique_id=1864007018]
 script = ExtResource("1_h5exn")
-little_bobs = true
 
 [node name="player_spawner" parent="." unique_id=1071021330 instance=ExtResource("2_be5qn")]
 unique_name_in_owner = true

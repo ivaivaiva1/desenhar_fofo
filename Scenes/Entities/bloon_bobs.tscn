@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bl0vl4awh0ypa"]
+
+[ext_resource type="Script" uid="uid://fjshigaxwr0q" path="res://Scripts/GameCore/Objects/collectable.gd" id="1_6nbqh"]
+[ext_resource type="Script" uid="uid://cbc24q2fpet5x" path="res://Scripts/Behaviours/floating.gd" id="4_f4dgm"]
+[ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://Shaders/blink.gdshader" id="5_p4t3k"]
+[ext_resource type="Texture2D" uid="uid://fkurlt83behl" path="res://Sprites/Bubble Prototype.png" id="6_f4dgm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3fu72"]
+shader = ExtResource("5_p4t3k")
+shader_parameter/flash_color = Color(1, 0, 0.14999962, 1)
+shader_parameter/flash_pct = 0.694000032965
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6nbqh"]
+friction = 0.0
+bounce = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m5rmg"]
+radius = 53.429546
+
+[node name="bloon_bobs" type="Node2D" unique_id=186391876 groups=["Collectable"]]
+scale = Vector2(1.015, 1.015)
+script = ExtResource("1_6nbqh")
+entity_type = 3
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1810300892]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_3fu72")
+position = Vector2(3.9408865, 4.926109)
+scale = Vector2(0.43494514, 0.43494517)
+texture = ExtResource("6_f4dgm")
+
+[node name="floating" type="Node2D" parent="." unique_id=798932583 node_paths=PackedStringArray("floating_object")]
+script = ExtResource("4_f4dgm")
+floating_object = NodePath("../Sprite")
+float_duration = 0.5
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=817471165]
+visible = false
+physics_material_override = SubResource("PhysicsMaterial_6nbqh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1518447931]
+shape = SubResource("CircleShape2D_m5rmg")

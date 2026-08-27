@@ -3,9 +3,9 @@ extends Node2D
 @export var floating_object: Node2D 
 @onready var start_y: float = floating_object.global_position.y
 
-@export var float_height: float = 5
+@export var float_height: float = 9
 @export var float_duration: float = 1
-@export var random_duration_percent: float = 30
+@export var random_duration_percent: float = 10
 
 func _ready() -> void:
 	if float_height == 0: queue_free()

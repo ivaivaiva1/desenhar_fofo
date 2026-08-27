@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/Entities/cama.tscn" id="5_ktorn"]
 [ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/Entities/food.tscn" id="6_menvj"]
 [ext_resource type="PackedScene" uid="uid://c8rqtnxypgm2q" path="res://Scenes/Entities/pudim.tscn" id="7_d6aje"]
+[ext_resource type="PackedScene" uid="uid://bl0vl4awh0ypa" path="res://Scenes/Entities/bloon_bobs.tscn" id="8_1ayq5"]
 
 [node name="level" type="Node2D" unique_id=1864007018]
 script = ExtResource("1_we5iv")
@@ -50,3 +51,6 @@ position = Vector2(1664.0001, 832)
 rotation = -0.7853982
 scale = Vector2(0.99999994, 0.99999994)
 pudim_force = 1000.0
+
+[node name="bloon_bobs" parent="collectables_controller" unique_id=525574511 instance=ExtResource("8_1ayq5")]
+position = Vector2(958, 254)

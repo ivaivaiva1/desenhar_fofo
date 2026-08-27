@@ -33,8 +33,8 @@ texture = ExtResource("3_h3n23")
 [node name="floating" type="Node2D" parent="." unique_id=987034080 node_paths=PackedStringArray("floating_object")]
 script = ExtResource("4_h3n23")
 floating_object = NodePath("../sprites_container")
-float_height = 2.5
-float_duration = 0.5
+float_height = 5.0
+float_duration = 1.5
 
 [node name="Timer" type="Timer" parent="." unique_id=641131971]
 unique_name_in_owner = true

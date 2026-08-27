@@ -14,8 +14,8 @@ func _ready() -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	if is_picked: return
 	if !can_be_picked: return
+	if is_picked: return
 	if area.is_in_group("Player"):
 		if frame_freeze: HitFreeze.freeze()
 		make_picked()
@@ -23,7 +23,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		var player := area.get_parent() 
 		player.pump_yuumy()
 
-
+ 
 func papagaio_collected():
 	HitFreeze.freeze()
 	ScreenShake.do_screen_shake(5, 0.15)

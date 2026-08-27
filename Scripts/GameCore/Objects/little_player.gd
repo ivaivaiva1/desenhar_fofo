@@ -100,3 +100,16 @@ func pump_yuumy():
 		original_scale,
 		0.064
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+
+
+func _on_body_entered(body: Node) -> void:
+	if body.is_in_group("Bloon"):
+		var dir = (global_position - body.global_position).normalized()
+		
+		apply_central_impulse(dir * 7 * 1000000)
+		pump_yuumy()
+		
+		var bloon: Bloon = body.get_parent() as Bloon
+		if bloon:
+			bloon.do_hited()
+			bloon.do_flash()

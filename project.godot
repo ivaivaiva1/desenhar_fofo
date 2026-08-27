@@ -40,6 +40,7 @@ PlayerSpawner=""
 Pudim=""
 DrawBlocker=""
 DrawArea=""
+Bloon=""
 
 [input]
 

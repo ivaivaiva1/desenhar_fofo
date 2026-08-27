@@ -5,7 +5,6 @@
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ryrav"]
 friction = 0.0
-bounce = 0.3
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e2o6t"]
 radius = 93.33333
@@ -32,3 +31,5 @@ scale = Vector2(0.3, 0.3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1615327810]
 shape = SubResource("CircleShape2D_e2o6t")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

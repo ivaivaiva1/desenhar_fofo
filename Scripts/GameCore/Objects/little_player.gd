@@ -43,7 +43,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 		
 	for i in state.get_contact_count():
 		var collider := state.get_contact_collider_object(i)
-		
+		if !collider: return
 		if collider.is_in_group("Pudim"):
 			print("chamei")
 			ScreenShake.do_screen_shake(1.5, 0.2)
@@ -56,6 +56,9 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 	linear_velocity.x = clamp(linear_velocity.x, -max_speed, max_speed)
 	linear_velocity.y = clamp(linear_velocity.y, -max_speed, max_speed)
 
+
+func make_yellow():
+	sprite.modulate = Color.YELLOW
 
 
 var original_scale: Vector2
@@ -110,6 +113,4 @@ func _on_body_entered(body: Node) -> void:
 		pump_yuumy()
 		
 		var bloon: Bloon = body.get_parent() as Bloon
-		if bloon:
-			bloon.do_hited()
-			bloon.do_flash()
+		if bloon: bloon.get_hited()

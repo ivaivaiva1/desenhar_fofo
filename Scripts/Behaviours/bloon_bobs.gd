@@ -7,9 +7,14 @@ var original_flash_color: Color
 var original_flash_pct: float
 var base_scale: Vector2
 var sprite_base_scale: Vector2
+@export var max_life: int = 5
+var current_life: int
+var is_dead: bool = false
+
 
 
 func _ready() -> void:
+	current_life = max_life
 	bloon_object = get_parent() as Collectable
 	base_scale = bloon_object.scale
 	sprite_base_scale = sprite.scale
@@ -17,6 +22,24 @@ func _ready() -> void:
 	original_flash_color = sprite.material.get_shader_parameter("flash_color")
 	original_flash_pct = sprite.material.get_shader_parameter("flash_pct")
 	start_breathing()
+
+
+
+func get_hited():
+	current_life -= 1
+	if current_life <= 0:
+		die()
+		return
+	SfxManager.play_sfx(SoundsList.BUBBLE_SOUND)
+	do_flash()
+	do_hited()
+
+
+func die():
+	SfxManager.play_sfx(SoundsList.BLOON_EXPLODE)
+	bloon_object.make_picked()
+	queue_free()
+
 
 
 var _breathing_tween: Tween = null
@@ -33,6 +56,7 @@ func start_breathing() -> void:
 	
 	_breathing_tween.tween_property(sprite, "scale", _base_scale * 1.05, breath_time)
 	_breathing_tween.tween_property(sprite, "scale", _base_scale / 1.05, breath_time * 1.5)
+
 
 
 var hited_tween: Tween

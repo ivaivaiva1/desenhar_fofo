@@ -51,7 +51,10 @@ func _process(_delta: float) -> void:
 func start_drawning():
 	if current_state == GAME_STATE.DRAWNING: return
 	current_state = GAME_STATE.DRAWNING
-	if rolling_bob: rolling_bob.auto_destroy()
+	if !load_level.level_instance.little_bobs:
+		if rolling_bob: rolling_bob.auto_destroy()
+	else:
+		load_level.level_instance.bobzinho_controller.clear()
 	state_label.text = (" SPACE TO PLAY")
 	if load_level.level_instance == null: return
 	if collectables_controller != null:
@@ -92,7 +95,7 @@ func spawn_little_bobs():
 
 
 func pass_level(call_next_level: bool = true):
-	SfxManager.play_sfx(SoundsList.CLICKKK_Skywave)
+	SfxManager.play_sfx(SoundsList.DUPLICATE_SOUND)
 	Engine.time_scale = 0.1
 	await get_tree().create_timer(0.1).timeout
 	Engine.time_scale = 1

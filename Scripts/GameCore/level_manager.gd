@@ -88,6 +88,7 @@ func spawn_little_bobs():
 	little_bob_instance.global_position = player_pos.global_position
 	rolling_bob = little_bob_instance as BobContainer
 	rolling_bob.level_manager = self as LevelManager
+	rolling_bob.start(6, 400)
 
 
 func pass_level(call_next_level: bool = true):

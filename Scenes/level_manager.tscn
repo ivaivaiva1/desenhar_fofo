@@ -15,7 +15,7 @@ script = ExtResource("1_ci404")
 unique_name_in_owner = true
 script = ExtResource("2_ghtn7")
 current_world = 1
-level = 1
+level = 20
 
 [node name="line_controller" parent="." unique_id=679656892 instance=ExtResource("3_pakjl")]
 unique_name_in_owner = true
@@ -38,20 +38,3 @@ visible = false
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1436782732]
 position = Vector2(960, 540)
-
-[node name="warp_zone" type="Node2D" parent="." unique_id=1155506313]
-unique_name_in_owner = true
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="warp_zone" unique_id=1880578140]
-offset_left = -709.0
-offset_right = 2636.0
-offset_bottom = 31.0
-color = Color(1, 0.5183333, 0.14999998, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="warp_zone" unique_id=1772159855]
-offset_left = -709.0
-offset_top = 1050.0
-offset_right = 2636.0
-offset_bottom = 1081.0
-color = Color(1, 0.5183333, 0.14999998, 1)

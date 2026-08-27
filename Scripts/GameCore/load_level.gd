@@ -8,7 +8,6 @@ class_name LoadLevel
 var level_instance: Level 
 var enviorement_instance: Node2D
 signal world_is_changing
-@onready var warp_zone: Node2D = %warp_zone
 
 
 
@@ -72,7 +71,6 @@ func spawn_level():
 	level_manager.add_child.call_deferred(level_instance)
 	level_instance.global_position = Vector2.ZERO
 	level_instance.start(level_manager)
-	warp_zone.visible = level_instance.is_warp
 
 
 func next_world():

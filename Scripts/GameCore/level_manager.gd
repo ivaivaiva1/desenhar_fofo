@@ -49,7 +49,7 @@ func _process(_delta: float) -> void:
 func start_drawning():
 	if current_state == GAME_STATE.DRAWNING: return
 	current_state = GAME_STATE.DRAWNING
-	rolling_bob.auto_destroy()
+	if rolling_bob: rolling_bob.auto_destroy()
 	state_label.text = (" SPACE TO PLAY")
 	if load_level.level_instance == null: return
 	if collectables_controller != null:
@@ -63,7 +63,10 @@ func start_rolling():
 	if current_state == GAME_STATE.ROLLING: return
 	line_controller.finish_line()
 	current_state = GAME_STATE.ROLLING
-	spawn_bob()
+	if !load_level.level_instance.little_bobs:
+		spawn_bob()
+	else:
+		spawn_little_bobs()
 	player_pos.visible = false
 	state_label.text = (" SPACE TO STOP")
 	level_ui.hide_drawining_ui()
@@ -76,6 +79,10 @@ func spawn_bob():
 	rolling_bob = bob_instance as Player
 	rolling_bob.current_level = load_level.level_instance
 	rolling_bob.level_manager = self as LevelManager
+
+
+func spawn_little_bobs():
+	pass
 
 
 func pass_level(call_next_level: bool = true):

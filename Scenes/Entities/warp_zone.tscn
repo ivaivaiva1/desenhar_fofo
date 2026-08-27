@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bg7tycqkg0pux"]
+
+[ext_resource type="Script" uid="uid://b10qa3c448ryc" path="res://Scripts/Entities/warp_zone.gd" id="1_7xwtu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5exn"]
+size = Vector2(268, 140)
+
+[node name="WarpZone" type="Area2D" unique_id=87311193]
+script = ExtResource("1_7xwtu")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1388138884]
+z_index = -1
+offset_left = -134.0
+offset_right = 134.0
+offset_bottom = 32.0
+mouse_filter = 2
+color = Color(1, 0.5306667, 0.120000005, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1195006266]
+position = Vector2(0, 70)
+shape = SubResource("RectangleShape2D_h5exn")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

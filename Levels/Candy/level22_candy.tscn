@@ -5,10 +5,10 @@
 [ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/GameCore/collectables_controller.gd" id="3_wlct2"]
 [ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/Entities/cama.tscn" id="4_4ucem"]
 [ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/Entities/food.tscn" id="5_8oisq"]
+[ext_resource type="PackedScene" uid="uid://bg7tycqkg0pux" path="res://Scenes/Entities/warp_zone.tscn" id="6_vp762"]
 
 [node name="level" type="Node2D" unique_id=1864007018]
 script = ExtResource("1_gttk8")
-is_warp = true
 
 [node name="player_spawner" parent="." unique_id=1071021330 instance=ExtResource("2_tmykq")]
 unique_name_in_owner = true
@@ -62,3 +62,17 @@ position = Vector2(448.00003, 896.00006)
 
 [node name="collectable9" parent="collectables_controller" unique_id=496081826 instance=ExtResource("5_8oisq")]
 position = Vector2(192, 896.00006)
+
+[node name="WarpZone" parent="." unique_id=87311193 instance=ExtResource("6_vp762")]
+position = Vector2(1728, 1048)
+
+[node name="WarpZone2" parent="." unique_id=740000396 instance=ExtResource("6_vp762")]
+position = Vector2(192, 1048)
+
+[node name="WarpZone3" parent="." unique_id=1013817484 instance=ExtResource("6_vp762")]
+position = Vector2(1728, 32)
+rotation = 3.1415927
+
+[node name="WarpZone4" parent="." unique_id=1860812989 instance=ExtResource("6_vp762")]
+position = Vector2(192, 32)
+rotation = 3.1415927

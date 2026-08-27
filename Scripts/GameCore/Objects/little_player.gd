@@ -1,8 +1,5 @@
 extends RigidBody2D
-class_name Player
-
-var level_manager: LevelManager
-var current_level: Level
+class_name LittlePlayer
 
 @export var entity_type: SkinPicker.ENTITY_TYPE
 @onready var sprite: Sprite2D = %Sprite
@@ -22,15 +19,12 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if level_manager == null: return
 	if global_position.y > 1400:
 		die()
 
 
 func die():
 	SfxManager.play_sfx(SoundsList.DEATH_SFX)
-	level_manager.start_drawning()
-
 
 
 func player_jump(force_x: float, force_y: float) -> void:
@@ -106,8 +100,3 @@ func pump_yuumy():
 		original_scale,
 		0.064
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-
-
-
-func auto_destroy():
-	queue_free()

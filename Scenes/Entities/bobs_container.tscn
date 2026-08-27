@@ -1,3 +1,28 @@
 [gd_scene format=3 uid="uid://d0aen8rgrfni3"]
 
+[ext_resource type="PackedScene" uid="uid://djfkfgkv6w1hy" path="res://Scenes/Entities/little_player.tscn" id="1_2a1mg"]
+[ext_resource type="Script" uid="uid://ku15ggwojlcd" path="res://Scripts/Entities/bobs_container.gd" id="1_3ktrk"]
+
 [node name="bobs_container" type="Node2D" unique_id=370811422]
+script = ExtResource("1_3ktrk")
+
+[node name="little_player" parent="." unique_id=1431038016 instance=ExtResource("1_2a1mg")]
+position = Vector2(1, 0)
+
+[node name="little_player2" parent="." unique_id=63378758 instance=ExtResource("1_2a1mg")]
+position = Vector2(1, 0)
+
+[node name="little_player3" parent="." unique_id=2059790320 instance=ExtResource("1_2a1mg")]
+position = Vector2(1, 0)
+
+[node name="little_player4" parent="." unique_id=758762837 instance=ExtResource("1_2a1mg")]
+position = Vector2(1, 0)
+
+[node name="little_player5" parent="." unique_id=2106802310 instance=ExtResource("1_2a1mg")]
+position = Vector2(1, 0)
+
+[node name="little_player6" parent="." unique_id=1597986522 instance=ExtResource("1_2a1mg")]
+position = Vector2(1, 0)
+
+[node name="little_player7" parent="." unique_id=669613421 instance=ExtResource("1_2a1mg")]
+position = Vector2(1, 0)

@@ -11,11 +11,13 @@ class_name LevelManager
 @onready var state_label: RichTextLabel = $state_label
 var collectables_controller: CollectablesController
 
-var player_scene: PackedScene = preload("uid://cre6fiyfcf35x")
 var player_pos: Marker2D 
+var player_scene: PackedScene = preload("uid://cre6fiyfcf35x")
+var little_bob_scene: PackedScene = preload("uid://d0aen8rgrfni3")
+
 
 var current_state: GAME_STATE = GAME_STATE.DRAWNING
-var rolling_bob: Player
+var rolling_bob
 
 signal clear_lines()
 
@@ -58,7 +60,6 @@ func start_drawning():
 	level_ui.hide_rolling_ui()
 
 
-
 func start_rolling():
 	if current_state == GAME_STATE.ROLLING: return
 	line_controller.finish_line()
@@ -82,7 +83,11 @@ func spawn_bob():
 
 
 func spawn_little_bobs():
-	pass
+	var little_bob_instance = little_bob_scene.instantiate()
+	get_tree().current_scene.add_child(little_bob_instance)
+	little_bob_instance.global_position = player_pos.global_position
+	rolling_bob = little_bob_instance as BobContainer
+	rolling_bob.level_manager = self as LevelManager
 
 
 func pass_level(call_next_level: bool = true):

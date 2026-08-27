@@ -20,7 +20,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		if frame_freeze: HitFreeze.freeze()
 		make_picked()
 		if is_papagaio: papagaio_collected()
-		var player: Player = area.get_parent() as Player
+		var player := area.get_parent() 
 		player.pump_yuumy()
 
 

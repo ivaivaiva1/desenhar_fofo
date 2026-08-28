@@ -10,7 +10,8 @@ var current_level: Level
 @export var gravity_air: float = 1000.0
 @export var gravity_ground_down: float = 7000.0
 @export var gravity_ground_up: float = 700
-@export var grounded_time: float = 0.2
+@export var grounded_time: float = 0.4
+@onready var label: Label = %Label
 
 var max_speed: float = 2000.0
 var grounded := false
@@ -26,6 +27,10 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
+	if grounded:
+		label.text = "T"
+	else:
+		label.text = "F"
 	if level_manager == null:
 		return
 	

@@ -9,6 +9,9 @@ absorbent = true
 [sub_resource type="CircleShape2D" id="CircleShape2D_e2o6t"]
 radius = 61.0
 
+[sub_resource type="LabelSettings" id="LabelSettings_nqm6o"]
+font_size = 65
+
 [node name="Player" type="RigidBody2D" unique_id=1431038016]
 mass = 10.0
 physics_material_override = SubResource("PhysicsMaterial_ryrav")
@@ -29,3 +32,15 @@ shape = SubResource("CircleShape2D_e2o6t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1615327810]
 visible = false
 shape = SubResource("CircleShape2D_e2o6t")
+
+[node name="Label" type="Label" parent="." unique_id=861267892]
+unique_name_in_owner = true
+visible = false
+offset_left = -258.0
+offset_top = -291.0
+offset_right = 259.0
+offset_bottom = -39.0
+text = "DASHDIUHAD"
+label_settings = SubResource("LabelSettings_nqm6o")
+horizontal_alignment = 1
+vertical_alignment = 1

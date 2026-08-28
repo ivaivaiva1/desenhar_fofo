@@ -87,7 +87,7 @@ entity_type = 3
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1245632784]
 unique_name_in_owner = true
 position = Vector2(0, 10.83744)
-scale = Vector2(4.6951976, 4.6951976)
+scale = Vector2(7, 7)
 sprite_frames = SubResource("SpriteFrames_g5c5h")
 autoplay = "default"
 frame_progress = 0.86890787

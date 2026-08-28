@@ -11,26 +11,52 @@ script = ExtResource("1_2c36j")
 
 [node name="player_spawner" parent="." unique_id=1071021330 instance=ExtResource("2_4j1qf")]
 unique_name_in_owner = true
-position = Vector2(160, 93)
+position = Vector2(256, 120)
 
 [node name="collectables_controller" type="Node2D" parent="." unique_id=710388454]
 unique_name_in_owner = true
 script = ExtResource("3_pqpwx")
 
 [node name="clown2" parent="collectables_controller" unique_id=482788674 instance=ExtResource("5_2c36j")]
-position = Vector2(800, 93.00001)
+position = Vector2(1280, 120.00001)
+
+[node name="clown_behaviour" parent="collectables_controller/clown2" index="2" unique_id=1843234375]
+hide_cooldown = 2.0
+hide_tween_timer = 3.0
 
 [node name="clown6" parent="collectables_controller" unique_id=186391876 instance=ExtResource("5_2c36j")]
-position = Vector2(384, 124.00001)
+position = Vector2(640.00006, 240.00002)
+
+[node name="clown_behaviour" parent="collectables_controller/clown6" index="2" unique_id=1843234375]
+hide_cooldown = 2.0
+hide_tween_timer = 3.0
 
 [node name="clown3" parent="collectables_controller" unique_id=864651549 instance=ExtResource("5_2c36j")]
-position = Vector2(224, 372)
+position = Vector2(384, 600)
+
+[node name="clown_behaviour" parent="collectables_controller/clown3" index="2" unique_id=1843234375]
+hide_cooldown = 2.0
+hide_tween_timer = 3.0
 
 [node name="clown5" parent="collectables_controller" unique_id=1005038772 instance=ExtResource("5_2c36j")]
-position = Vector2(960.00006, 310)
+position = Vector2(1664, 600.00006)
+
+[node name="clown_behaviour" parent="collectables_controller/clown5" index="2" unique_id=1843234375]
+hide_cooldown = 2.0
+hide_tween_timer = 3.0
 
 [node name="clown4" parent="collectables_controller" unique_id=505402738 instance=ExtResource("5_2c36j")]
-position = Vector2(672, 434.00003)
+position = Vector2(1152.0001, 720.00006)
+
+[node name="clown_behaviour" parent="collectables_controller/clown4" index="2" unique_id=1843234375]
+hide_cooldown = 2.0
+hide_tween_timer = 3.0
 
 [node name="cama" parent="collectables_controller" unique_id=1009130463 instance=ExtResource("4_smss5")]
-position = Vector2(96, 558)
+position = Vector2(128, 960)
+
+[editable path="collectables_controller/clown2"]
+[editable path="collectables_controller/clown6"]
+[editable path="collectables_controller/clown3"]
+[editable path="collectables_controller/clown5"]
+[editable path="collectables_controller/clown4"]

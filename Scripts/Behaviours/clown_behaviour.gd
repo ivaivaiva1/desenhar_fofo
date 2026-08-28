@@ -3,8 +3,8 @@ class_name Clown
 
 @onready var collectable: Collectable = get_parent() as Collectable
 var start_hiding: bool = false
-var hide_cooldown: float = 1
-var hide_tween_timer: float = 2
+@export var hide_cooldown: float = 1
+@export var hide_tween_timer: float = 2
 @onready var hide_timer: float = hide_cooldown
 @onready var sprite := %Sprite
 

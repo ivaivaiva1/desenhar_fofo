@@ -11,44 +11,44 @@ script = ExtResource("1_j0y70")
 
 [node name="player_spawner" parent="." unique_id=1071021330 instance=ExtResource("2_8au82")]
 unique_name_in_owner = true
-position = Vector2(96, 320)
+position = Vector2(256, 480)
 
 [node name="collectables_controller" type="Node2D" parent="." unique_id=710388454]
 unique_name_in_owner = true
 script = ExtResource("3_3pb2w")
 
 [node name="cama" parent="collectables_controller" unique_id=1009130463 instance=ExtResource("4_nutnc")]
-position = Vector2(1056, 320)
+position = Vector2(1664, 480)
 
 [node name="papagaio" parent="collectables_controller" unique_id=186391876 instance=ExtResource("5_qepil")]
-position = Vector2(384, 96)
+position = Vector2(1280, 120.00006)
 
-[node name="floating_patrol" parent="collectables_controller/papagaio" index="2" unique_id=1663466198]
+[node name="floating_patrol" parent="collectables_controller/papagaio" index="1" unique_id=1663466198]
 position = Vector2(-6.0133163e-05, -3.0066582e-05)
 travel_time = 8.0
 
-[node name="patrol_target" parent="collectables_controller/papagaio" index="3" unique_id=1758924140]
-position = Vector2(0, 441.3793)
+[node name="patrol_target" parent="collectables_controller/papagaio" index="2" unique_id=1758924140]
+position = Vector2(0, 827.586)
 
 [node name="papagaio2" parent="collectables_controller" unique_id=2108985116 instance=ExtResource("5_qepil")]
-position = Vector2(512, 96)
+position = Vector2(960, 120)
 
-[node name="floating_patrol" parent="collectables_controller/papagaio2" index="2" unique_id=1663466198]
+[node name="floating_patrol" parent="collectables_controller/papagaio2" index="1" unique_id=1663466198]
 position = Vector2(-6.0133163e-05, -3.0066582e-05)
 travel_time = 8.0
 
-[node name="patrol_target" parent="collectables_controller/papagaio2" index="3" unique_id=1758924140]
-position = Vector2(0, 441.3793)
+[node name="patrol_target" parent="collectables_controller/papagaio2" index="2" unique_id=1758924140]
+position = Vector2(0, 827.586)
 
 [node name="papagaio3" parent="collectables_controller" unique_id=1800873728 instance=ExtResource("5_qepil")]
-position = Vector2(640, 96)
+position = Vector2(640.00006, 120)
 
-[node name="floating_patrol" parent="collectables_controller/papagaio3" index="2" unique_id=1663466198]
+[node name="floating_patrol" parent="collectables_controller/papagaio3" index="1" unique_id=1663466198]
 position = Vector2(-6.0133163e-05, -3.0066582e-05)
 travel_time = 8.0
 
-[node name="patrol_target" parent="collectables_controller/papagaio3" index="3" unique_id=1758924140]
-position = Vector2(0, 441.3793)
+[node name="patrol_target" parent="collectables_controller/papagaio3" index="2" unique_id=1758924140]
+position = Vector2(0, 827.586)
 
 [editable path="collectables_controller/papagaio"]
 [editable path="collectables_controller/papagaio2"]

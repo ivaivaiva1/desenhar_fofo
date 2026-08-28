@@ -1,12 +1,14 @@
 extends Node2D
 class_name Collectable
 
+var level_manager: LevelManager
 @export var entity_type: SkinPicker.ENTITY_TYPE
 @export var frame_freeze: bool = false
 var is_picked: bool = false
 @onready var sprite:= %Sprite
 @export var is_papagaio: bool = false
 var can_be_picked: bool = true
+var self_restore: bool = false
 
 
 func _ready() -> void:
@@ -14,6 +16,7 @@ func _ready() -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
+	if self_restore: return
 	if !can_be_picked: return
 	if is_picked: return
 	if area.is_in_group("Player"):
@@ -37,6 +40,7 @@ func make_picked():
 
 
 func make_unpicked():
+	if self_restore: return
 	if !is_picked: return
 	is_picked = false
 	sprite.visible = true

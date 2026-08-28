@@ -3,6 +3,7 @@ class_name LittlePlayer
 
 @export var entity_type: SkinPicker.ENTITY_TYPE
 @onready var sprite: Sprite2D = %Sprite
+var controller: BobzinhoController
 
 var gravity_air: float = 1400.0 
 var gravity_ground_down: float = 9000.0 
@@ -24,7 +25,7 @@ func _process(_delta: float) -> void:
 
 
 func die():
-	return
+	controller.kill(self)
 
 
 func player_jump(force_x: float, force_y: float) -> void:
@@ -45,7 +46,6 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 		var collider := state.get_contact_collider_object(i)
 		if !collider: return
 		if collider.is_in_group("Pudim"):
-			print("chamei")
 			ScreenShake.do_screen_shake(1.5, 0.2)
 			var normal := state.get_contact_local_normal(i)
 			var pudim: Pudim = collider as Pudim
@@ -109,7 +109,7 @@ func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("Bloon"):
 		var dir = (global_position - body.global_position).normalized()
 		
-		apply_central_impulse(dir * 7 * 1000000)
+		apply_central_impulse(dir * 10 * 1000000)
 		pump_yuumy()
 		
 		var bloon: Bloon = body.get_parent() as Bloon

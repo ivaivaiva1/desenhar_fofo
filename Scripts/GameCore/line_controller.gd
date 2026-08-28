@@ -38,7 +38,6 @@ func handle_mouse_button(event: InputEventMouseButton):
 	#print(event.button_index)
 	if event.button_index != MOUSE_BUTTON_LEFT:
 		return
-	print("passou")
 	if event.pressed:
 		start_line()
 	else:
@@ -122,7 +121,6 @@ func finish_line():
 		return
 	
 	is_drawing = false
-	print("acabou")
 	if current_line.source_points.size() >= 2:
 		line_finished.emit(current_line)
 	

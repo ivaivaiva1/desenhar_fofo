@@ -37,5 +37,6 @@ script = ExtResource("5_360jo")
 [node name="StaticBody2D" type="StaticBody2D" parent="bloon_bobs_behaviour" unique_id=817471165 groups=["Bloon"]]
 visible = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="bloon_bobs_behaviour/StaticBody2D" unique_id=1518447931]
+[node name="Body" type="CollisionShape2D" parent="bloon_bobs_behaviour/StaticBody2D" unique_id=1518447931]
+unique_name_in_owner = true
 shape = SubResource("CircleShape2D_m5rmg")

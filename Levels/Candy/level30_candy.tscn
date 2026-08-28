@@ -35,17 +35,14 @@ position = Vector2(272, 928)
 [node name="collectable" parent="collectables_controller" unique_id=186391876 instance=ExtResource("6_menvj")]
 position = Vector2(960.00006, 512.00006)
 
-[node name="collectable2" parent="collectables_controller" unique_id=1310654872 instance=ExtResource("6_menvj")]
-position = Vector2(960.00006, 256)
+[node name="collectable2" parent="collectables_controller" unique_id=1061007077 instance=ExtResource("6_menvj")]
+position = Vector2(960.00006, 960)
 
 [node name="collectable3" parent="collectables_controller" unique_id=178932242 instance=ExtResource("6_menvj")]
 position = Vector2(576.00006, 160)
 
 [node name="collectable5" parent="collectables_controller" unique_id=1104849812 instance=ExtResource("6_menvj")]
 position = Vector2(1344, 160.00002)
-
-[node name="collectable4" parent="collectables_controller" unique_id=2044736291 instance=ExtResource("6_menvj")]
-position = Vector2(1504, 672.00006)
 
 [node name="Pudim" parent="collectables_controller" unique_id=1431602877 instance=ExtResource("7_d6aje")]
 position = Vector2(960, 736)
@@ -58,4 +55,10 @@ scale = Vector2(0.99999994, 0.99999994)
 pudim_force = 1000.0
 
 [node name="bloon_bobs" parent="collectables_controller" unique_id=525574511 instance=ExtResource("8_1ayq5")]
-position = Vector2(958, 254)
+position = Vector2(960, 256)
+
+[node name="bloon_bobs5" parent="collectables_controller" unique_id=722443329 instance=ExtResource("8_1ayq5")]
+position = Vector2(1504, 672.00006)
+
+[editable path="collectables_controller/bloon_bobs"]
+[editable path="collectables_controller/bloon_bobs5"]

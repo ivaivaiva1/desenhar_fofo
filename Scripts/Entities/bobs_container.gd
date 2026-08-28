@@ -11,8 +11,9 @@ var little_bob_scene: PackedScene = preload("uid://djfkfgkv6w1hy")
 @onready var spawn_area: CollisionShape2D = %spawn_area
 
 
-func start(bob_count: int, explosion_force: float) -> void:
+func start(LM: LevelManager, bob_count: int, explosion_force: float) -> void:
 	randomize()
+	level_manager = LM
 	force_strength = explosion_force
 	for i in bob_count:
 		if level_manager.current_state != level_manager.GAME_STATE.ROLLING: 

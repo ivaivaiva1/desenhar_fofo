@@ -2,20 +2,30 @@ extends Node2D
 class_name Bloon
 
 var bloon_object: Collectable
+var level_manager: LevelManager
+
 @onready var sprite: Sprite2D = %Sprite
+@onready var body: CollisionShape2D = %Body
+
 var original_flash_color: Color
 var original_flash_pct: float
 var base_scale: Vector2
 var sprite_base_scale: Vector2
-@export var max_life: int = 5
+@export var max_life: int = 3
+@export var many_bobs: int =  6
+@export var impulse_force: int = 400
 var current_life: int
 var is_dead: bool = false
+var little_bob_scene: PackedScene = preload("uid://d0aen8rgrfni3")
 
 
 
 func _ready() -> void:
-	current_life = max_life
 	bloon_object = get_parent() as Collectable
+	bloon_object.self_restore = true
+	
+	current_life = max_life
+	
 	base_scale = bloon_object.scale
 	sprite_base_scale = sprite.scale
 	sprite.material = sprite.material.duplicate()
@@ -26,6 +36,7 @@ func _ready() -> void:
 
 
 func get_hited():
+	if bloon_object.is_picked: return
 	current_life -= 1
 	if current_life <= 0:
 		die()
@@ -35,11 +46,30 @@ func get_hited():
 	do_hited()
 
 
-func die():
-	SfxManager.play_sfx(SoundsList.BLOON_EXPLODE)
-	bloon_object.make_picked()
-	queue_free()
+func spawn_little_bobs():
+	var little_bob_instance = little_bob_scene.instantiate()
+	get_tree().current_scene.add_child(little_bob_instance)
+	little_bob_instance.global_position = self.global_position
+	little_bob_instance.start(level_manager, many_bobs, impulse_force)
 
+
+
+func die():
+	bloon_object.is_picked = true
+	body.set_deferred("disabled", true)
+	sprite.visible = false
+	HitFreeze.freeze(0.1, 0.3)
+	ScreenShake.do_screen_shake(5, 0.3)
+	SfxManager.play_sfx(SoundsList.BLOON_EXPLODE)
+	spawn_little_bobs()
+
+
+func reset():
+	print("reset")
+	bloon_object.is_picked = false
+	body.set_deferred("disabled", false)
+	sprite.visible = true
+	current_life = max_life
 
 
 var _breathing_tween: Tween = null
@@ -83,7 +113,6 @@ func do_hited():
 
 var flash_tween: Tween
 func do_flash():
-	print("tamo aq")
 	if flash_tween: flash_tween.kill()
 	flash_tween = create_tween()
 	var mat := sprite.material

@@ -6,9 +6,9 @@ class_name LittlePlayer
 var controller: BobzinhoController
 
 var gravity_air: float = 1100.0 
-var gravity_ground_down: float = 7000.0 
+var gravity_ground_down: float = 9000.0 
 var gravity_ground_up: float = 0
-var max_speed: float = 1500
+var max_speed: float = 2000
 
 
 func _ready() -> void:

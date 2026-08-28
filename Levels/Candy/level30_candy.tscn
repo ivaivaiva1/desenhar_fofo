@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c8rqtnxypgm2q" path="res://Scenes/Entities/pudim.tscn" id="7_d6aje"]
 [ext_resource type="PackedScene" uid="uid://bl0vl4awh0ypa" path="res://Scenes/Entities/bloon_bobs.tscn" id="8_1ayq5"]
 [ext_resource type="PackedScene" uid="uid://brocdhq6jppsd" path="res://Scenes/Entities/urna.tscn" id="10_jwk4y"]
+[ext_resource type="PackedScene" uid="uid://bg7tycqkg0pux" path="res://Scenes/Entities/warp_zone.tscn" id="10_ktorn"]
 
 [node name="level" type="Node2D" unique_id=1864007018]
 script = ExtResource("1_we5iv")
@@ -60,6 +61,13 @@ position = Vector2(960, 256)
 
 [node name="bloon_bobs5" parent="collectables_controller" unique_id=722443329 instance=ExtResource("8_1ayq5")]
 position = Vector2(1504, 672.00006)
+
+[node name="WarpZone" parent="." unique_id=87311193 instance=ExtResource("10_ktorn")]
+position = Vector2(960, 1048)
+
+[node name="WarpZone2" parent="." unique_id=1254476802 instance=ExtResource("10_ktorn")]
+position = Vector2(960, 32)
+rotation = 3.1415927
 
 [editable path="collectables_controller/bloon_bobs"]
 [editable path="collectables_controller/bloon_bobs5"]

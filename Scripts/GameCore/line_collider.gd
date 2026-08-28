@@ -35,9 +35,9 @@ func _build_collision(line: Line):
 		return
 	
 	var body = StaticBody2D.new()
-	
+	body.add_to_group("Line")
 	var physics_material := PhysicsMaterial.new()
-	physics_material.bounce = 100000
+	physics_material.bounce = 0
 	physics_material.absorbent = true
 	physics_material.friction = 0
 	

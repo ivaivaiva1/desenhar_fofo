@@ -7,9 +7,9 @@ var current_level: Level
 @export var entity_type: SkinPicker.ENTITY_TYPE
 @onready var sprite: Sprite2D = %Sprite
 
-@export var gravity_air: float = 100.0
-@export var gravity_ground_down: float = 9000.0
-@export var gravity_ground_up: float = 0.0
+@export var gravity_air: float = 1000.0
+@export var gravity_ground_down: float = 7000.0
+@export var gravity_ground_up: float = 700
 @export var grounded_time: float = 0.2
 
 var max_speed: float = 2000.0
@@ -45,25 +45,21 @@ func player_jump(force_x: float, force_y: float) -> void:
 
 
 func _integrate_forces(state: PhysicsDirectBodyState2D):
-	var has_contact := state.get_contact_count() > 0
-	
-	if has_contact:
-		grounded = true
-		grounded_timer = grounded_time
-	elif grounded:
-		grounded_timer -= state.step
-		if grounded_timer <= 0.0:
-			grounded = false
-	
-	var gravity: float = gravity_air
-	if grounded:
-		if linear_velocity.y < 0.0:
-			gravity = gravity_ground_up
-		else:
-			gravity = gravity_ground_down
+	var has_ground_contact := false
 	
 	for i in state.get_contact_count():
 		var collider := state.get_contact_collider_object(i)
+		
+		
+		if collider.is_in_group("Line"):
+			print("ta na linha")
+			var normal := state.get_contact_local_normal(i)
+			var tangent := Vector2(-normal.y, normal.x)
+			if tangent.dot(linear_velocity) < 0.0:
+				tangent = -tangent
+			var speed := linear_velocity.length()
+			linear_velocity = tangent * speed
+		
 		if collider.is_in_group("Pudim"):
 			ScreenShake.do_screen_shake(1.5, 0.2)
 			
@@ -72,7 +68,30 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 			
 			linear_velocity += normal * pudim.pudim_force
 			pudim.pump_pudim()
-	apply_central_force(Vector2.DOWN * gravity * 10)
+		
+		if state.get_contact_local_normal(i).y < -0.26:
+			has_ground_contact = true
+	
+	if has_ground_contact:
+		grounded = true
+		grounded_timer = grounded_time
+	elif grounded:
+		grounded_timer -= state.step
+		if grounded_timer <= 0.0:
+			grounded = false
+	
+	
+	var target_gravity: float = gravity_air
+	if grounded:
+		if has_ground_contact:
+			if linear_velocity.y < 0.0:
+				target_gravity = gravity_ground_up
+			else:
+				target_gravity = gravity_ground_down
+		else:
+			target_gravity = gravity_ground_up
+	
+	gravity_scale = target_gravity / 980.0
 
 
 

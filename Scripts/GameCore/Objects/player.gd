@@ -7,10 +7,14 @@ var current_level: Level
 @export var entity_type: SkinPicker.ENTITY_TYPE
 @onready var sprite: Sprite2D = %Sprite
 
-@export var gravity_air: float = 1400.0
+@export var gravity_air: float = 100.0
 @export var gravity_ground_down: float = 9000.0
-@export var gravity_ground_up: float = 0
-var max_speed: float = 2000
+@export var gravity_ground_up: float = 0.0
+@export var grounded_time: float = 0.2
+
+var max_speed: float = 2000.0
+var grounded := false
+var grounded_timer := 0.0
 
 
 func _ready() -> void:
@@ -22,7 +26,9 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if level_manager == null: return
+	if level_manager == null:
+		return
+	
 	if global_position.y > 1400:
 		die()
 
@@ -32,7 +38,6 @@ func die():
 	level_manager.start_drawning()
 
 
-
 func player_jump(force_x: float, force_y: float) -> void:
 	linear_velocity = Vector2.ZERO
 	angular_velocity = 0.0
@@ -40,26 +45,34 @@ func player_jump(force_x: float, force_y: float) -> void:
 
 
 func _integrate_forces(state: PhysicsDirectBodyState2D):
+	var has_contact := state.get_contact_count() > 0
+	
+	if has_contact:
+		grounded = true
+		grounded_timer = grounded_time
+	elif grounded:
+		grounded_timer -= state.step
+		if grounded_timer <= 0.0:
+			grounded = false
+	
 	var gravity: float = gravity_air
-	if state.get_contact_count() > 0:
-		if linear_velocity.y < 0:
+	if grounded:
+		if linear_velocity.y < 0.0:
 			gravity = gravity_ground_up
 		else:
 			gravity = gravity_ground_down
-		
+	
 	for i in state.get_contact_count():
 		var collider := state.get_contact_collider_object(i)
-		
 		if collider.is_in_group("Pudim"):
 			ScreenShake.do_screen_shake(1.5, 0.2)
+			
 			var normal := state.get_contact_local_normal(i)
 			var pudim: Pudim = collider as Pudim
 			
 			linear_velocity += normal * pudim.pudim_force
 			pudim.pump_pudim()
-	#apply_central_force(Vector2.DOWN * gravity * 10)
-	linear_velocity.x = clamp(linear_velocity.x, -max_speed, max_speed)
-	linear_velocity.y = clamp(linear_velocity.y, -max_speed, max_speed)
+	apply_central_force(Vector2.DOWN * gravity * 10)
 
 
 

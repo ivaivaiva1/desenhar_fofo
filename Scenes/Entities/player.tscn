@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://btuffg8yumu42" path="res://Sprites/Candy/Enviorement/bobfit-2x.png" id="2_nqm6o"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ryrav"]
-friction = 0.0
 absorbent = true
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e2o6t"]

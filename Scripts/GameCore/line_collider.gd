@@ -46,7 +46,7 @@ func _build_collision(line: Line):
 	get_tree().current_scene.add_child(body)
 	
 	var points = line.source_points
-	var thickness := 20.0
+	var thickness := 35.0
 	
 	for i in range(points.size() - 1):
 		var a = points[i]

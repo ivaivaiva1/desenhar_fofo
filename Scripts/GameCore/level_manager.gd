@@ -88,7 +88,7 @@ func spawn_little_bobs():
 	var little_bob_instance = little_bob_scene.instantiate()
 	get_tree().current_scene.add_child(little_bob_instance)
 	little_bob_instance.global_position = player_pos.global_position
-	little_bob_instance.start(self, 3, 400)
+	little_bob_instance.start(self, load_level.level_instance.bob_count, 400)
 	rolling_bob = load_level.level_instance.bobzinho_controller
 
 

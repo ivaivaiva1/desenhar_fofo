@@ -5,8 +5,8 @@ class_name LittlePlayer
 @onready var sprite: Sprite2D = %Sprite
 var controller: BobzinhoController
 
-var gravity_air: float = 1400.0 
-var gravity_ground_down: float = 9000.0 
+var gravity_air: float = 1100.0 
+var gravity_ground_down: float = 7000.0 
 var gravity_ground_up: float = 0
 var max_speed: float = 1500
 
@@ -41,7 +41,11 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 			gravity = gravity_ground_up
 		else:
 			gravity = gravity_ground_down
-		
+			linear_velocity *= 1.02
+			if abs(linear_velocity.x) < 70:
+				linear_velocity.x += 1 * sign(linear_velocity.x)
+	
+	
 	for i in state.get_contact_count():
 		var collider := state.get_contact_collider_object(i)
 		if !collider: return

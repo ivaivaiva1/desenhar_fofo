@@ -6,9 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/Entities/cama.tscn" id="4_4ucem"]
 [ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/Entities/food.tscn" id="5_8oisq"]
 [ext_resource type="PackedScene" uid="uid://bg7tycqkg0pux" path="res://Scenes/Entities/warp_zone.tscn" id="6_vp762"]
+[ext_resource type="Script" uid="uid://dtdjd3bbu1ah6" path="res://Scripts/GameCore/bobzinho_controller.gd" id="7_n6jx3"]
 
 [node name="level" type="Node2D" unique_id=1864007018]
 script = ExtResource("1_gttk8")
+little_bobs = true
+bob_count = 9
 
 [node name="player_spawner" parent="." unique_id=1071021330 instance=ExtResource("2_tmykq")]
 unique_name_in_owner = true
@@ -76,3 +79,7 @@ rotation = 3.1415927
 [node name="WarpZone4" parent="." unique_id=1860812989 instance=ExtResource("6_vp762")]
 position = Vector2(192, 32)
 rotation = 3.1415927
+
+[node name="bobzinho_controller" type="Node2D" parent="." unique_id=350813446]
+unique_name_in_owner = true
+script = ExtResource("7_n6jx3")

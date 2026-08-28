@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cw6rvogvqpjys"]
 
 [ext_resource type="Script" uid="uid://bwk6yq56faubf" path="res://Scripts/GameCore/level.gd" id="1_kidrj"]
-[ext_resource type="PackedScene" uid="uid://bbghfu7nrn6le" path="res://tile_map_layer.tscn" id="2_653ff"]
 [ext_resource type="PackedScene" uid="uid://hv0uyenq7lw7" path="res://Scenes/player_spawner.tscn" id="2_bi0d5"]
 [ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/GameCore/collectables_controller.gd" id="3_653ff"]
 [ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/Entities/cama.tscn" id="4_512bx"]
@@ -12,26 +11,25 @@
 [node name="level" type="Node2D" unique_id=1864007018]
 script = ExtResource("1_kidrj")
 
-[node name="TileMapLayer" parent="." unique_id=964555964 instance=ExtResource("2_653ff")]
-
 [node name="Draw_Blocker" parent="." unique_id=1494958407 instance=ExtResource("7_bi0d5")]
-offset_left = 256.0
-offset_right = 832.0
-offset_bottom = 651.0
+offset_left = 448.0
+offset_top = -64.0
+offset_right = 1472.0
+offset_bottom = 1152.0
 
 [node name="player_spawner" parent="." unique_id=1071021330 instance=ExtResource("2_bi0d5")]
 unique_name_in_owner = true
-position = Vector2(96, 310)
+position = Vector2(160, 512)
 
 [node name="collectables_controller" type="Node2D" parent="." unique_id=710388454]
 unique_name_in_owner = true
 script = ExtResource("3_653ff")
 
 [node name="cama" parent="collectables_controller" unique_id=1009130463 instance=ExtResource("4_512bx")]
-position = Vector2(1056, 310)
+position = Vector2(1760, 512)
 
 [node name="BubbleGun" parent="collectables_controller" unique_id=982462662 instance=ExtResource("6_kidrj")]
-position = Vector2(352, 310)
+position = Vector2(640, 512)
 is_horizontal = true
 is_right = true
 
@@ -42,7 +40,7 @@ scale = Vector2(1, 1)
 float_height = 0.0
 
 [node name="BubbleGun2" parent="collectables_controller" unique_id=746800837 instance=ExtResource("6_kidrj")]
-position = Vector2(544, 310)
+position = Vector2(960, 512)
 is_horizontal = true
 is_right = true
 
@@ -53,7 +51,7 @@ scale = Vector2(1, 1)
 float_height = 0.0
 
 [node name="BubbleGun3" parent="collectables_controller" unique_id=1802178565 instance=ExtResource("6_kidrj")]
-position = Vector2(736, 310)
+position = Vector2(1280, 512)
 is_horizontal = true
 is_right = true
 

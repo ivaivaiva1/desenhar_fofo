@@ -24,17 +24,17 @@ func _ready() -> void:
 
 func set_force():
 	if is_horizontal:
-		jump_y = -55000
+		jump_y = -55000 / 16
 		if is_right:
-			jump_x = 55000
+			jump_x = 55000 / 16
 		else:
-			jump_x = -55000
+			jump_x = -55000 / 16
 	else:
 		jump_x = 0
 		if is_up:
-			jump_y = -100000
+			jump_y = -100000 / 16
 		else:
-			jump_y = 130000
+			jump_y = 130000 / 16
 
 
 func _process(delta: float) -> void:

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cknh6gnkm40po" path="res://Sprites/Candy/nadica.png" id="5_o4bwg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1tq3v"]
-radius = 56.008926
+radius = 100.04499
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mkth0"]
 atlas = ExtResource("1_jk14k")
@@ -72,14 +72,13 @@ float_duration = 0.5
 [node name="Area2D" type="Area2D" parent="." unique_id=381617726 groups=["DrawBlocker"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1222480777]
-visible = false
 shape = SubResource("CircleShape2D_1tq3v")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1257336457]
 unique_name_in_owner = true
 z_index = 100
 rotation = 0.57595867
-scale = Vector2(5, 5)
+scale = Vector2(9, 9)
 sprite_frames = SubResource("SpriteFrames_m5rmg")
 autoplay = "default"
 

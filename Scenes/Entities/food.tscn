@@ -15,6 +15,7 @@ entity_type = 1
 [node name="Area2D" type="Area2D" parent="." unique_id=1524499499]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=322469688]
+visible = false
 position = Vector2(-0.98522174, -1.9704435)
 scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_1tq3v")

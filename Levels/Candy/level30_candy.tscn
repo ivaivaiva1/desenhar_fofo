@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dnnajgubgxtar"]
 
 [ext_resource type="Script" uid="uid://bwk6yq56faubf" path="res://Scripts/GameCore/level.gd" id="1_we5iv"]
-[ext_resource type="PackedScene" uid="uid://bbghfu7nrn6le" path="res://tile_map_layer.tscn" id="2_1ayq5"]
 [ext_resource type="PackedScene" uid="uid://hv0uyenq7lw7" path="res://Scenes/player_spawner.tscn" id="3_s1pa6"]
 [ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/GameCore/collectables_controller.gd" id="4_jwk4y"]
 [ext_resource type="Script" uid="uid://dtdjd3bbu1ah6" path="res://Scripts/GameCore/bobzinho_controller.gd" id="4_s1pa6"]
@@ -15,9 +14,6 @@
 script = ExtResource("1_we5iv")
 little_bobs = true
 bob_count = 6
-
-[node name="TileMapLayer" parent="." unique_id=964555964 instance=ExtResource("2_1ayq5")]
-visible = false
 
 [node name="player_spawner" parent="." unique_id=1071021330 instance=ExtResource("3_s1pa6")]
 unique_name_in_owner = true

@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cvbek2enn6lco"]
 
 [ext_resource type="Script" uid="uid://bwk6yq56faubf" path="res://Scripts/GameCore/level.gd" id="1_n544k"]
-[ext_resource type="PackedScene" uid="uid://bbghfu7nrn6le" path="res://tile_map_layer.tscn" id="2_cvd8t"]
 [ext_resource type="PackedScene" uid="uid://hv0uyenq7lw7" path="res://Scenes/player_spawner.tscn" id="2_yvjnt"]
 [ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/GameCore/collectables_controller.gd" id="3_cvd8t"]
 [ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/Entities/cama.tscn" id="4_4dvif"]
@@ -9,9 +8,6 @@
 
 [node name="level" type="Node2D" unique_id=1864007018]
 script = ExtResource("1_n544k")
-
-[node name="TileMapLayer" parent="." unique_id=964555964 instance=ExtResource("2_cvd8t")]
-visible = false
 
 [node name="player_spawner" parent="." unique_id=1071021330 instance=ExtResource("2_yvjnt")]
 unique_name_in_owner = true

@@ -57,7 +57,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 			
 			linear_velocity += normal * pudim.pudim_force
 			pudim.pump_pudim()
-	apply_central_force(Vector2.DOWN * gravity * mass)
+	#apply_central_force(Vector2.DOWN * gravity * 10)
 	linear_velocity.x = clamp(linear_velocity.x, -max_speed, max_speed)
 	linear_velocity.y = clamp(linear_velocity.y, -max_speed, max_speed)
 

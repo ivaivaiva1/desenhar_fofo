@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dyrnenri70nse"]
+
+[ext_resource type="Script" uid="uid://bwk6yq56faubf" path="res://Scripts/GameCore/level.gd" id="1_5rm6b"]
+[ext_resource type="PackedScene" uid="uid://hv0uyenq7lw7" path="res://Scenes/player_spawner.tscn" id="2_slvtl"]
+[ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/GameCore/collectables_controller.gd" id="3_cd4v6"]
+[ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/Entities/food.tscn" id="5_fvoxm"]
+[ext_resource type="PackedScene" uid="uid://brocdhq6jppsd" path="res://Scenes/Entities/urna.tscn" id="5_slvtl"]
+[ext_resource type="PackedScene" uid="uid://bg7tycqkg0pux" path="res://Scenes/Entities/warp_zone.tscn" id="6_08y7n"]
+[ext_resource type="Script" uid="uid://dtdjd3bbu1ah6" path="res://Scripts/GameCore/bobzinho_controller.gd" id="7_bhau0"]
+
+[node name="level" type="Node2D" unique_id=1864007018]
+script = ExtResource("1_5rm6b")
+little_bobs = true
+bob_count = 9
+
+[node name="player_spawner" parent="." unique_id=1071021330 instance=ExtResource("2_slvtl")]
+unique_name_in_owner = true
+position = Vector2(960, 544)
+
+[node name="collectables_controller" type="Node2D" parent="." unique_id=710388454]
+unique_name_in_owner = true
+script = ExtResource("3_cd4v6")
+
+[node name="urna" parent="collectables_controller" unique_id=680511115 instance=ExtResource("5_slvtl")]
+position = Vector2(960, 896)
+
+[node name="collectable4" parent="collectables_controller" unique_id=186391876 instance=ExtResource("5_fvoxm")]
+position = Vector2(960.00006, 192.00006)
+
+[node name="WarpZone" parent="." unique_id=87311193 instance=ExtResource("6_08y7n")]
+position = Vector2(317, 1048)
+
+[node name="WarpZone2" parent="." unique_id=1525489019 instance=ExtResource("6_08y7n")]
+position = Vector2(317, 32)
+rotation = 3.1415927
+
+[node name="bobzinho_controller" type="Node2D" parent="." unique_id=1642385451]
+unique_name_in_owner = true
+script = ExtResource("7_bhau0")

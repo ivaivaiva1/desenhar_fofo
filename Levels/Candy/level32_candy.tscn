@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://co5isog4y3lo5"]
+
+[ext_resource type="Script" uid="uid://bwk6yq56faubf" path="res://Scripts/GameCore/level.gd" id="1_n1m2o"]
+[ext_resource type="PackedScene" uid="uid://hv0uyenq7lw7" path="res://Scenes/player_spawner.tscn" id="2_0c1ov"]
+[ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/GameCore/collectables_controller.gd" id="3_2ub0w"]
+[ext_resource type="PackedScene" uid="uid://brocdhq6jppsd" path="res://Scenes/Entities/urna.tscn" id="4_n1m2o"]
+[ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/Entities/food.tscn" id="5_gpqsl"]
+[ext_resource type="PackedScene" uid="uid://bg7tycqkg0pux" path="res://Scenes/Entities/warp_zone.tscn" id="6_ppyw5"]
+[ext_resource type="Script" uid="uid://dtdjd3bbu1ah6" path="res://Scripts/GameCore/bobzinho_controller.gd" id="7_ch1qh"]
+
+[node name="level" type="Node2D" unique_id=1864007018]
+script = ExtResource("1_n1m2o")
+little_bobs = true
+bob_count = 9
+
+[node name="player_spawner" parent="." unique_id=1071021330 instance=ExtResource("2_0c1ov")]
+unique_name_in_owner = true
+position = Vector2(1728, 512)
+
+[node name="collectables_controller" type="Node2D" parent="." unique_id=710388454]
+unique_name_in_owner = true
+script = ExtResource("3_2ub0w")
+
+[node name="urna" parent="collectables_controller" unique_id=1009130463 instance=ExtResource("4_n1m2o")]
+position = Vector2(192, 512)
+
+[node name="collectable3" parent="collectables_controller" unique_id=261218531 instance=ExtResource("5_gpqsl")]
+position = Vector2(1728, 896.00006)
+
+[node name="collectable10" parent="collectables_controller" unique_id=186391876 instance=ExtResource("5_gpqsl")]
+position = Vector2(1728, 192.00006)
+
+[node name="collectable11" parent="collectables_controller" unique_id=39399372 instance=ExtResource("5_gpqsl")]
+position = Vector2(1472, 192)
+
+[node name="collectable12" parent="collectables_controller" unique_id=1694069456 instance=ExtResource("5_gpqsl")]
+position = Vector2(1216.0001, 192)
+
+[node name="collectable13" parent="collectables_controller" unique_id=1658169396 instance=ExtResource("5_gpqsl")]
+position = Vector2(960.0001, 192)
+
+[node name="collectable14" parent="collectables_controller" unique_id=1297823933 instance=ExtResource("5_gpqsl")]
+position = Vector2(704.00006, 192)
+
+[node name="collectable15" parent="collectables_controller" unique_id=1297990688 instance=ExtResource("5_gpqsl")]
+position = Vector2(448.00006, 192)
+
+[node name="collectable16" parent="collectables_controller" unique_id=1486984832 instance=ExtResource("5_gpqsl")]
+position = Vector2(192.00003, 192)
+
+[node name="collectable4" parent="collectables_controller" unique_id=1126844090 instance=ExtResource("5_gpqsl")]
+position = Vector2(1472.0001, 896.00006)
+
+[node name="collectable5" parent="collectables_controller" unique_id=1258577849 instance=ExtResource("5_gpqsl")]
+position = Vector2(1216.0001, 896.00006)
+
+[node name="collectable6" parent="collectables_controller" unique_id=874281722 instance=ExtResource("5_gpqsl")]
+position = Vector2(960.00006, 896.00006)
+
+[node name="collectable7" parent="collectables_controller" unique_id=440517957 instance=ExtResource("5_gpqsl")]
+position = Vector2(704.00006, 896.00006)
+
+[node name="collectable8" parent="collectables_controller" unique_id=175541842 instance=ExtResource("5_gpqsl")]
+position = Vector2(448.00003, 896.00006)
+
+[node name="collectable9" parent="collectables_controller" unique_id=496081826 instance=ExtResource("5_gpqsl")]
+position = Vector2(192, 896.00006)
+
+[node name="WarpZone" parent="." unique_id=87311193 instance=ExtResource("6_ppyw5")]
+position = Vector2(1728, 1048)
+
+[node name="WarpZone2" parent="." unique_id=740000396 instance=ExtResource("6_ppyw5")]
+position = Vector2(192, 1048)
+
+[node name="WarpZone3" parent="." unique_id=1013817484 instance=ExtResource("6_ppyw5")]
+position = Vector2(1728, 32)
+rotation = 3.1415927
+
+[node name="WarpZone4" parent="." unique_id=1860812989 instance=ExtResource("6_ppyw5")]
+position = Vector2(192, 32)
+rotation = 3.1415927
+
+[node name="bobzinho_controller" type="Node2D" parent="." unique_id=350813446]
+unique_name_in_owner = true
+script = ExtResource("7_ch1qh")

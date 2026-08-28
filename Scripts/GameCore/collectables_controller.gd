@@ -41,6 +41,7 @@ func restore_collectables():
 
 
 func check_if_cleared():
+	print("checando se o level  acabou")
 	if level_is_done: return
 	var finish_level: bool = true
 	for collectable in level_collectables:

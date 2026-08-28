@@ -5,14 +5,15 @@
 [ext_resource type="PackedScene" uid="uid://hv0uyenq7lw7" path="res://Scenes/player_spawner.tscn" id="3_s1pa6"]
 [ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/GameCore/collectables_controller.gd" id="4_jwk4y"]
 [ext_resource type="Script" uid="uid://dtdjd3bbu1ah6" path="res://Scripts/GameCore/bobzinho_controller.gd" id="4_s1pa6"]
-[ext_resource type="PackedScene" uid="uid://m64lbytajtml" path="res://Scenes/Entities/cama.tscn" id="5_ktorn"]
 [ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/Entities/food.tscn" id="6_menvj"]
 [ext_resource type="PackedScene" uid="uid://c8rqtnxypgm2q" path="res://Scenes/Entities/pudim.tscn" id="7_d6aje"]
 [ext_resource type="PackedScene" uid="uid://bl0vl4awh0ypa" path="res://Scenes/Entities/bloon_bobs.tscn" id="8_1ayq5"]
+[ext_resource type="PackedScene" uid="uid://brocdhq6jppsd" path="res://Scenes/Entities/urna.tscn" id="10_jwk4y"]
 
 [node name="level" type="Node2D" unique_id=1864007018]
 script = ExtResource("1_we5iv")
 little_bobs = true
+bob_count = 6
 
 [node name="TileMapLayer" parent="." unique_id=964555964 instance=ExtResource("2_1ayq5")]
 visible = false
@@ -29,7 +30,7 @@ script = ExtResource("4_s1pa6")
 unique_name_in_owner = true
 script = ExtResource("4_jwk4y")
 
-[node name="cama" parent="collectables_controller" unique_id=1009130463 instance=ExtResource("5_ktorn")]
+[node name="urna" parent="collectables_controller" unique_id=103635019 instance=ExtResource("10_jwk4y")]
 position = Vector2(272, 928)
 
 [node name="collectable" parent="collectables_controller" unique_id=186391876 instance=ExtResource("6_menvj")]

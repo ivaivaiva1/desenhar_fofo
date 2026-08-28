@@ -15,7 +15,7 @@ script = ExtResource("1_ci404")
 unique_name_in_owner = true
 script = ExtResource("2_ghtn7")
 current_world = 1
-level = 20
+level = 30
 
 [node name="line_controller" parent="." unique_id=679656892 instance=ExtResource("3_pakjl")]
 unique_name_in_owner = true

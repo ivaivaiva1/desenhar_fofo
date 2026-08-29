@@ -39,7 +39,7 @@ position = Vector2(704, 576.00006)
 
 [node name="Pudim" parent="collectables_controller" unique_id=540096184 instance=ExtResource("6_5ar4j")]
 position = Vector2(1088, 960)
-pudim_force = 550.0
+pudim_force = 400.0
 
 [node name="Draw_Blocker" parent="." unique_id=1494958407 instance=ExtResource("7_yimnh")]
 offset_left = 832.0

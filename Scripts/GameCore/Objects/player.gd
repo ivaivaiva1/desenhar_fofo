@@ -7,7 +7,7 @@ var current_level: Level
 @export var entity_type: SkinPicker.ENTITY_TYPE
 @onready var sprite: Sprite2D = %Sprite
 
-var gravity_air: float = 1000.0
+var gravity_air: float = 2000.0
 var gravity_ground_down: float = 7000.0
 var gravity_ground_up: float = 700
 var grounded_time: float = 0.4
@@ -48,6 +48,7 @@ func player_jump(force_x: float, force_y: float) -> void:
 	linear_velocity = Vector2.ZERO
 	angular_velocity = 0.0
 	apply_impulse(Vector2(force_x, force_y))
+	print(angular_velocity)
 
 
 func _integrate_forces(state: PhysicsDirectBodyState2D):

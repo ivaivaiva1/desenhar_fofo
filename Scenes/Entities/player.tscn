@@ -36,6 +36,7 @@ shape = SubResource("CircleShape2D_e2o6t")
 
 [node name="Label" type="Label" parent="." unique_id=861267892]
 unique_name_in_owner = true
+visible = false
 offset_left = -258.0
 offset_top = -291.0
 offset_right = 259.0

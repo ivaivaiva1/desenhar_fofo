@@ -39,4 +39,4 @@ position = Vector2(1088.0001, 672.00006)
 [node name="pudim" parent="." unique_id=2051217350 instance=ExtResource("6_vl5io")]
 position = Vector2(256, 895.99994)
 rotation = 0.5235988
-pudim_force = 900.0
+pudim_force = 500.0

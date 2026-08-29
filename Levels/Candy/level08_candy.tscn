@@ -45,11 +45,11 @@ position = Vector2(1440.0001, 736.00006)
 [node name="pudim" parent="." unique_id=2051217350 instance=ExtResource("6_eqi3e")]
 position = Vector2(192, 736)
 rotation = 1.5707964
-pudim_force = 1000.0
+pudim_force = 600.0
 
 [node name="pudim2" parent="." unique_id=540096184 instance=ExtResource("6_eqi3e")]
 position = Vector2(1728, 736)
 rotation = -1.5707964
-pudim_force = 1000.0
+pudim_force = 600.0
 
 [editable path="collectables_controller/collectable"]

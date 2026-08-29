@@ -28,39 +28,36 @@ script = ExtResource("3_653ff")
 [node name="cama" parent="collectables_controller" unique_id=1009130463 instance=ExtResource("4_512bx")]
 position = Vector2(1760, 512)
 
-[node name="BubbleGun" parent="collectables_controller" unique_id=982462662 instance=ExtResource("6_kidrj")]
+[node name="BubbleGum" parent="collectables_controller" unique_id=676950479 instance=ExtResource("6_kidrj")]
 position = Vector2(640, 512)
 is_horizontal = true
 is_right = true
 
-[node name="collectable" parent="collectables_controller/BubbleGun" unique_id=186391876 instance=ExtResource("5_amagp")]
-scale = Vector2(1, 1)
+[node name="food" parent="collectables_controller/BubbleGum" unique_id=2134633078 instance=ExtResource("5_amagp")]
 
-[node name="floating" parent="collectables_controller/BubbleGun/collectable" index="2" unique_id=1456923062]
+[node name="floating" parent="collectables_controller/BubbleGum/food" index="2" unique_id=1456923062]
 float_height = 0.0
 
-[node name="BubbleGun2" parent="collectables_controller" unique_id=746800837 instance=ExtResource("6_kidrj")]
+[node name="BubbleGum2" parent="collectables_controller" unique_id=1278744923 instance=ExtResource("6_kidrj")]
 position = Vector2(960, 512)
 is_horizontal = true
 is_right = true
 
-[node name="collectable" parent="collectables_controller/BubbleGun2" unique_id=1950932330 instance=ExtResource("5_amagp")]
-scale = Vector2(1, 1)
+[node name="food" parent="collectables_controller/BubbleGum2" unique_id=536900603 instance=ExtResource("5_amagp")]
 
-[node name="floating" parent="collectables_controller/BubbleGun2/collectable" index="2" unique_id=1456923062]
+[node name="floating" parent="collectables_controller/BubbleGum2/food" index="2" unique_id=1456923062]
 float_height = 0.0
 
-[node name="BubbleGun3" parent="collectables_controller" unique_id=1802178565 instance=ExtResource("6_kidrj")]
+[node name="BubbleGum3" parent="collectables_controller" unique_id=270429320 instance=ExtResource("6_kidrj")]
 position = Vector2(1280, 512)
 is_horizontal = true
 is_right = true
 
-[node name="collectable" parent="collectables_controller/BubbleGun3" unique_id=360252984 instance=ExtResource("5_amagp")]
-scale = Vector2(1, 1)
+[node name="food" parent="collectables_controller/BubbleGum3" unique_id=1943742616 instance=ExtResource("5_amagp")]
 
-[node name="floating" parent="collectables_controller/BubbleGun3/collectable" index="2" unique_id=1456923062]
+[node name="floating" parent="collectables_controller/BubbleGum3/food" index="2" unique_id=1456923062]
 float_height = 0.0
 
-[editable path="collectables_controller/BubbleGun/collectable"]
-[editable path="collectables_controller/BubbleGun2/collectable"]
-[editable path="collectables_controller/BubbleGun3/collectable"]
+[editable path="collectables_controller/BubbleGum/food"]
+[editable path="collectables_controller/BubbleGum2/food"]
+[editable path="collectables_controller/BubbleGum3/food"]

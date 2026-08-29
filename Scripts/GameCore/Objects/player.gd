@@ -7,10 +7,10 @@ var current_level: Level
 @export var entity_type: SkinPicker.ENTITY_TYPE
 @onready var sprite: Sprite2D = %Sprite
 
-@export var gravity_air: float = 1000.0
-@export var gravity_ground_down: float = 7000.0
-@export var gravity_ground_up: float = 700
-@export var grounded_time: float = 0.4
+var gravity_air: float = 1000.0
+var gravity_ground_down: float = 7000.0
+var gravity_ground_up: float = 700
+var grounded_time: float = 0.4
 @onready var label: Label = %Label
 
 var max_speed: float = 2000.0
@@ -28,14 +28,14 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if grounded:
-		label.text = "T"
+		label.text = str(freeze)
 	else:
-		label.text = "F"
+		label.text = str(freeze)
 	if level_manager == null:
 		return
-	
 	if global_position.y > 1400:
 		die()
+
 
 
 func die():
@@ -44,12 +44,14 @@ func die():
 
 
 func player_jump(force_x: float, force_y: float) -> void:
+	if freeze: return
 	linear_velocity = Vector2.ZERO
 	angular_velocity = 0.0
 	apply_impulse(Vector2(force_x, force_y))
 
 
 func _integrate_forces(state: PhysicsDirectBodyState2D):
+	if freeze: return
 	var has_ground_contact := false
 	
 	for i in state.get_contact_count():

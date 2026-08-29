@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://doceqgnqsgu5" path="res://Scripts/GameCore/Objects/player.gd" id="1_nqm6o"]
 [ext_resource type="Texture2D" uid="uid://btuffg8yumu42" path="res://Sprites/Candy/Enviorement/bobfit-2x.png" id="2_nqm6o"]
+[ext_resource type="Script" uid="uid://divg5y25gh8am" path="res://Scripts/Behaviours/area_enter.gd" id="3_qbyki"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ryrav"]
 absorbent = true
@@ -35,7 +36,6 @@ shape = SubResource("CircleShape2D_e2o6t")
 
 [node name="Label" type="Label" parent="." unique_id=861267892]
 unique_name_in_owner = true
-visible = false
 offset_left = -258.0
 offset_top = -291.0
 offset_right = 259.0
@@ -44,3 +44,9 @@ text = "DASHDIUHAD"
 label_settings = SubResource("LabelSettings_nqm6o")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="area_enter" type="Node2D" parent="." unique_id=865877180]
+script = ExtResource("3_qbyki")
+
+[connection signal="area_entered" from="Area2D" to="area_enter" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="area_enter" method="_on_area_2d_area_exited"]

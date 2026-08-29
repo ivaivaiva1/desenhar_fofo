@@ -97,6 +97,9 @@ func can_draw_at(point: Vector2) -> bool:
 		if collider.is_in_group("DrawBlocker"):
 			return false
 		
+		if collider.is_in_group("VoidZone"):
+			return false
+		
 		if collider.is_in_group("DrawArea"):
 			inside_draw_area = true
 	

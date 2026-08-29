@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://ccr3b4h2bkl13"]
+
+[ext_resource type="Script" uid="uid://bwk6yq56faubf" path="res://Scripts/GameCore/level.gd" id="1_iq0nd"]
+[ext_resource type="PackedScene" uid="uid://hv0uyenq7lw7" path="res://Scenes/player_spawner.tscn" id="2_c54bk"]
+[ext_resource type="Script" uid="uid://db02f8x44ql7e" path="res://Scripts/GameCore/collectables_controller.gd" id="3_84l14"]
+[ext_resource type="PackedScene" uid="uid://brocdhq6jppsd" path="res://Scenes/Entities/urna.tscn" id="4_rc6uo"]
+[ext_resource type="PackedScene" uid="uid://cumvxyqe4xg4r" path="res://Scenes/Entities/food.tscn" id="5_lm84q"]
+[ext_resource type="PackedScene" uid="uid://bg7tycqkg0pux" path="res://Scenes/Entities/warp_zone.tscn" id="6_jpqud"]
+[ext_resource type="Script" uid="uid://dtdjd3bbu1ah6" path="res://Scripts/GameCore/bobzinho_controller.gd" id="7_got10"]
+[ext_resource type="PackedScene" uid="uid://buosfexcxlria" path="res://Scenes/Entities/void_zone.tscn" id="8_c54bk"]
+
+[node name="level" type="Node2D" unique_id=1864007018]
+script = ExtResource("1_iq0nd")
+little_bobs = true
+bob_count = 9
+
+[node name="player_spawner" parent="." unique_id=1071021330 instance=ExtResource("2_c54bk")]
+unique_name_in_owner = true
+position = Vector2(256, 448)
+
+[node name="collectables_controller" type="Node2D" parent="." unique_id=710388454]
+unique_name_in_owner = true
+script = ExtResource("3_84l14")
+
+[node name="urna" parent="collectables_controller" unique_id=680511115 instance=ExtResource("4_rc6uo")]
+position = Vector2(1664, 896)
+
+[node name="collectable4" parent="collectables_controller" unique_id=186391876 instance=ExtResource("5_lm84q")]
+position = Vector2(768.00006, 320)
+
+[node name="collectable5" parent="collectables_controller" unique_id=1511152909 instance=ExtResource("5_lm84q")]
+position = Vector2(896, 384.00003)
+
+[node name="collectable6" parent="collectables_controller" unique_id=1881575210 instance=ExtResource("5_lm84q")]
+position = Vector2(1024, 448)
+
+[node name="collectable7" parent="collectables_controller" unique_id=1305007896 instance=ExtResource("5_lm84q")]
+position = Vector2(1152, 512)
+
+[node name="collectable8" parent="collectables_controller" unique_id=1995315489 instance=ExtResource("5_lm84q")]
+position = Vector2(704.0001, 512)
+
+[node name="collectable9" parent="collectables_controller" unique_id=350353471 instance=ExtResource("5_lm84q")]
+position = Vector2(832.00006, 576)
+
+[node name="collectable10" parent="collectables_controller" unique_id=518411017 instance=ExtResource("5_lm84q")]
+position = Vector2(960, 640.00006)
+
+[node name="collectable11" parent="collectables_controller" unique_id=683221897 instance=ExtResource("5_lm84q")]
+position = Vector2(1088, 704.00006)
+
+[node name="WarpZone" parent="." unique_id=87311193 instance=ExtResource("6_jpqud")]
+position = Vector2(160, 1048)
+
+[node name="WarpZone2" parent="." unique_id=1525489019 instance=ExtResource("6_jpqud")]
+position = Vector2(160, 32)
+rotation = 3.1415927
+
+[node name="WarpZone3" parent="." unique_id=372092113 instance=ExtResource("6_jpqud")]
+position = Vector2(480, 1048)
+
+[node name="WarpZone4" parent="." unique_id=1255184287 instance=ExtResource("6_jpqud")]
+position = Vector2(480, 32)
+rotation = 3.1415927
+
+[node name="WarpZone5" parent="." unique_id=1278090248 instance=ExtResource("6_jpqud")]
+position = Vector2(800, 1048)
+
+[node name="WarpZone6" parent="." unique_id=2113867810 instance=ExtResource("6_jpqud")]
+position = Vector2(800, 32)
+rotation = 3.1415927
+
+[node name="WarpZone7" parent="." unique_id=1492460878 instance=ExtResource("6_jpqud")]
+position = Vector2(1120, 1048)
+
+[node name="WarpZone8" parent="." unique_id=1323748332 instance=ExtResource("6_jpqud")]
+position = Vector2(1120, 32)
+rotation = 3.1415927
+
+[node name="WarpZone9" parent="." unique_id=1848305768 instance=ExtResource("6_jpqud")]
+position = Vector2(1440, 1048)
+
+[node name="WarpZone10" parent="." unique_id=2034856818 instance=ExtResource("6_jpqud")]
+position = Vector2(1440, 32)
+rotation = 3.1415927
+
+[node name="WarpZone11" parent="." unique_id=2049853293 instance=ExtResource("6_jpqud")]
+position = Vector2(1760, 1048)
+
+[node name="WarpZone12" parent="." unique_id=1236685379 instance=ExtResource("6_jpqud")]
+position = Vector2(1760, 32)
+rotation = 3.1415927
+
+[node name="bobzinho_controller" type="Node2D" parent="." unique_id=1642385451]
+unique_name_in_owner = true
+script = ExtResource("7_got10")
+
+[node name="void_zone" parent="." unique_id=1494958407 instance=ExtResource("8_c54bk")]
+offset_left = 640.0
+offset_top = 192.0
+offset_right = 1216.0
+offset_bottom = 768.0

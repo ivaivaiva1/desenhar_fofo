@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://buosfexcxlria"]
+
+[ext_resource type="Script" uid="uid://dfcbuqh8c3l5y" path="res://Scripts/Entities/void_zone.gd" id="1_jjdb8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1tq3v"]
+size = Vector2(0, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjdb8"]
+
+[node name="void_zone" type="ColorRect" unique_id=1494958407]
+z_index = 100
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = -930.0
+offset_bottom = -510.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+color = Color(0.17808002, 0.12479999, 0.48, 0.57254905)
+script = ExtResource("1_jjdb8")
+
+[node name="margin" type="ColorRect" parent="." unique_id=2390052]
+unique_name_in_owner = true
+z_index = -100
+z_as_relative = false
+layout_mode = 0
+offset_right = 30.0
+offset_bottom = 30.0
+color = Color(0.48333335, 1, 0, 1)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1308818528 groups=["VoidZone"]]
+
+[node name="Collision" type="CollisionShape2D" parent="Area2D" unique_id=841791677]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_1tq3v")
+
+[node name="BlockArea" type="Area2D" parent="." unique_id=1648692809 groups=["DrawBlocker"]]
+
+[node name="BlockCol" type="CollisionShape2D" parent="BlockArea" unique_id=1151595101]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_jjdb8")

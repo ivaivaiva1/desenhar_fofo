@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dl4wd5v7vg32n" path="res://Scripts/GameCore/Objects/little_player.gd" id="1_yi2qm"]
 [ext_resource type="Texture2D" uid="uid://btuffg8yumu42" path="res://Sprites/Candy/Enviorement/bobfit-2x.png" id="2_1jqmf"]
+[ext_resource type="Script" uid="uid://divg5y25gh8am" path="res://Scripts/Behaviours/area_enter.gd" id="3_1jqmf"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ryrav"]
 friction = 0.0
@@ -33,4 +34,9 @@ scale = Vector2(0.3, 0.3)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1615327810]
 shape = SubResource("CircleShape2D_e2o6t")
 
+[node name="area_enter" type="Node2D" parent="." unique_id=1888045652]
+script = ExtResource("3_1jqmf")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="area_entered" from="Area2D" to="area_enter" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="area_enter" method="_on_area_2d_area_exited"]

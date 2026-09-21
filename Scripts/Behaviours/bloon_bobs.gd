@@ -11,7 +11,7 @@ var original_flash_color: Color
 var original_flash_pct: float
 var base_scale: Vector2
 var sprite_base_scale: Vector2
-@export var max_life: int = 3
+@export var max_life: int = 1
 @export var many_bobs: int =  6
 @export var impulse_force: int = 400
 var current_life: int

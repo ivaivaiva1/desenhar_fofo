@@ -58,7 +58,6 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 	for i in state.get_contact_count():
 		var collider := state.get_contact_collider_object(i)
 		
-		
 		if collider.is_in_group("Line"):
 			print("ta na linha")
 			var normal := state.get_contact_local_normal(i)
